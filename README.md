@@ -1,5 +1,6 @@
 Этот репозиторий содержит почти всё, что я сделал на Системном и Прикладном Программном Обеспечении (СППО) в ИТМО
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f220610a1b9435fafc39394b214e572)](https://app.codacy.com/gh/FeironoX5/itmo?utm_source=github.com&utm_medium=referral&utm_content=FeironoX5/itmo&utm_campaign=Badge_Grade)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/FeironoX5/itmo)](https://github.com/FeironoX5/itmo/issues/new)
 ![GitHub last commit](https://img.shields.io/github/last-commit/FeironoX5/itmo)
 [![CodeFactor](https://www.codefactor.io/repository/github/feironox5/itmo/badge/main)](https://www.codefactor.io/repository/github/feironox5/itmo/overview/main)
