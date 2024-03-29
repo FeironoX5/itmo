@@ -1,0 +1,210 @@
+<schedule>
+	<time_slot>
+		08:20-09:50
+	</time_slot>
+	<week>
+		3
+		7
+		9
+		11
+		13
+		15
+	</week>
+	<group>
+		PRLCOMP 1
+	</group>
+	<room>
+		1324 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ / PARALLEL COMPUTING (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		10:00-11:30
+	</time_slot>
+	<week>
+		3
+		7
+	</week>
+	<group>
+		PRLCOMP 1
+	</group>
+	<room>
+		1324 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ / PARALLEL COMPUTING (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		10:00-11:30
+	</time_slot>
+	<week>
+		9
+		11
+		13
+	</week>
+	<group>
+		PRLCOMP 1.1
+	</group>
+	<room>
+		1324 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ / PARALLEL COMPUTING (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		10:00-11:30
+	</time_slot>
+	<week>
+		2
+		4
+		6
+		8
+		12
+		14
+		16
+		18
+	</week>
+	<group>
+		ИНФОРМ 3.4
+	</group>
+	<room>
+		2112 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ИНФОРМАТИКА (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		11:40-13:10
+	</time_slot>
+	<week>
+		2
+		4
+		6
+		8
+		12
+		14
+		16
+		18
+	</week>
+	<group>
+		ИНФОРМ 3.4
+	</group>
+	<room>
+		2112 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ИНФОРМАТИКА (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		13:30-15:00
+	</time_slot>
+	<week>
+		3
+		7
+		9
+		11
+		13
+	</week>
+	<group>
+		PRLCOMP 1.1
+	</group>
+	<room>
+		1324 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ / PARALLEL COMPUTING (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		13:30-15:00
+	</time_slot>
+	<week>
+		2
+		4
+		6
+		8
+		12
+		14
+		16
+		18
+	</week>
+	<group>
+		ИНФОРМ 3.5
+	</group>
+	<room>
+		2112 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ИНФОРМАТИКА (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+	<time_slot>
+		15:20-16:50
+	</time_slot>
+	<week>
+		2
+		4
+		6
+		8
+		12
+		14
+		16
+		18
+	</week>
+	<group>
+		ИНФОРМ 3.5
+	</group>
+	<room>
+		2112 АУД.
+	</room>
+	<building>
+		Кронверкский пр., д.49, лит.А
+	</building>
+	<subject_name>
+		ИНФОРМАТИКА (ЛАБ)
+	</subject_name>
+	<lesson_format>
+		Очно - дистанционный
+	</lesson_format>
+</schedule>
