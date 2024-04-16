@@ -1,4 +1,7 @@
-Этот репозиторий содержит почти всё, что я сделал на Системном и Прикладном Программном Обеспечении (СППО) в ИТМО
+Этот репозиторий содержит почти всё, что я сделал на Системном и Прикладном Программном Обеспечении (СППО) в ИТМО. Из полезного:
+- [Нарезанная методичка по дискретке, конспект по графам](/Discrete%20maths)
+- [Наборы карточек по матанализу для заучивания терминов, формул и теорем (с доказательстами)](/Math%20Analysis)
+- [Мой Notion-шаблон, который я использую для самоорганизации](/https://glebkiva.notion.site/ac7734721ad9453cbe9527774fa9c8fc?pvs=74)
 
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/FeironoX5/itmo)](https://github.com/FeironoX5/itmo/issues/new)
 ![GitHub last commit](https://img.shields.io/github/last-commit/FeironoX5/itmo)
