@@ -4,7 +4,6 @@ import enums.Material;
 import exceptions.NameException;
 import exceptions.NaturalNumberException;
 import exceptions.NumberException;
-import interfaces.MotorMount;
 
 public class CenteringRing extends InnerComponent {
     private final double diameter;

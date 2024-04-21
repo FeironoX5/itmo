@@ -1,7 +1,6 @@
 package components.inner;
 
 import components.Component;
-import components.body.BodyComponent;
 import enums.ComponentType;
 import enums.Material;
 import exceptions.NameException;

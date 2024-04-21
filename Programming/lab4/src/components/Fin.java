@@ -1,6 +1,5 @@
 package components;
 
-import components.inner.InnerComponent;
 import enums.ComponentType;
 import enums.FinShape;
 import enums.Material;

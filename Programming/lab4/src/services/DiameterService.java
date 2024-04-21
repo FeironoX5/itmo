@@ -9,7 +9,7 @@ import static java.lang.Double.max;
 public class DiameterService {
     public static double getDiameter(Rocket rocket) {
         double maxd = 0;
-        // TODO Arrays.stream(rocket.getStages()).max()
+        // TODO Change to Arrays.stream(rocket.getStages()).max()
         for (int i = 0; i < rocket.getActiveStages(); i++) {
             maxd = max(maxd, getDiameter(rocket.getStage(i)));
         }

@@ -4,8 +4,6 @@ import components.*;
 import components.assembly.Stage;
 import components.body.BodyComponent;
 
-import static java.lang.Double.max;
-
 public class HeightService {
     public static double getHeight(Rocket rocket) {
         double sum = 0;

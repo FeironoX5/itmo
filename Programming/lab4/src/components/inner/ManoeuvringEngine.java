@@ -6,7 +6,6 @@ import exceptions.NameException;
 import exceptions.NaturalNumberException;
 import exceptions.NumberException;
 import interfaces.MotorMount;
-import interfaces.Rotatable;
 
 public class ManoeuvringEngine extends InnerComponent implements MotorMount {
     private Vector vector;

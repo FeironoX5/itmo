@@ -1,11 +1,9 @@
 package components.assembly;
 
-import components.body.BodyComponent;
 import components.Component;
 import enums.ComponentType;
 import enums.Material;
 import exceptions.NameException;
-import exceptions.NaturalNumberException;
 import exceptions.NumberException;
 
 public abstract class AssemblyComponent extends Component {

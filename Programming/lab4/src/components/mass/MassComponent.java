@@ -1,7 +1,6 @@
 package components.mass;
 
 import components.inner.InnerComponent;
-import enums.ComponentType;
 import enums.Material;
 import exceptions.NameException;
 import exceptions.NaturalNumberException;
