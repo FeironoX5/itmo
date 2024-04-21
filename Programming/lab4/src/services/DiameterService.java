@@ -1,18 +1,15 @@
 package services;
 
 import components.*;
-import components.assembly.AssemblyComponent;
 import components.assembly.Stage;
 import components.body.BodyComponent;
-
-import java.util.Arrays;
 
 import static java.lang.Double.max;
 
 public class DiameterService {
     public static double getDiameter(Rocket rocket) {
         double maxd = 0;
-//        Arrays.stream(rocket.getStages()).max() // TODO
+        // TODO Arrays.stream(rocket.getStages()).max()
         for (int i = 0; i < rocket.getActiveStages(); i++) {
             maxd = max(maxd, getDiameter(rocket.getStage(i)));
         }

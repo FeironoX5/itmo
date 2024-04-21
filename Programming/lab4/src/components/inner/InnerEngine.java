@@ -2,6 +2,9 @@ package components.inner;
 
 import components.Vector;
 import enums.Material;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 import interfaces.MotorMount;
 
 public class InnerEngine extends InnerComponent implements MotorMount {
@@ -10,14 +13,15 @@ public class InnerEngine extends InnerComponent implements MotorMount {
     private final double wallThickness;
     private double velocity;
 
-    public InnerEngine(String name, double mass, Material material, double diameter, double wallThickness) {
+    public InnerEngine(String name, double mass, Material material, double diameter, double wallThickness)
+            throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         if (diameter <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильный диаметр компонента");
         }
         this.diameter = diameter;
         if (wallThickness <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная толщина стенок компонента");
         }
         this.wallThickness = wallThickness;
         this.vector = new Vector(0, 0, -1);
@@ -30,9 +34,9 @@ public class InnerEngine extends InnerComponent implements MotorMount {
     }
 
     @Override
-    public void setVelocity(double velocity) {
+    public void setVelocity(double velocity) throws NaturalNumberException {
         if (velocity < 0) {
-            // TODO add error
+            throw new NaturalNumberException("Неправильная скорость двигателя");
         }
         this.velocity = velocity;
         System.out.printf("Скорость %s успешно назначена на %f\n", getName(), this.velocity);

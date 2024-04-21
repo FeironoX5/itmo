@@ -5,6 +5,9 @@ import components.Vector;
 import components.inner.InnerComponent;
 import enums.ComponentType;
 import enums.Material;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 import interfaces.MotorMount;
 
 public abstract class BodyComponent extends Component {
@@ -12,15 +15,15 @@ public abstract class BodyComponent extends Component {
     private final double height;
     private final double diameter;
 
-    public BodyComponent(String name, double mass, Material material, InnerComponent[] inners, double height, double diameter) {
+    public BodyComponent(String name, double mass, Material material, InnerComponent[] inners, double height, double diameter) throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material, ComponentType.BODY);
         this.inners = inners;
         if (height <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная высота компонента");
         }
         this.height = height;
         if (diameter <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильный диаметр компонента");
         }
         this.diameter = diameter;
     }

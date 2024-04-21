@@ -2,19 +2,23 @@ package components.inner;
 
 import components.Fin;
 import enums.Material;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 
 public class Trapezoidal extends InnerComponent {
     private final Fin[] fins;
     private final double sweep_angle;
 
-    public Trapezoidal(String name, double mass, Material material, Fin[] fins, double sweepAngle) {
+    public Trapezoidal(String name, double mass, Material material, Fin[] fins, double sweepAngle)
+            throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         if (fins.length == 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная длина компонента");
         }
         this.fins = fins;
         if (sweepAngle <= 0 || sweepAngle >= 90) {
-            // TODO error
+            throw new NumberException("Неправильная угол наклона плавников");
         }
         sweep_angle = sweepAngle;
     }

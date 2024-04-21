@@ -2,6 +2,9 @@ package components.inner;
 
 import components.Vector;
 import enums.Material;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 import interfaces.MotorMount;
 import interfaces.Rotatable;
 
@@ -9,7 +12,8 @@ public class ManoeuvringEngine extends InnerComponent implements MotorMount {
     private Vector vector;
     private double velocity;
 
-    public ManoeuvringEngine(String name, double mass, Material material, double rotation) {
+    public ManoeuvringEngine(String name, double mass, Material material, double rotation)
+            throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         this.vector = new Vector(Math.sin(rotation), Math.cos(rotation), 0);
         setVelocity(0);
@@ -26,9 +30,9 @@ public class ManoeuvringEngine extends InnerComponent implements MotorMount {
     }
 
     @Override
-    public void setVelocity(double velocity) {
+    public void setVelocity(double velocity) throws NaturalNumberException {
         if (velocity < 0) {
-            // TODO add error
+            throw new NaturalNumberException("Неправильная скорость двигателя");
         }
         this.velocity = velocity;
         System.out.printf("Скорость %s успешно назначена на %f\n", getName(), this.velocity);

@@ -3,18 +3,20 @@ package components.body;
 import components.Vector;
 import components.inner.InnerComponent;
 import enums.Material;
-import interfaces.MotorMount;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 import interfaces.Rotatable;
-
 
 public class BodyTube extends BodyComponent implements Rotatable {
     private final double wallThickness;
     private double rotation;
 
-    public BodyTube(String name, double mass, Material material, InnerComponent[] inners, double height, double diameter, double wallThickness) {
+    public BodyTube(String name, double mass, Material material, InnerComponent[] inners, double height,
+            double diameter, double wallThickness) throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material, inners, height, diameter);
         if (wallThickness <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная толщина стенок компонента");
         }
         this.wallThickness = wallThickness;
         this.rotation = 0;

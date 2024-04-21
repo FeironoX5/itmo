@@ -1,20 +1,24 @@
 package components.inner;
 
 import enums.Material;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 import interfaces.MotorMount;
 
 public class CenteringRing extends InnerComponent {
     private final double diameter;
     private final double wallThickness;
 
-    public CenteringRing(String name, double mass, Material material, double diameter, double wallThickness) {
+    public CenteringRing(String name, double mass, Material material, double diameter, double wallThickness)
+            throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         if (diameter <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильный диаметр компонента");
         }
         this.diameter = diameter;
         if (wallThickness <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная толщина стенок компонента");
         }
         this.wallThickness = wallThickness;
     }

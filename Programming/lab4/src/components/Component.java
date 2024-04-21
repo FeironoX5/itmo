@@ -2,8 +2,9 @@ package components;
 
 import enums.ComponentType;
 import enums.Material;
-
-import java.util.Objects;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 
 public abstract class Component {
     private final String name;
@@ -11,13 +12,13 @@ public abstract class Component {
     private final ComponentType type;
     public final Material material;
 
-    public Component(String name, double mass, Material material, ComponentType type) {
+    public Component(String name, double mass, Material material, ComponentType type) throws NameException, NumberException, NaturalNumberException {
         if (name.isEmpty()) {
-            // TODO error
+            throw new NameException("Неправильное имя компонента");
         }
         this.name = name;
         if (mass <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная масса компонента");
         }
         this.mass = mass;
         this.material = material;

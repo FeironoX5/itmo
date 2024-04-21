@@ -1,10 +1,11 @@
 package interfaces;
 
 import components.Vector;
+import exceptions.NaturalNumberException;
 
 public interface MotorMount {
 
-    void setVelocity(double velocity);
+    void setVelocity(double velocity) throws NaturalNumberException;
 
     double getVelocity();
 

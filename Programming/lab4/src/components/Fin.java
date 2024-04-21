@@ -4,16 +4,20 @@ import components.inner.InnerComponent;
 import enums.ComponentType;
 import enums.FinShape;
 import enums.Material;
+import exceptions.NameException;
+import exceptions.NaturalNumberException;
+import exceptions.NumberException;
 
 public class Fin extends Component {
     private final FinShape shape;
     private final double length;
 
-    public Fin(String name, double mass, Material material, FinShape shape, double length) {
+    public Fin(String name, double mass, Material material, FinShape shape, double length)
+            throws NameException, NumberException {
         super(name, mass, material, ComponentType.OUTER);
         this.shape = shape;
         if (length <= 0) {
-            // TODO error
+            throw new NaturalNumberException("Неправильная длина компонента");
         }
         this.length = length;
     }
