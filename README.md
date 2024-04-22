@@ -25,7 +25,7 @@
 
 - [телега](https://t.me/lostinwinelands)
 - [вк](https://vk.com/feironox5)
-- [behance](https://www.behance.net/glebkiva) (буду очень рад если поддержите лайком)
+- [behance](https://www.behance.net/glebkiva)
 
 <div align="center">
   <br>
