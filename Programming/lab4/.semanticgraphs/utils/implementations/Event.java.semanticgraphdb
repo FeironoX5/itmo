@@ -1,100 +1,0 @@
-
-$src\utils\implementations\Event.javaπ
-utils.implementations.EventCLASS.
-$src\utils\implementations\Event.java (" 
-packageutils.implementations"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"c
-declarationStringN<mark class="modifier">public </mark><mark class="modifier">class </mark>Event"
-accesspublic*Event2z
-;utils.implementations.Event.Event(T, utils.enums.EventType)DECLARATION.
-$src\utils\implementations\Event.java   (2d
-%utils.implementations.Event.getData()DECLARATION.
-$src\utils\implementations\Event.java* *(2d
-%utils.implementations.Event.getType()DECLARATION.
-$src\utils\implementations\Event.java3 3(2k
-,utils.implementations.Event?data@20.20:20.24DECLARATION.
-$src\utils\implementations\Event.java (2p
-1utils.implementations.Event?eventType@24.28:24.37DECLARATION.
-$src\utils\implementations\Event.java (%2_
-utils.implementations.Event.TTYPE_PARAMETER.
-$src\utils\implementations\Event.java (á	
-;utils.implementations.Event.Event(T, utils.enums.EventType)CONSTRUCTOR.
-$src\utils\implementations\Event.java   ("Ÿ
-declarationString√<mark class="modifier">public </mark><mark class="method">Event</mark>(final <mark class="type-parameter">T</mark> data<mark class="modifier"><mark class="modifier">,</mark></mark> ype eventType)*Event2x
-@utils.implementations.Event.Event(T, utils.enums.EventType)!dataCALL.
-$src\utils\implementations\Event.java! !(2}
-Eutils.implementations.Event.Event(T, utils.enums.EventType)!eventTypeCALL.
-$src\utils\implementations\Event.java" "("2d
-,utils.implementations.Event?data@20.20:20.24CALL.
-$src\utils\implementations\Event.java! !(2i
-1utils.implementations.Event?eventType@24.28:24.37CALL.
-$src\utils\implementations\Event.java" "(2}
-@utils.implementations.Event.Event(T, utils.enums.EventType)!data	PARAMETER.
-$src\utils\implementations\Event.java   (2Ç
-Eutils.implementations.Event.Event(T, utils.enums.EventType)!eventType	PARAMETER.
-$src\utils\implementations\Event.java /  (82Z
-utils.implementations.EventRETURN_TYPE.
-$src\utils\implementations\Event.java   (∑
-@utils.implementations.Event.Event(T, utils.enums.EventType)!data	PARAMETER.
-$src\utils\implementations\Event.java   ("	
-typeT"
-isFinaltrue"?
-declarationString*<mark class="type-parameter">T</mark> data*data2U
-utils.implementations.Event.TTYPE.
-$src\utils\implementations\Event.java   (™
-Eutils.implementations.Event.Event(T, utils.enums.EventType)!eventType	PARAMETER.
-$src\utils\implementations\Event.java /  (8"
-type	EventType"
-isFinaltrue"(
-declarationStringEventType eventType*	eventType2M
-utils.enums.EventTypeTYPE.
-$src\utils\implementations\Event.java %  (.ò
-%utils.implementations.Event.getData()METHOD.
-$src\utils\implementations\Event.java* *("
-isFinalfalse"Æ
-declarationStringò<mark class="modifier">public </mark>&lt;<mark class="modifier"><mark class="type-parameter">T</mark></mark>&gt; T <mark class="method">getData</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"	
-typeT*getData2d
-,utils.implementations.Event?data@20.20:20.24CALL.
-$src\utils\implementations\Event.java+ +(2@
-TRETURN_TYPE.
-$src\utils\implementations\Event.java* *(¡
-%utils.implementations.Event.getType()METHOD.
-$src\utils\implementations\Event.java3 3("
-isFinalfalse"∂
-declarationString†<mark class="modifier">public </mark>&lt;<mark class="modifier"><mark class="type-parameter">T</mark></mark>&gt; EventType <mark class="method">getType</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-type	EventType*getType2i
-1utils.implementations.Event?eventType@24.28:24.37CALL.
-$src\utils\implementations\Event.java4 4(2T
-utils.enums.EventTypeRETURN_TYPE.
-$src\utils\implementations\Event.java3 3(ç
-,utils.implementations.Event?data@20.20:20.24VALUE.
-$src\utils\implementations\Event.java ("
-isFinaltrue"	
-typeT"Ü
-declarationStringq<mark class="modifier">private </mark><mark class="modifier">final </mark>T <mark class="class-field">data</mark>"
-isStaticfalse"
-accessprivate*data2U
-utils.implementations.Event.TTYPE.
-$src\utils\implementations\Event.java (§
-1utils.implementations.Event?eventType@24.28:24.37VALUE.
-$src\utils\implementations\Event.java (%"
-isFinaltrue"
-type	EventType"ì
-declarationString~<mark class="modifier">private </mark><mark class="modifier">final </mark>EventType <mark class="class-field">eventType</mark>"
-isStaticfalse"
-accessprivate*	eventType2M
-utils.enums.EventTypeTYPE.
-$src\utils\implementations\Event.java (b
-utils.implementations.Event.TTYPE_PARAMETER.
-$src\utils\implementations\Event.java (*T

@@ -1,74 +1,0 @@
-
-"src\utils\enums\ComponentType.java�
-utils.enums.ComponentTypeENUM,
-"src\utils\enums\ComponentType.java ("�
-declarationStringy<mark class="modifier">enum </mark>// TODO избавится от enum, заменить на Instance of
-ComponentType*ComponentType2v
-9utils.enums.ComponentType.ComponentType(java.lang.String)DECLARATION,
-"src\utils\enums\ComponentType.java   (2a
-$utils.enums.ComponentType.toString()DECLARATION,
-"src\utils\enums\ComponentType.java% %(2g
-*utils.enums.ComponentType?name@30.19:30.23DECLARATION,
-"src\utils\enums\ComponentType.java (2_
-"utils.enums.ComponentType?ASSEMBLYDECLARATION,
-"src\utils\enums\ComponentType.java (2[
-utils.enums.ComponentType?BODYDECLARATION,
-"src\utils\enums\ComponentType.java (2\
-utils.enums.ComponentType?INNERDECLARATION,
-"src\utils\enums\ComponentType.java (	2\
-utils.enums.ComponentType?OUTERDECLARATION,
-"src\utils\enums\ComponentType.java (	q
-"utils.enums.ComponentType?ASSEMBLYVALUE,
-"src\utils\enums\ComponentType.java ("
-enumtrue*ASSEMBLYi
-utils.enums.ComponentType?BODYVALUE,
-"src\utils\enums\ComponentType.java ("
-enumtrue*BODYk
-utils.enums.ComponentType?INNERVALUE,
-"src\utils\enums\ComponentType.java (	"
-enumtrue*INNERk
-utils.enums.ComponentType?OUTERVALUE,
-"src\utils\enums\ComponentType.java (	"
-enumtrue*OUTER�
-9utils.enums.ComponentType.ComponentType(java.lang.String)CONSTRUCTOR,
-"src\utils\enums\ComponentType.java   ("p
-declarationString[<mark class="modifier"> </mark><mark class="method">ComponentType</mark>(final String name)*ComponentType2t
->utils.enums.ComponentType.ComponentType(java.lang.String)!nameCALL,
-"src\utils\enums\ComponentType.java! !(2`
-*utils.enums.ComponentType?name@30.19:30.23CALL,
-"src\utils\enums\ComponentType.java! !(2y
->utils.enums.ComponentType.ComponentType(java.lang.String)!name	PARAMETER,
-"src\utils\enums\ComponentType.java   (#2V
-utils.enums.ComponentTypeRETURN_TYPE,
-"src\utils\enums\ComponentType.java   (�
->utils.enums.ComponentType.ComponentType(java.lang.String)!name	PARAMETER,
-"src\utils\enums\ComponentType.java   (#"
-typeString"
-isFinaltrue" 
-declarationStringString name*name2F
-java.lang.StringTYPE,
-"src\utils\enums\ComponentType.java   (�
-$utils.enums.ComponentType.toString()METHOD,
-"src\utils\enums\ComponentType.java% %("
-isFinalfalse"�
-declarationString�<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeString*toString2t
->java.lang.String.format(java.lang.String, java.lang.Object...)CALL,
-"src\utils\enums\ComponentType.java& &(2`
-*utils.enums.ComponentType?name@30.19:30.23CALL,
-"src\utils\enums\ComponentType.java&- &(12M
-java.lang.StringRETURN_TYPE,
-"src\utils\enums\ComponentType.java% %(�
-*utils.enums.ComponentType?name@30.19:30.23VARIABLE,
-"src\utils\enums\ComponentType.java ("
-isFinalfalse"
-typeString"g
-declarationStringR<mark class="modifier">private </mark>String <mark class="class-field">name</mark>"
-isStaticfalse"
-accessprivate*name2F
-java.lang.StringTYPE,
-"src\utils\enums\ComponentType.java (

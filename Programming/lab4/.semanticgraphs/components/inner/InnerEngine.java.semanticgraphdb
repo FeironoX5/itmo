@@ -1,270 +1,0 @@
-
-%src\components\inner\InnerEngine.javaÌ
-components.inner.InnerEngineCLASS/
-%src\components\inner\InnerEngine.java	 	("
-packagecomponents.inner"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"÷
-declarationString¿<mark class="modifier">public </mark><mark class="modifier">class </mark>InnerEngine<mark class="modifier"> extends </mark>InnerComponent<mark class="modifier"><br>implements </mark>MotorMount"
-accesspublic*InnerEngine2®
-hcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)DECLARATION/
-%src\components\inner\InnerEngine.java (2p
-0components.inner.InnerEngine.calculateMovement()DECLARATION/
-%src\components\inner\InnerEngine.java   (#2p
-0components.inner.InnerEngine.setVelocity(double)DECLARATION/
-%src\components\inner\InnerEngine.java% %(2j
-*components.inner.InnerEngine.getVelocity()DECLARATION/
-%src\components\inner\InnerEngine.java. .(2j
-*components.inner.InnerEngine.getDiameter()DECLARATION/
-%src\components\inner\InnerEngine.java2 2(2o
-/components.inner.InnerEngine.getWallThickness()DECLARATION/
-%src\components\inner\InnerEngine.java6 6("2h
-(components.inner.InnerEngine.getVector()DECLARATION/
-%src\components\inner\InnerEngine.java; ;(2o
-/components.inner.InnerEngine?vector@10.25:10.31DECLARATION/
-%src\components\inner\InnerEngine.java
- 
-(2q
-1components.inner.InnerEngine?diameter@11.25:11.33DECLARATION/
-%src\components\inner\InnerEngine.java (!2v
-6components.inner.InnerEngine?wallThickness@12.25:12.38DECLARATION/
-%src\components\inner\InnerEngine.java (&2q
-1components.inner.InnerEngine?velocity@13.19:13.27DECLARATION/
-%src\components\inner\InnerEngine.java (2V
-utils.interfaces.MotorMountEXTEND/
-%src\components\inner\InnerEngine.java	; 	(E2Z
-components.inner.InnerComponentEXTEND/
-%src\components\inner\InnerEngine.java	! 	(/ã 
-hcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)CONSTRUCTOR/
-%src\components\inner\InnerEngine.java ("Ú
-declarationString‹<mark class="modifier">public </mark><mark class="method">InnerEngine</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> diameter<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> wallThickness)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*InnerEngine2i
-0components.inner.InnerEngine.setVelocity(double)CALL/
-%src\components\inner\InnerEngine.java (2â
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL/
-%src\components\inner\InnerEngine.java (,2â
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL/
-%src\components\inner\InnerEngine.java (,2i
-0components.Vector.Vector(double, double, double)CALL/
-%src\components\inner\InnerEngine.java ( 2ó
-^components.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)CALL/
-%src\components\inner\InnerEngine.java (2¶
-mcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!nameCALL/
-%src\components\inner\InnerEngine.java (2¶
-mcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!massCALL/
-%src\components\inner\InnerEngine.java (2™
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!materialCALL/
-%src\components\inner\InnerEngine.java ("2™
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!diameterCALL/
-%src\components\inner\InnerEngine.java (2™
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!diameterCALL/
-%src\components\inner\InnerEngine.java ( 2Ø
-vcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!wallThicknessCALL/
-%src\components\inner\InnerEngine.java (2Ø
-vcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!wallThicknessCALL/
-%src\components\inner\InnerEngine.java (*2j
-1components.inner.InnerEngine?diameter@11.25:11.33CALL/
-%src\components\inner\InnerEngine.java (2o
-6components.inner.InnerEngine?wallThickness@12.25:12.38CALL/
-%src\components\inner\InnerEngine.java (2h
-/components.inner.InnerEngine?vector@10.25:10.31CALL/
-%src\components\inner\InnerEngine.java (2´
-mcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!name	PARAMETER/
-%src\components\inner\InnerEngine.java ("2´
-mcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!mass	PARAMETER/
-%src\components\inner\InnerEngine.java+ (/2Ø
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!material	PARAMETER/
-%src\components\inner\InnerEngine.java: (B2Ø
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!diameter	PARAMETER/
-%src\components\inner\InnerEngine.java (2¥
-vcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!wallThickness	PARAMETER/
-%src\components\inner\InnerEngine.java$ (12\
-components.inner.InnerEngineRETURN_TYPE/
-%src\components\inner\InnerEngine.java ( ¿
-mcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!name	PARAMETER/
-%src\components\inner\InnerEngine.java (""
-typeString"
-isFinalfalse" 
-declarationStringString name*name2I
-java.lang.StringTYPE/
-%src\components\inner\InnerEngine.java (‘
-mcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!mass	PARAMETER/
-%src\components\inner\InnerEngine.java+ (/"
-typedouble"
-isFinalfalse">
-declarationString)<mark class="modifier">double</mark> mass*mass2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java$ (*‘
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!material	PARAMETER/
-%src\components\inner\InnerEngine.java: (B"
-typeMaterial"
-isFinalfalse"&
-declarationStringMaterial material*material2M
-utils.enums.MaterialTYPE/
-%src\components\inner\InnerEngine.java1 (9‡
-qcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!diameter	PARAMETER/
-%src\components\inner\InnerEngine.java ("
-typedouble"
-isFinalfalse"B
-declarationString-<mark class="modifier">double</mark> diameter*diameter2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java (Ô
-vcomponents.inner.InnerEngine.InnerEngine(java.lang.String, double, utils.enums.Material, double, double)!wallThickness	PARAMETER/
-%src\components\inner\InnerEngine.java$ (1"
-typedouble"
-isFinalfalse"G
-declarationString2<mark class="modifier">double</mark> wallThickness*wallThickness2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java (#É
-0components.inner.InnerEngine.calculateMovement()METHOD/
-%src\components\inner\InnerEngine.java   (#"
-isFinalfalse"ü
-declarationStringâ<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>Vector <mark class="method">calculateMovement</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeVector*calculateMovement2n
-5components.Vector.multiply(components.Vector, double)CALL/
-%src\components\inner\InnerEngine.java! !(2j
-1components.inner.InnerEngine?velocity@13.19:13.27CALL/
-%src\components\inner\InnerEngine.java!, !(42h
-/components.inner.InnerEngine?vector@10.25:10.31CALL/
-%src\components\inner\InnerEngine.java!$ !(*2l
-/utils.interfaces.MotorMount.calculateMovement()OVERRIDE/
-%src\components\inner\InnerEngine.java   (#2Q
-components.VectorRETURN_TYPE/
-%src\components\inner\InnerEngine.java   (ﬂ
-0components.inner.InnerEngine.setVelocity(double)METHOD/
-%src\components\inner\InnerEngine.java% %("
-isFinalfalse"º
-declarationString¶<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark><mark class="modifier">void</mark> <mark class="method">setVelocity</mark>(<mark class="modifier">double</mark> velocity)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NaturalNumberException"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typevoid*setVelocity2z
-Ajava.io.PrintStream.printf(java.lang.String, java.lang.Object...)CALL/
-%src\components\inner\InnerEngine.java* *(2W
-components.Component.getName()CALL/
-%src\components\inner\InnerEngine.java*C *(J2â
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL/
-%src\components\inner\InnerEngine.java' '(,2r
-9components.inner.InnerEngine.setVelocity(double)!velocityCALL/
-%src\components\inner\InnerEngine.java& &(2r
-9components.inner.InnerEngine.setVelocity(double)!velocityCALL/
-%src\components\inner\InnerEngine.java) )( 2j
-1components.inner.InnerEngine?velocity@13.19:13.27CALL/
-%src\components\inner\InnerEngine.java) )(2j
-1components.inner.InnerEngine?velocity@13.19:13.27CALL/
-%src\components\inner\InnerEngine.java*S *([2l
-/utils.interfaces.MotorMount.setVelocity(double)OVERRIDE/
-%src\components\inner\InnerEngine.java% %(2w
-9components.inner.InnerEngine.setVelocity(double)!velocity	PARAMETER/
-%src\components\inner\InnerEngine.java%# %(+2D
-voidRETURN_TYPE/
-%src\components\inner\InnerEngine.java% %(®
-9components.inner.InnerEngine.setVelocity(double)!velocity	PARAMETER/
-%src\components\inner\InnerEngine.java%# %(+"
-typedouble"
-isFinalfalse"B
-declarationString-<mark class="modifier">double</mark> velocity*velocity2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java% %("§
-*components.inner.InnerEngine.getVelocity()METHOD/
-%src\components\inner\InnerEngine.java. .("
-isFinalfalse"∑
-declarationString°<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getVelocity</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getVelocity2j
-1components.inner.InnerEngine?velocity@13.19:13.27CALL/
-%src\components\inner\InnerEngine.java/ /(2f
-)utils.interfaces.MotorMount.getVelocity()OVERRIDE/
-%src\components\inner\InnerEngine.java. .(2F
-doubleRETURN_TYPE/
-%src\components\inner\InnerEngine.java. .(ç
-*components.inner.InnerEngine.getDiameter()METHOD/
-%src\components\inner\InnerEngine.java2 2("
-isFinalfalse"à
-declarationStrings<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getDiameter</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getDiameter2j
-1components.inner.InnerEngine?diameter@11.25:11.33CALL/
-%src\components\inner\InnerEngine.java3 3(2F
-doubleRETURN_TYPE/
-%src\components\inner\InnerEngine.java2 2(°
-/components.inner.InnerEngine.getWallThickness()METHOD/
-%src\components\inner\InnerEngine.java6 6(""
-isFinalfalse"ç
-declarationStringx<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getWallThickness</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getWallThickness2o
-6components.inner.InnerEngine?wallThickness@12.25:12.38CALL/
-%src\components\inner\InnerEngine.java7 7(2F
-doubleRETURN_TYPE/
-%src\components\inner\InnerEngine.java6 6(á
-(components.inner.InnerEngine.getVector()METHOD/
-%src\components\inner\InnerEngine.java; ;("
-isFinalfalse"ó
-declarationStringÅ<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>Vector <mark class="method">getVector</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeVector*	getVector2h
-/components.inner.InnerEngine?vector@10.25:10.31CALL/
-%src\components\inner\InnerEngine.java< <(2d
-'utils.interfaces.MotorMount.getVector()OVERRIDE/
-%src\components\inner\InnerEngine.java; ;(2Q
-components.VectorRETURN_TYPE/
-%src\components\inner\InnerEngine.java; ;(î
-/components.inner.InnerEngine?vector@10.25:10.31VALUE/
-%src\components\inner\InnerEngine.java
- 
-("
-isFinaltrue"
-typeVector"ç
-declarationStringx<mark class="modifier">private </mark><mark class="modifier">final </mark>Vector <mark class="class-field">vector</mark>"
-isStaticfalse"
-accessprivate*vector2J
-components.VectorTYPE/
-%src\components\inner\InnerEngine.java
- 
-(Æ
-1components.inner.InnerEngine?diameter@11.25:11.33VALUE/
-%src\components\inner\InnerEngine.java (!"
-isFinaltrue"
-typedouble"Æ
-declarationStringò<mark class="modifier">private </mark><mark class="modifier">final </mark><mark class="modifier">double</mark> <mark class="class-field">diameter</mark>"
-isStaticfalse"
-accessprivate*diameter2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java (Ω
-6components.inner.InnerEngine?wallThickness@12.25:12.38VALUE/
-%src\components\inner\InnerEngine.java (&"
-isFinaltrue"
-typedouble"≥
-declarationStringù<mark class="modifier">private </mark><mark class="modifier">final </mark><mark class="modifier">double</mark> <mark class="class-field">wallThickness</mark>"
-isStaticfalse"
-accessprivate*wallThickness2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java (ç
-1components.inner.InnerEngine?velocity@13.19:13.27VARIABLE/
-%src\components\inner\InnerEngine.java ("
-isFinalfalse"
-typedouble"â
-declarationStringt<mark class="modifier">private </mark><mark class="modifier">double</mark> <mark class="class-field">velocity</mark>"
-isStaticfalse"
-accessprivate*velocity2?
-doubleTYPE/
-%src\components\inner\InnerEngine.java (

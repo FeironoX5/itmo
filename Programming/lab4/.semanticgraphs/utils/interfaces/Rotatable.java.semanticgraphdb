@@ -1,47 +1,0 @@
-
-#src\utils\interfaces\Rotatable.javaá
-utils.interfaces.RotatableTRAIT-
-#src\utils\interfaces\Rotatable.java ("
-packageutils.interfaces"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"k
-declarationStringV<mark class="modifier">public </mark><mark class="modifier">interface </mark>Rotatable"
-accesspublic*	Rotatable2f
-(utils.interfaces.Rotatable.getRotation()DECLARATION-
-#src\utils\interfaces\Rotatable.java (2g
-)utils.interfaces.Rotatable.rotate(double)DECLARATION-
-#src\utils\interfaces\Rotatable.java	 (û
-(utils.interfaces.Rotatable.getRotation()METHOD-
-#src\utils\interfaces\Rotatable.java ("
-isFinalfalse"Ç
-declarationStringm<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="method">getRotation</mark>()"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typedouble*getRotation2D
-doubleRETURN_TYPE-
-#src\utils\interfaces\Rotatable.java (
-ß
-)utils.interfaces.Rotatable.rotate(double)METHOD-
-#src\utils\interfaces\Rotatable.java	 ("
-isFinalfalse"¶
-declarationStringê<mark class="modifier"> </mark><mark class="modifier">void</mark> <mark class="method">rotate</mark>(<mark class="modifier">double</mark> angle)"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typevoid*rotate2k
-/utils.interfaces.Rotatable.rotate(double)!angle	PARAMETER-
-#src\utils\interfaces\Rotatable.java (2B
-voidRETURN_TYPE-
-#src\utils\interfaces\Rotatable.java (î
-/utils.interfaces.Rotatable.rotate(double)!angle	PARAMETER-
-#src\utils\interfaces\Rotatable.java ("
-typedouble"
-isFinalfalse"?
-declarationString*<mark class="modifier">double</mark> angle*angle2=
-doubleTYPE-
-#src\utils\interfaces\Rotatable.java (

@@ -1,89 +1,0 @@
-
-.src\components\assembly\AssemblyComponent.java»
-%components.assembly.AssemblyComponentCLASS8
-.src\components\assembly\AssemblyComponent.java ('"
-packagecomponents.assembly"
-isFinalfalse"
-inner classfalse"
-
-isAbstracttrue"Ç
-declarationString±<mark class="modifier">public </mark><mark class="modifier">abstract </mark><mark class="modifier">class </mark>AssemblyComponent<mark class="modifier"> extends </mark>Component"
-accesspublic*AssemblyComponent2°
-gcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)DECLARATION8
-.src\components\assembly\AssemblyComponent.java	 	(2y
-0components.assembly.AssemblyComponent.toString()DECLARATION8
-.src\components\assembly\AssemblyComponent.java (2X
-components.ComponentEXTEND8
-.src\components\assembly\AssemblyComponent.java0 (9ê
-gcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)CONSTRUCTOR8
-.src\components\assembly\AssemblyComponent.java	 	("É
-declarationString³<mark class="modifier">public </mark><mark class="method">AssemblyComponent</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException*AssemblyComponent2«
-icomponents.Component.Component(java.lang.String, double, utils.enums.Material, utils.enums.ComponentType)CALL8
-.src\components\assembly\AssemblyComponent.java (2®
-lcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!nameCALL8
-.src\components\assembly\AssemblyComponent.java (2®
-lcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!massCALL8
-.src\components\assembly\AssemblyComponent.java (2²
-pcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!materialCALL8
-.src\components\assembly\AssemblyComponent.java ("2³
-lcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!name	PARAMETER8
-.src\components\assembly\AssemblyComponent.java	$ 	((2³
-lcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!mass	PARAMETER8
-.src\components\assembly\AssemblyComponent.java	1 	(52·
-pcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!material	PARAMETER8
-.src\components\assembly\AssemblyComponent.java	@ 	(H2n
-%components.assembly.AssemblyComponentRETURN_TYPE8
-.src\components\assembly\AssemblyComponent.java
- 
-( Ñ
-lcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!name	PARAMETER8
-.src\components\assembly\AssemblyComponent.java	$ 	(("
-typeString"
-isFinalfalse" 
-declarationStringString name*name2R
-java.lang.StringTYPE8
-.src\components\assembly\AssemblyComponent.java	 	(#å
-lcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!mass	PARAMETER8
-.src\components\assembly\AssemblyComponent.java	1 	(5"
-typedouble"
-isFinalfalse">
-declarationString)<mark class="modifier">double</mark> mass*mass2H
-doubleTYPE8
-.src\components\assembly\AssemblyComponent.java	* 	(0å
-pcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)!material	PARAMETER8
-.src\components\assembly\AssemblyComponent.java	@ 	(H"
-typeMaterial"
-isFinalfalse"&
-declarationStringMaterial material*material2V
-utils.enums.MaterialTYPE8
-.src\components\assembly\AssemblyComponent.java	7 	(?«	
-0components.assembly.AssemblyComponent.toString()METHOD8
-.src\components\assembly\AssemblyComponent.java ("
-isFinalfalse"–
-declarationString€<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeString*toString2€
->java.lang.String.format(java.lang.String, java.lang.Object...)CALL8
-.src\components\assembly\AssemblyComponent.java (2`
-components.Component.getType()CALL8
-.src\components\assembly\AssemblyComponent.java* (12`
-components.Component.getName()CALL8
-.src\components\assembly\AssemblyComponent.java5 (<2‚
-@components.assembly.AssemblyComponent.toString()?res@16.15:16.18CALL8
-.src\components\assembly\AssemblyComponent.java (2‚
-@components.assembly.AssemblyComponent.toString()?res@16.15:16.18CALL8
-.src\components\assembly\AssemblyComponent.java (2‰
-@components.assembly.AssemblyComponent.toString()?res@16.15:16.18DECLARATION8
-.src\components\assembly\AssemblyComponent.java (2Y
-java.lang.StringRETURN_TYPE8
-.src\components\assembly\AssemblyComponent.java (ç
-@components.assembly.AssemblyComponent.toString()?res@16.15:16.18VARIABLE8
-.src\components\assembly\AssemblyComponent.java ("
-typeString"
-isFinalfalse"d
-declarationStringO<mark class="modifier"> </mark>String <mark class="class-field">res</mark> = ""*res2R
-java.lang.StringTYPE8
-.src\components\assembly\AssemblyComponent.java (

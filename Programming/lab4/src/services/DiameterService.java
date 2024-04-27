@@ -15,7 +15,7 @@ import static java.lang.Double.max;
  */
 public final class DiameterService {
     private DiameterService() {
-        // TODO уточнить не должен ли быть класс сервиса abstract
+        // FIXME уточнить не должен ли быть класс сервиса abstract
     }
 
     /**

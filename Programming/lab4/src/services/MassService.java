@@ -13,7 +13,7 @@ import components.inner.InnerComponent;
  *
  * @author Gleb Kiva
  */
-public final class MassService {
+public final class MassService { // FIXME -> weaightable + getWeight(), used
     private MassService() {
     }
 

@@ -1,15 +1,0 @@
-
-$src\utils\enums\TransitionShape.java÷
-utils.enums.TransitionShapeENUM.
-$src\utils\enums\TransitionShape.java ("G
-declarationString2<mark class="modifier">enum </mark>TransitionShape*TransitionShape2b
-#utils.enums.TransitionShape?CONICALDECLARATION.
-$src\utils\enums\TransitionShape.java (2d
-%utils.enums.TransitionShape?ELLIPSOIDDECLARATION.
-$src\utils\enums\TransitionShape.java (s
-#utils.enums.TransitionShape?CONICALVALUE.
-$src\utils\enums\TransitionShape.java ("
-enumtrue*CONICALw
-%utils.enums.TransitionShape?ELLIPSOIDVALUE.
-$src\utils\enums\TransitionShape.java ("
-enumtrue*	ELLIPSOID

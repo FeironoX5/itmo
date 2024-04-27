@@ -1,20 +1,0 @@
-
-"src\utils\enums\NoseConeShape.javaÅ
-utils.enums.NoseConeShapeENUM,
-"src\utils\enums\NoseConeShape.java ("E
-declarationString0<mark class="modifier">enum </mark>NoseConeShape*NoseConeShape2^
-!utils.enums.NoseConeShape?CONICALDECLARATION,
-"src\utils\enums\NoseConeShape.java (2`
-#utils.enums.NoseConeShape?ELLIPSOIDDECLARATION,
-"src\utils\enums\NoseConeShape.java (2\
-utils.enums.NoseConeShape?OGIVEDECLARATION,
-"src\utils\enums\NoseConeShape.java (	o
-!utils.enums.NoseConeShape?CONICALVALUE,
-"src\utils\enums\NoseConeShape.java ("
-enumtrue*CONICALs
-#utils.enums.NoseConeShape?ELLIPSOIDVALUE,
-"src\utils\enums\NoseConeShape.java ("
-enumtrue*	ELLIPSOIDk
-utils.enums.NoseConeShape?OGIVEVALUE,
-"src\utils\enums\NoseConeShape.java (	"
-enumtrue*OGIVE

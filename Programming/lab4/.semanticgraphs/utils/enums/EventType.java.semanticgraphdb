@@ -1,22 +1,0 @@
-
-src\utils\enums\EventType.javaª
-utils.enums.EventTypeENUM(
-src\utils\enums\EventType.java
- 
-("A
-declarationString,<mark class="modifier">enum </mark>EventType*	EventType2^
-%utils.enums.EventType?STAGE_SEPARATEDDECLARATION(
-src\utils\enums\EventType.java (2c
-*utils.enums.EventType?FLIGHT_PHASE_ENTEREDDECLARATION(
-src\utils\enums\EventType.java (2_
-&utils.enums.EventType?ENGINE_POWER_SETDECLARATION(
-src\utils\enums\EventType.java (w
-%utils.enums.EventType?STAGE_SEPARATEDVALUE(
-src\utils\enums\EventType.java ("
-enumtrue*STAGE_SEPARATEDÅ
-*utils.enums.EventType?FLIGHT_PHASE_ENTEREDVALUE(
-src\utils\enums\EventType.java ("
-enumtrue*FLIGHT_PHASE_ENTEREDy
-&utils.enums.EventType?ENGINE_POWER_SETVALUE(
-src\utils\enums\EventType.java ("
-enumtrue*ENGINE_POWER_SET

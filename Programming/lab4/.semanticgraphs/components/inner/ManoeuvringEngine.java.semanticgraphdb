@@ -1,201 +1,0 @@
-
-+src\components\inner\ManoeuvringEngine.javaõ
-"components.inner.ManoeuvringEngineCLASS5
-+src\components\inner\ManoeuvringEngine.java	 	("
-packagecomponents.inner"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"‹
-declarationString∆<mark class="modifier">public </mark><mark class="modifier">class </mark>ManoeuvringEngine<mark class="modifier"> extends </mark>InnerComponent<mark class="modifier"><br>implements </mark>MotorMount"
-accesspublic*ManoeuvringEngine2≤
-lcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)DECLARATION5
-+src\components\inner\ManoeuvringEngine.java (2|
-6components.inner.ManoeuvringEngine.calculateMovement()DECLARATION5
-+src\components\inner\ManoeuvringEngine.java (#2t
-.components.inner.ManoeuvringEngine.getVector()DECLARATION5
-+src\components\inner\ManoeuvringEngine.java (2|
-6components.inner.ManoeuvringEngine.setVelocity(double)DECLARATION5
-+src\components\inner\ManoeuvringEngine.java   (2v
-0components.inner.ManoeuvringEngine.getVelocity()DECLARATION5
-+src\components\inner\ManoeuvringEngine.java) )(2{
-5components.inner.ManoeuvringEngine?vector@10.19:10.25DECLARATION5
-+src\components\inner\ManoeuvringEngine.java
- 
-(2}
-7components.inner.ManoeuvringEngine?velocity@11.19:11.27DECLARATION5
-+src\components\inner\ManoeuvringEngine.java (2\
-utils.interfaces.MotorMountEXTEND5
-+src\components\inner\ManoeuvringEngine.java	A 	(K2`
-components.inner.InnerComponentEXTEND5
-+src\components\inner\ManoeuvringEngine.java	' 	(5·
-lcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)CONSTRUCTOR5
-+src\components\inner\ManoeuvringEngine.java ("à
-declarationStringÚ<mark class="modifier">public </mark><mark class="method">ManoeuvringEngine</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> rotation)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*ManoeuvringEngine2Y
-java.lang.Math.sin(double)CALL5
-+src\components\inner\ManoeuvringEngine.java& ()2Y
-java.lang.Math.cos(double)CALL5
-+src\components\inner\ManoeuvringEngine.java: (=2u
-6components.inner.ManoeuvringEngine.setVelocity(double)CALL5
-+src\components\inner\ManoeuvringEngine.java (2o
-0components.Vector.Vector(double, double, double)CALL5
-+src\components\inner\ManoeuvringEngine.java ( 2ù
-^components.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)CALL5
-+src\components\inner\ManoeuvringEngine.java (2∞
-qcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!nameCALL5
-+src\components\inner\ManoeuvringEngine.java (2∞
-qcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!massCALL5
-+src\components\inner\ManoeuvringEngine.java (2¥
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!materialCALL5
-+src\components\inner\ManoeuvringEngine.java ("2¥
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!rotationCALL5
-+src\components\inner\ManoeuvringEngine.java* (22¥
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!rotationCALL5
-+src\components\inner\ManoeuvringEngine.java> (F2t
-5components.inner.ManoeuvringEngine?vector@10.19:10.25CALL5
-+src\components\inner\ManoeuvringEngine.java (2µ
-qcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!name	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java$ ((2µ
-qcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!mass	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java1 (52π
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!material	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java@ (H2π
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!rotation	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java (2h
-"components.inner.ManoeuvringEngineRETURN_TYPE5
-+src\components\inner\ManoeuvringEngine.java ( –
-qcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!name	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java$ (("
-typeString"
-isFinalfalse" 
-declarationStringString name*name2O
-java.lang.StringTYPE5
-+src\components\inner\ManoeuvringEngine.java (#‰
-qcomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!mass	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java1 (5"
-typedouble"
-isFinalfalse">
-declarationString)<mark class="modifier">double</mark> mass*mass2E
-doubleTYPE5
-+src\components\inner\ManoeuvringEngine.java* (0‰
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!material	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java@ (H"
-typeMaterial"
-isFinalfalse"&
-declarationStringMaterial material*material2S
-utils.enums.MaterialTYPE5
-+src\components\inner\ManoeuvringEngine.java7 (?
-ucomponents.inner.ManoeuvringEngine.ManoeuvringEngine(java.lang.String, double, utils.enums.Material, double)!rotation	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java ("
-typedouble"
-isFinalfalse"B
-declarationString-<mark class="modifier">double</mark> rotation*rotation2E
-doubleTYPE5
-+src\components\inner\ManoeuvringEngine.java (π
-6components.inner.ManoeuvringEngine.calculateMovement()METHOD5
-+src\components\inner\ManoeuvringEngine.java (#"
-isFinalfalse"ü
-declarationStringâ<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>Vector <mark class="method">calculateMovement</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeVector*calculateMovement2t
-5components.Vector.multiply(components.Vector, double)CALL5
-+src\components\inner\ManoeuvringEngine.java (2v
-7components.inner.ManoeuvringEngine?velocity@11.19:11.27CALL5
-+src\components\inner\ManoeuvringEngine.java, (42t
-5components.inner.ManoeuvringEngine?vector@10.19:10.25CALL5
-+src\components\inner\ManoeuvringEngine.java$ (*2r
-/utils.interfaces.MotorMount.calculateMovement()OVERRIDE5
-+src\components\inner\ManoeuvringEngine.java (#2W
-components.VectorRETURN_TYPE5
-+src\components\inner\ManoeuvringEngine.java (´
-.components.inner.ManoeuvringEngine.getVector()METHOD5
-+src\components\inner\ManoeuvringEngine.java ("
-isFinalfalse"ó
-declarationStringÅ<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>Vector <mark class="method">getVector</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeVector*	getVector2t
-5components.inner.ManoeuvringEngine?vector@10.19:10.25CALL5
-+src\components\inner\ManoeuvringEngine.java (2j
-'utils.interfaces.MotorMount.getVector()OVERRIDE5
-+src\components\inner\ManoeuvringEngine.java (2W
-components.VectorRETURN_TYPE5
-+src\components\inner\ManoeuvringEngine.java («
-6components.inner.ManoeuvringEngine.setVelocity(double)METHOD5
-+src\components\inner\ManoeuvringEngine.java   ("
-isFinalfalse"º
-declarationString¶<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark><mark class="modifier">void</mark> <mark class="method">setVelocity</mark>(<mark class="modifier">double</mark> velocity)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NaturalNumberException"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typevoid*setVelocity2Ä
-Ajava.io.PrintStream.printf(java.lang.String, java.lang.Object...)CALL5
-+src\components\inner\ManoeuvringEngine.java% %(2]
-components.Component.getName()CALL5
-+src\components\inner\ManoeuvringEngine.java%C %(J2è
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL5
-+src\components\inner\ManoeuvringEngine.java" "(,2~
-?components.inner.ManoeuvringEngine.setVelocity(double)!velocityCALL5
-+src\components\inner\ManoeuvringEngine.java! !(2~
-?components.inner.ManoeuvringEngine.setVelocity(double)!velocityCALL5
-+src\components\inner\ManoeuvringEngine.java$ $( 2v
-7components.inner.ManoeuvringEngine?velocity@11.19:11.27CALL5
-+src\components\inner\ManoeuvringEngine.java$ $(2v
-7components.inner.ManoeuvringEngine?velocity@11.19:11.27CALL5
-+src\components\inner\ManoeuvringEngine.java%S %([2r
-/utils.interfaces.MotorMount.setVelocity(double)OVERRIDE5
-+src\components\inner\ManoeuvringEngine.java   (2É
-?components.inner.ManoeuvringEngine.setVelocity(double)!velocity	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java #  (+2J
-voidRETURN_TYPE5
-+src\components\inner\ManoeuvringEngine.java   (∫
-?components.inner.ManoeuvringEngine.setVelocity(double)!velocity	PARAMETER5
-+src\components\inner\ManoeuvringEngine.java #  (+"
-typedouble"
-isFinalfalse"B
-declarationString-<mark class="modifier">double</mark> velocity*velocity2E
-doubleTYPE5
-+src\components\inner\ManoeuvringEngine.java   ("»
-0components.inner.ManoeuvringEngine.getVelocity()METHOD5
-+src\components\inner\ManoeuvringEngine.java) )("
-isFinalfalse"∑
-declarationString°<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getVelocity</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getVelocity2v
-7components.inner.ManoeuvringEngine?velocity@11.19:11.27CALL5
-+src\components\inner\ManoeuvringEngine.java* *(2l
-)utils.interfaces.MotorMount.getVelocity()OVERRIDE5
-+src\components\inner\ManoeuvringEngine.java) )(2L
-doubleRETURN_TYPE5
-+src\components\inner\ManoeuvringEngine.java) )(Ö
-5components.inner.ManoeuvringEngine?vector@10.19:10.25VARIABLE5
-+src\components\inner\ManoeuvringEngine.java
- 
-("
-isFinalfalse"
-typeVector"i
-declarationStringT<mark class="modifier">private </mark>Vector <mark class="class-field">vector</mark>"
-isStaticfalse"
-accessprivate*vector2P
-components.VectorTYPE5
-+src\components\inner\ManoeuvringEngine.java
- 
-(ü
-7components.inner.ManoeuvringEngine?velocity@11.19:11.27VARIABLE5
-+src\components\inner\ManoeuvringEngine.java ("
-isFinalfalse"
-typedouble"â
-declarationStringt<mark class="modifier">private </mark><mark class="modifier">double</mark> <mark class="class-field">velocity</mark>"
-isStaticfalse"
-accessprivate*velocity2E
-doubleTYPE5
-+src\components\inner\ManoeuvringEngine.java (

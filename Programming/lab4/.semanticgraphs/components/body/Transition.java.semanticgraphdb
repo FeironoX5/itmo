@@ -1,178 +1,0 @@
-
-#src\components\body\Transition.java‚
-components.body.TransitionCLASS-
-#src\components\body\Transition.java	 	("
-packagecomponents.body"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"ù
-declarationStringá<mark class="modifier">public </mark><mark class="modifier">class </mark>Transition<mark class="modifier"> extends </mark>BodyComponent"
-accesspublic*
-Transition2Ï
-≠components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)DECLARATION-
-#src\components\body\Transition.java (2k
--components.body.Transition.getInnerDiameter()DECLARATION-
-#src\components\body\Transition.java ("2c
-%components.body.Transition.getShape()DECLARATION-
-#src\components\body\Transition.java (#2r
-4components.body.Transition?innerDiameter@10.25:10.38DECLARATION-
-#src\components\body\Transition.java
- 
-(&2j
-,components.body.Transition?shape@11.34:11.39DECLARATION-
-#src\components\body\Transition.java" ('2V
-components.body.BodyComponentEXTEND-
-#src\components\body\Transition.java	  	(-ñ/
-≠components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)CONSTRUCTOR-
-#src\components\body\Transition.java ("Ç
-declarationStringÏ<mark class="modifier">public </mark><mark class="method">Transition</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material<mark class="modifier"><mark class="modifier">,</mark></mark> InnerComponent[] inners<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> height<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> diameter<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> innerDiameter<mark class="modifier"><mark class="modifier">,</mark></mark> TransitionShape shape)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*
-Transition2á
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL-
-#src\components\body\Transition.java (,2∆
-écomponents.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)CALL-
-#src\components\body\Transition.java (2Í
-≤components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!nameCALL-
-#src\components\body\Transition.java (2Í
-≤components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!massCALL-
-#src\components\body\Transition.java (2Ó
-∂components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!materialCALL-
-#src\components\body\Transition.java ("2Ï
-¥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!innersCALL-
-#src\components\body\Transition.java$ (*2Ï
-¥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!heightCALL-
-#src\components\body\Transition.java, (22Ó
-∂components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!diameterCALL-
-#src\components\body\Transition.java4 (<2Û
-ªcomponents.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!innerDiameterCALL-
-#src\components\body\Transition.java (2Û
-ªcomponents.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!innerDiameterCALL-
-#src\components\body\Transition.java (*2Î
-≥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!shapeCALL-
-#src\components\body\Transition.java (2k
-4components.body.Transition?innerDiameter@10.25:10.38CALL-
-#src\components\body\Transition.java (2c
-,components.body.Transition?shape@11.34:11.39CALL-
-#src\components\body\Transition.java (2Ô
-≤components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!name	PARAMETER-
-#src\components\body\Transition.java (!2Ô
-≤components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!mass	PARAMETER-
-#src\components\body\Transition.java* (.2Û
-∂components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!material	PARAMETER-
-#src\components\body\Transition.java9 (A2Ò
-¥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!inners	PARAMETER-
-#src\components\body\Transition.java (#2Ò
-¥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!height	PARAMETER-
-#src\components\body\Transition.java, (22Û
-∂components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!diameter	PARAMETER-
-#src\components\body\Transition.java; (C2¯
-ªcomponents.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!innerDiameter	PARAMETER-
-#src\components\body\Transition.javaL (Y2
-≥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!shape	PARAMETER-
-#src\components\body\Transition.javak (p2X
-components.body.TransitionRETURN_TYPE-
-#src\components\body\Transition.java ( Ç
-≤components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!name	PARAMETER-
-#src\components\body\Transition.java (!"
-typeString"
-isFinalfalse" 
-declarationStringString name*name2G
-java.lang.StringTYPE-
-#src\components\body\Transition.java (ñ
-≤components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!mass	PARAMETER-
-#src\components\body\Transition.java* (."
-typedouble"
-isFinalfalse">
-declarationString)<mark class="modifier">double</mark> mass*mass2=
-doubleTYPE-
-#src\components\body\Transition.java# ()ñ
-∂components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!material	PARAMETER-
-#src\components\body\Transition.java9 (A"
-typeMaterial"
-isFinalfalse"&
-declarationStringMaterial material*material2K
-utils.enums.MaterialTYPE-
-#src\components\body\Transition.java0 (8≠
-¥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!inners	PARAMETER-
-#src\components\body\Transition.java (#"
-typeInnerComponent[]"
-isFinalfalse",
-declarationStringInnerComponent[] inners*inners2X
-!components.inner.InnerComponent[]TYPE-
-#src\components\body\Transition.java (ú
-¥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!height	PARAMETER-
-#src\components\body\Transition.java, (2"
-typedouble"
-isFinalfalse"@
-declarationString+<mark class="modifier">double</mark> height*height2=
-doubleTYPE-
-#src\components\body\Transition.java% (+¢
-∂components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!diameter	PARAMETER-
-#src\components\body\Transition.java; (C"
-typedouble"
-isFinalfalse"B
-declarationString-<mark class="modifier">double</mark> diameter*diameter2=
-doubleTYPE-
-#src\components\body\Transition.java4 (:±
-ªcomponents.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!innerDiameter	PARAMETER-
-#src\components\body\Transition.javaL (Y"
-typedouble"
-isFinalfalse"G
-declarationString2<mark class="modifier">double</mark> innerDiameter*innerDiameter2=
-doubleTYPE-
-#src\components\body\Transition.javaE (K¢
-≥components.body.Transition.Transition(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double, double, utils.enums.TransitionShape)!shape	PARAMETER-
-#src\components\body\Transition.javak (p"
-typeTransitionShape"
-isFinalfalse"*
-declarationStringTransitionShape shape*shape2R
-utils.enums.TransitionShapeTYPE-
-#src\components\body\Transition.java[ (jó
--components.body.Transition.getInnerDiameter()METHOD-
-#src\components\body\Transition.java (""
-isFinalfalse"ç
-declarationStringx<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getInnerDiameter</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getInnerDiameter2k
-4components.body.Transition?innerDiameter@10.25:10.38CALL-
-#src\components\body\Transition.java (2D
-doubleRETURN_TYPE-
-#src\components\body\Transition.java (ˇ
-%components.body.Transition.getShape()METHOD-
-#src\components\body\Transition.java (#"
-isFinalfalse"p
-declarationString[<mark class="modifier">public </mark>TransitionShape <mark class="method">getShape</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeTransitionShape*getShape2c
-,components.body.Transition?shape@11.34:11.39CALL-
-#src\components\body\Transition.java (2Y
-utils.enums.TransitionShapeRETURN_TYPE-
-#src\components\body\Transition.java (∑
-4components.body.Transition?innerDiameter@10.25:10.38VALUE-
-#src\components\body\Transition.java
- 
-(&"
-isFinaltrue"
-typedouble"≥
-declarationStringù<mark class="modifier">private </mark><mark class="modifier">final </mark><mark class="modifier">double</mark> <mark class="class-field">innerDiameter</mark>"
-isStaticfalse"
-accessprivate*innerDiameter2=
-doubleTYPE-
-#src\components\body\Transition.java
- 
-(®
-,components.body.Transition?shape@11.34:11.39VALUE-
-#src\components\body\Transition.java" ('"
-isFinaltrue"
-typeTransitionShape"ñ
-declarationStringÄ<mark class="modifier">private </mark><mark class="modifier">final </mark>TransitionShape <mark class="class-field">shape</mark>"
-isStaticfalse"
-accessprivate*shape2R
-utils.enums.TransitionShapeTYPE-
-#src\components\body\Transition.java (!

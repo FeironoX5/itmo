@@ -1,33 +1,0 @@
-
-'src\utils\interfaces\EventListener.java–
-utils.interfaces.EventListenerTRAIT1
-'src\utils\interfaces\EventListener.java ("
-packageutils.interfaces"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"o
-declarationStringZ<mark class="modifier">public </mark><mark class="modifier">interface </mark>EventListener"
-accesspublic*EventListener2á
-Eutils.interfaces.EventListener.handle(utils.implementations.Event<?>)DECLARATION1
-'src\utils\interfaces\EventListener.java	 (’
-Eutils.interfaces.EventListener.handle(utils.implementations.Event<?>)METHOD1
-'src\utils\interfaces\EventListener.java	 ("
-isFinalfalse"è
-declarationStringz<mark class="modifier"> </mark><mark class="modifier">void</mark> <mark class="method">handle</mark>(Event&lt;?&gt; event)"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typevoid*handle2ã
-Kutils.interfaces.EventListener.handle(utils.implementations.Event<?>)!event	PARAMETER1
-'src\utils\interfaces\EventListener.java (2F
-voidRETURN_TYPE1
-'src\utils\interfaces\EventListener.java (≥
-Kutils.interfaces.EventListener.handle(utils.implementations.Event<?>)!event	PARAMETER1
-'src\utils\interfaces\EventListener.java ("
-typeEvent<?>"
-isFinalfalse"#
-declarationStringEvent<?> event*event2V
-utils.implementations.EventTYPE1
-'src\utils\interfaces\EventListener.java (

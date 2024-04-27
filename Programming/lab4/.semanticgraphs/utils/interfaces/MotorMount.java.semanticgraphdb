@@ -1,77 +1,0 @@
-
-$src\utils\interfaces\MotorMount.javaì
-utils.interfaces.MotorMountTRAIT.
-$src\utils\interfaces\MotorMount.java
- 
-("
-packageutils.interfaces"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"l
-declarationStringW<mark class="modifier">public </mark><mark class="modifier">interface </mark>MotorMount"
-accesspublic*
-MotorMount2n
-/utils.interfaces.MotorMount.setVelocity(double)DECLARATION.
-$src\utils\interfaces\MotorMount.java	 (2h
-)utils.interfaces.MotorMount.getVelocity()DECLARATION.
-$src\utils\interfaces\MotorMount.java (2f
-'utils.interfaces.MotorMount.getVector()DECLARATION.
-$src\utils\interfaces\MotorMount.java (2n
-/utils.interfaces.MotorMount.calculateMovement()DECLARATION.
-$src\utils\interfaces\MotorMount.java' '( 
-/utils.interfaces.MotorMount.setVelocity(double)METHOD.
-$src\utils\interfaces\MotorMount.java	 ("
-isFinalfalse"ˆ
-declarationStringò<mark class="modifier"> </mark><mark class="modifier">void</mark> <mark class="method">setVelocity</mark>(<mark class="modifier">double</mark> velocity)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NaturalNumberException"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typevoid*setVelocity2u
-8utils.interfaces.MotorMount.setVelocity(double)!velocity	PARAMETER.
-$src\utils\interfaces\MotorMount.java ($2C
-voidRETURN_TYPE.
-$src\utils\interfaces\MotorMount.java (¥
-8utils.interfaces.MotorMount.setVelocity(double)!velocity	PARAMETER.
-$src\utils\interfaces\MotorMount.java ($"
-typedouble"
-isFinalfalse"B
-declarationString-<mark class="modifier">double</mark> velocity*velocity2>
-doubleTYPE.
-$src\utils\interfaces\MotorMount.java (¡
-)utils.interfaces.MotorMount.getVelocity()METHOD.
-$src\utils\interfaces\MotorMount.java ("
-isFinalfalse"‚
-declarationStringm<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="method">getVelocity</mark>()"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typedouble*getVelocity2E
-doubleRETURN_TYPE.
-$src\utils\interfaces\MotorMount.java (
-‡
-'utils.interfaces.MotorMount.getVector()METHOD.
-$src\utils\interfaces\MotorMount.java ("
-isFinalfalse"b
-declarationStringM<mark class="modifier"> </mark>Vector <mark class="method">getVector</mark>()"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typeVector*	getVector2P
-components.VectorRETURN_TYPE.
-$src\utils\interfaces\MotorMount.java (
-Ÿ
-/utils.interfaces.MotorMount.calculateMovement()METHOD.
-$src\utils\interfaces\MotorMount.java' '("
-isFinalfalse"j
-declarationStringU<mark class="modifier"> </mark>Vector <mark class="method">calculateMovement</mark>()"
-isStaticfalse"
-accesspackage_private"
-
-isAbstractfalse"
-typeVector*calculateMovement2P
-components.VectorRETURN_TYPE.
-$src\utils\interfaces\MotorMount.java' '(

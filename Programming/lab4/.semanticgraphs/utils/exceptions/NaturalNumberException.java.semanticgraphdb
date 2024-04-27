@@ -1,33 +1,0 @@
-
-0src\utils\exceptions\NaturalNumberException.java¤
-'utils.exceptions.NaturalNumberExceptionCLASS:
-0src\utils\exceptions\NaturalNumberException.java (#"
-packageutils.exceptions"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"«
-declarationString•<mark class="modifier">public </mark><mark class="modifier">class </mark>NaturalNumberException<mark class="modifier"> extends </mark>NumberException"
-accesspublic*NaturalNumberException2›
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)DECLARATION:
-0src\utils\exceptions\NaturalNumberException.java (!2f
- utils.exceptions.NumberExceptionEXTEND:
-0src\utils\exceptions\NaturalNumberException.java, (;ø
-Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CONSTRUCTOR:
-0src\utils\exceptions\NaturalNumberException.java (!"‚
-declarationStringm<mark class="modifier">public </mark><mark class="method">NaturalNumberException</mark>(final String message)*NaturalNumberException2†
-Butils.exceptions.NumberException.NumberException(java.lang.String)CALL:
-0src\utils\exceptions\NaturalNumberException.java (2œ
-Xutils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)!messageCALL:
-0src\utils\exceptions\NaturalNumberException.java (2¡
-Xutils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)!message	PARAMETER:
-0src\utils\exceptions\NaturalNumberException.java/ (62r
-'utils.exceptions.NaturalNumberExceptionRETURN_TYPE:
-0src\utils\exceptions\NaturalNumberException.java (!Æ
-Xutils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)!message	PARAMETER:
-0src\utils\exceptions\NaturalNumberException.java/ (6"
-typeString"
-isFinaltrue"#
-declarationStringString message*message2T
-java.lang.StringTYPE:
-0src\utils\exceptions\NaturalNumberException.java( (.

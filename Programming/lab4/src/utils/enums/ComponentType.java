@@ -6,7 +6,7 @@ package utils.enums;
  * @author Gleb Kiva
  */
 
-public enum ComponentType { // TODO избавится от enum, заменить на Instance of
+public enum ComponentType { // TODO избавиться от enum, заменить на Instance of
     /**
      * Сборочный компонент (напр. ).
      */

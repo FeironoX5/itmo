@@ -7,13 +7,13 @@ import utils.exceptions.NaturalNumberException;
 import utils.exceptions.NumberException;
 
 /**
- * {@code Component} испоется для построения ракеты.
- * Он должен быть реализован как один из следуюих классов:
+ * {@code Component} используется для построения ракеты.
+ * Он должен быть реализован как один из следующих классов:
  *
  * <pre>
  * Component
  *         | -BodyComponent
- *         | -AssemlyComponent
+ *         | -AssemblyComponent
  *         | -InnerComponent
  *         | -OuterComponent // TODO добавить OuterComponent как отдельный класс
  * </pre>

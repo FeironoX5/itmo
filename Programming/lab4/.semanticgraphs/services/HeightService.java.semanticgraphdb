@@ -1,162 +1,0 @@
-
-src\services\HeightService.javaë
-services.HeightServiceCLASS)
-src\services\HeightService.java ( "
-packageservices"
-isFinaltrue"
-inner classfalse"
-
-isAbstractfalse"è
-declarationStringz<mark class="modifier">public </mark><mark class="modifier">final </mark><mark class="modifier">class </mark>HeightService"
-accesspublic*HeightService2`
-&services.HeightService.HeightService()DECLARATION)
-src\services\HeightService.java (2m
-3services.HeightService.getHeight(components.Rocket)DECLARATION)
-src\services\HeightService.java ("2u
-;services.HeightService.getHeight(components.assembly.Stage)DECLARATION)
-src\services\HeightService.java% %("2y
-?services.HeightService.getHeight(components.body.BodyComponent)DECLARATION)
-src\services\HeightService.java3 3("©
-&services.HeightService.HeightService()CONSTRUCTOR)
-src\services\HeightService.java ("f
-declarationStringQ<mark class="modifier">private </mark><mark class="method">HeightService</mark>()*HeightService2P
-services.HeightServiceRETURN_TYPE)
-src\services\HeightService.java (™
-3services.HeightService.getHeight(components.Rocket)METHOD)
-src\services\HeightService.java (""
-isFinalfalse"ø
-declarationString©<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getHeight</mark>(final Rocket rocket)"
-isStatictrue"
-accesspublic"
-
-isAbstractfalse"
-typedouble*	getHeight2V
-#components.Rocket.getActiveStages()CALL)
-src\services\HeightService.java# (22n
-;services.HeightService.getHeight(components.assembly.Stage)CALL)
-src\services\HeightService.java (2R
-components.Rocket.getStage(int)CALL)
-src\services\HeightService.java$ (,2[
-(components.assembly.NoseCone.getHeight()CALL)
-src\services\HeightService.java& (/2N
-components.Rocket.getCone()CALL)
-src\services\HeightService.java (#2t
-Aservices.HeightService.getHeight(components.Rocket)?i@25.17:25.18CALL)
-src\services\HeightService.java (2m
-:services.HeightService.getHeight(components.Rocket)!rocketCALL)
-src\services\HeightService.java ("2t
-Aservices.HeightService.getHeight(components.Rocket)?i@25.17:25.18CALL)
-src\services\HeightService.java6 (72v
-Cservices.HeightService.getHeight(components.Rocket)?sum@24.15:24.18CALL)
-src\services\HeightService.java (2m
-:services.HeightService.getHeight(components.Rocket)!rocketCALL)
-src\services\HeightService.java (#2t
-Aservices.HeightService.getHeight(components.Rocket)?i@25.17:25.18CALL)
-src\services\HeightService.java- (.2v
-Cservices.HeightService.getHeight(components.Rocket)?sum@24.15:24.18CALL)
-src\services\HeightService.java (2m
-:services.HeightService.getHeight(components.Rocket)!rocketCALL)
-src\services\HeightService.java (2r
-:services.HeightService.getHeight(components.Rocket)!rocket	PARAMETER)
-src\services\HeightService.java0 (62}
-Cservices.HeightService.getHeight(components.Rocket)?sum@24.15:24.18DECLARATION)
-src\services\HeightService.java (2{
-Aservices.HeightService.getHeight(components.Rocket)?i@25.17:25.18DECLARATION)
-src\services\HeightService.java (2@
-doubleRETURN_TYPE)
-src\services\HeightService.java (‡
-Cservices.HeightService.getHeight(components.Rocket)?sum@24.15:24.18VARIABLE)
-src\services\HeightService.java ("
-typedouble"
-isFinalfalse"Å
-declarationStringl<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">sum</mark> = 0*sum29
-doubleTYPE)
-src\services\HeightService.java (–
-Aservices.HeightService.getHeight(components.Rocket)?i@25.17:25.18VARIABLE)
-src\services\HeightService.java ("
-typeint"
-isFinalfalse"|
-declarationStringg<mark class="modifier"> </mark><mark class="modifier">int</mark> <mark class="class-field">i</mark> = 0*i26
-intTYPE)
-src\services\HeightService.java (Ö
-:services.HeightService.getHeight(components.Rocket)!rocket	PARAMETER)
-src\services\HeightService.java0 (6"
-typeRocket"
-isFinaltrue""
-declarationStringRocket rocket*rocket2D
-components.RocketTYPE)
-src\services\HeightService.java) (/≠
-;services.HeightService.getHeight(components.assembly.Stage)METHOD)
-src\services\HeightService.java% %(""
-isFinalfalse"¡
-declarationString´<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getHeight</mark>(final Stage component)"
-isStatictrue"
-accesspublic"
-
-isAbstractfalse"
-typedouble*	getHeight2V
-#components.assembly.Stage.getBody()CALL)
-src\services\HeightService.java') '(02r
-?services.HeightService.getHeight(components.body.BodyComponent)CALL)
-src\services\HeightService.java( ((2x
-Eservices.HeightService.getHeight(components.assembly.Stage)!componentCALL)
-src\services\HeightService.java' '((2~
-Kservices.HeightService.getHeight(components.assembly.Stage)?sum@38.15:38.18CALL)
-src\services\HeightService.java( ((2|
-Iservices.HeightService.getHeight(components.assembly.Stage)?c@39.27:39.28CALL)
-src\services\HeightService.java( ((2~
-Kservices.HeightService.getHeight(components.assembly.Stage)?sum@38.15:38.18CALL)
-src\services\HeightService.java* *(2}
-Eservices.HeightService.getHeight(components.assembly.Stage)!component	PARAMETER)
-src\services\HeightService.java%/ %(82Ö
-Kservices.HeightService.getHeight(components.assembly.Stage)?sum@38.15:38.18DECLARATION)
-src\services\HeightService.java& &(2É
-Iservices.HeightService.getHeight(components.assembly.Stage)?c@39.27:39.28DECLARATION)
-src\services\HeightService.java' '(2@
-doubleRETURN_TYPE)
-src\services\HeightService.java% %(Ë
-Kservices.HeightService.getHeight(components.assembly.Stage)?sum@38.15:38.18VARIABLE)
-src\services\HeightService.java& &("
-typedouble"
-isFinalfalse"Å
-declarationStringl<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">sum</mark> = 0*sum29
-doubleTYPE)
-src\services\HeightService.java& &(‰
-Iservices.HeightService.getHeight(components.assembly.Stage)?c@39.27:39.28VARIABLE)
-src\services\HeightService.java' '("
-typeBodyComponent"
-isFinalfalse"d
-declarationStringO<mark class="modifier"> </mark>BodyComponent <mark class="class-field">c</mark>*c2P
-components.body.BodyComponentTYPE)
-src\services\HeightService.java' '(ú
-Eservices.HeightService.getHeight(components.assembly.Stage)!component	PARAMETER)
-src\services\HeightService.java%/ %(8"
-typeStage"
-isFinaltrue"$
-declarationStringStage component*	component2L
-components.assembly.StageTYPE)
-src\services\HeightService.java%) %(.»
-?services.HeightService.getHeight(components.body.BodyComponent)METHOD)
-src\services\HeightService.java3 3(""
-isFinalfalse"…
-declarationString≥<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getHeight</mark>(final BodyComponent component)"
-isStatictrue"
-accesspublic"
-
-isAbstractfalse"
-typedouble*	getHeight2\
-)components.body.BodyComponent.getHeight()CALL)
-src\services\HeightService.java4 4("2|
-Iservices.HeightService.getHeight(components.body.BodyComponent)!componentCALL)
-src\services\HeightService.java4 4(2Å
-Iservices.HeightService.getHeight(components.body.BodyComponent)!component	PARAMETER)
-src\services\HeightService.java37 3(@2@
-doubleRETURN_TYPE)
-src\services\HeightService.java3 3(¥
-Iservices.HeightService.getHeight(components.body.BodyComponent)!component	PARAMETER)
-src\services\HeightService.java37 3(@"
-typeBodyComponent"
-isFinaltrue",
-declarationStringBodyComponent component*	component2P
-components.body.BodyComponentTYPE)
-src\services\HeightService.java3) 3(6

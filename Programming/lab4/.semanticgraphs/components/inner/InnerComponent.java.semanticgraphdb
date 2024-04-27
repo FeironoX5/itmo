@@ -1,109 +1,0 @@
-
-(src\components\inner\InnerComponent.java…
-components.inner.InnerComponentCLASS2
-(src\components\inner\InnerComponent.java	 	($"
-packagecomponents.inner"
-isFinalfalse"
-inner classfalse"
-
-isAbstracttrue"Ä
-declarationString®<mark class="modifier">public </mark><mark class="modifier">abstract </mark><mark class="modifier">class </mark>InnerComponent<mark class="modifier"> extends </mark>Component"
-accesspublic*InnerComponent2¡
-^components.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)DECLARATION2
-(src\components\inner\InnerComponent.java
- 
-(2m
-*components.inner.InnerComponent.toString()DECLARATION2
-(src\components\inner\InnerComponent.java (2R
-components.ComponentEXTEND2
-(src\components\inner\InnerComponent.java	- 	(6½
-^components.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)CONSTRUCTOR2
-(src\components\inner\InnerComponent.java
- 
-("š
-declarationString„<mark class="modifier">public </mark><mark class="method">InnerComponent</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*InnerComponent2¥
-icomponents.Component.Component(java.lang.String, double, utils.enums.Material, utils.enums.ComponentType)CALL2
-(src\components\inner\InnerComponent.java (2Ÿ
-ccomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!nameCALL2
-(src\components\inner\InnerComponent.java (2Ÿ
-ccomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!massCALL2
-(src\components\inner\InnerComponent.java (2£
-gcomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!materialCALL2
-(src\components\inner\InnerComponent.java ("2¤
-ccomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!name	PARAMETER2
-(src\components\inner\InnerComponent.java
-! 
-(%2¤
-ccomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!mass	PARAMETER2
-(src\components\inner\InnerComponent.java
-. 
-(22¨
-gcomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!material	PARAMETER2
-(src\components\inner\InnerComponent.java
-= 
-(E2b
-components.inner.InnerComponentRETURN_TYPE2
-(src\components\inner\InnerComponent.java ( ¼
-ccomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!name	PARAMETER2
-(src\components\inner\InnerComponent.java
-! 
-(%"
-typeString"
-isFinalfalse" 
-declarationStringString name*name2L
-java.lang.StringTYPE2
-(src\components\inner\InnerComponent.java
- 
-( Ð
-ccomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!mass	PARAMETER2
-(src\components\inner\InnerComponent.java
-. 
-(2"
-typedouble"
-isFinalfalse">
-declarationString)<mark class="modifier">double</mark> mass*mass2B
-doubleTYPE2
-(src\components\inner\InnerComponent.java
-' 
-(-Ð
-gcomponents.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)!material	PARAMETER2
-(src\components\inner\InnerComponent.java
-= 
-(E"
-typeMaterial"
-isFinalfalse"&
-declarationStringMaterial material*material2P
-utils.enums.MaterialTYPE2
-(src\components\inner\InnerComponent.java
-4 
-(<ß
-*components.inner.InnerComponent.toString()METHOD2
-(src\components\inner\InnerComponent.java ("
-isFinalfalse"–
-declarationString€<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
-isStaticfalse"
-accesspublic"
-
-isAbstractfalse"
-typeString*toString2z
->java.lang.String.format(java.lang.String, java.lang.Object...)CALL2
-(src\components\inner\InnerComponent.java (2Z
-components.Component.getType()CALL2
-(src\components\inner\InnerComponent.java. (52Z
-components.Component.getName()CALL2
-(src\components\inner\InnerComponent.java9 (@2v
-:components.inner.InnerComponent.toString()?res@17.15:17.18CALL2
-(src\components\inner\InnerComponent.java (2v
-:components.inner.InnerComponent.toString()?res@17.15:17.18CALL2
-(src\components\inner\InnerComponent.java (2}
-:components.inner.InnerComponent.toString()?res@17.15:17.18DECLARATION2
-(src\components\inner\InnerComponent.java (2S
-java.lang.StringRETURN_TYPE2
-(src\components\inner\InnerComponent.java (Õ
-:components.inner.InnerComponent.toString()?res@17.15:17.18VARIABLE2
-(src\components\inner\InnerComponent.java ("
-typeString"
-isFinalfalse"d
-declarationStringO<mark class="modifier"> </mark>String <mark class="class-field">res</mark> = ""*res2L
-java.lang.StringTYPE2
-(src\components\inner\InnerComponent.java (

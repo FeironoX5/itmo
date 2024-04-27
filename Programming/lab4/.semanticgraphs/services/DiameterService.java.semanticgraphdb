@@ -1,172 +1,0 @@
-
-!src\services\DiameterService.java±
-services.DiameterServiceCLASS+
-!src\services\DiameterService.java (""
-packageservices"
-isFinaltrue"
-inner classfalse"
-
-isAbstractfalse"ë
-declarationString|<mark class="modifier">public </mark><mark class="modifier">final </mark><mark class="modifier">class </mark>DiameterService"
-accesspublic*DiameterService2f
-*services.DiameterService.DiameterService()DECLARATION+
-!src\services\DiameterService.java (2s
-7services.DiameterService.getDiameter(components.Rocket)DECLARATION+
-!src\services\DiameterService.java ($2{
-?services.DiameterService.getDiameter(components.assembly.Stage)DECLARATION+
-!src\services\DiameterService.java) )($2
-Cservices.DiameterService.getDiameter(components.body.BodyComponent)DECLARATION+
-!src\services\DiameterService.java7 7($∑
-*services.DiameterService.DiameterService()CONSTRUCTOR+
-!src\services\DiameterService.java ("h
-declarationStringS<mark class="modifier">private </mark><mark class="method">DiameterService</mark>()*DiameterService2T
-services.DiameterServiceRETURN_TYPE+
-!src\services\DiameterService.java (¬
-7services.DiameterService.getDiameter(components.Rocket)METHOD+
-!src\services\DiameterService.java ($"
-isFinalfalse"¡
-declarationString´<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getDiameter</mark>(final Rocket rocket)"
-isStatictrue"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getDiameter2X
-#components.Rocket.getActiveStages()CALL+
-!src\services\DiameterService.java# (22Y
-$java.lang.Double.max(double, double)CALL+
-!src\services\DiameterService.java (2t
-?services.DiameterService.getDiameter(components.assembly.Stage)CALL+
-!src\services\DiameterService.java ((2T
-components.Rocket.getStage(int)CALL+
-!src\services\DiameterService.java0 (82Y
-$java.lang.Double.max(double, double)CALL+
-!src\services\DiameterService.java   (2_
-*components.assembly.NoseCone.getDiameter()CALL+
-!src\services\DiameterService.java *  (52P
-components.Rocket.getCone()CALL+
-!src\services\DiameterService.java    ('2z
-Eservices.DiameterService.getDiameter(components.Rocket)?i@29.17:29.18CALL+
-!src\services\DiameterService.java (2s
->services.DiameterService.getDiameter(components.Rocket)!rocketCALL+
-!src\services\DiameterService.java ("2z
-Eservices.DiameterService.getDiameter(components.Rocket)?i@29.17:29.18CALL+
-!src\services\DiameterService.java6 (72}
-Hservices.DiameterService.getDiameter(components.Rocket)?maxd@27.15:27.19CALL+
-!src\services\DiameterService.java (2}
-Hservices.DiameterService.getDiameter(components.Rocket)?maxd@27.15:27.19CALL+
-!src\services\DiameterService.java (2s
->services.DiameterService.getDiameter(components.Rocket)!rocketCALL+
-!src\services\DiameterService.java) (/2z
-Eservices.DiameterService.getDiameter(components.Rocket)?i@29.17:29.18CALL+
-!src\services\DiameterService.java9 (:2}
-Hservices.DiameterService.getDiameter(components.Rocket)?maxd@27.15:27.19CALL+
-!src\services\DiameterService.java   (2s
->services.DiameterService.getDiameter(components.Rocket)!rocketCALL+
-!src\services\DiameterService.java   (2x
->services.DiameterService.getDiameter(components.Rocket)!rocket	PARAMETER+
-!src\services\DiameterService.java2 (82Ñ
-Hservices.DiameterService.getDiameter(components.Rocket)?maxd@27.15:27.19DECLARATION+
-!src\services\DiameterService.java (2Å
-Eservices.DiameterService.getDiameter(components.Rocket)?i@29.17:29.18DECLARATION+
-!src\services\DiameterService.java (2B
-doubleRETURN_TYPE+
-!src\services\DiameterService.java (Î
-Hservices.DiameterService.getDiameter(components.Rocket)?maxd@27.15:27.19VARIABLE+
-!src\services\DiameterService.java ("
-typedouble"
-isFinalfalse"Ç
-declarationStringm<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">maxd</mark> = 0*maxd2;
-doubleTYPE+
-!src\services\DiameterService.java (ÿ
-Eservices.DiameterService.getDiameter(components.Rocket)?i@29.17:29.18VARIABLE+
-!src\services\DiameterService.java ("
-typeint"
-isFinalfalse"|
-declarationStringg<mark class="modifier"> </mark><mark class="modifier">int</mark> <mark class="class-field">i</mark> = 0*i28
-intTYPE+
-!src\services\DiameterService.java (ç
->services.DiameterService.getDiameter(components.Rocket)!rocket	PARAMETER+
-!src\services\DiameterService.java2 (8"
-typeRocket"
-isFinaltrue""
-declarationStringRocket rocket*rocket2F
-components.RocketTYPE+
-!src\services\DiameterService.java+ (1’
-?services.DiameterService.getDiameter(components.assembly.Stage)METHOD+
-!src\services\DiameterService.java) )($"
-isFinalfalse"√
-declarationString≠<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getDiameter</mark>(final Stage component)"
-isStatictrue"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getDiameter2X
-#components.assembly.Stage.getBody()CALL+
-!src\services\DiameterService.java+) +(02Y
-$java.lang.Double.max(double, double)CALL+
-!src\services\DiameterService.java, ,(2x
-Cservices.DiameterService.getDiameter(components.body.BodyComponent)CALL+
-!src\services\DiameterService.java, ,((2~
-Iservices.DiameterService.getDiameter(components.assembly.Stage)!componentCALL+
-!src\services\DiameterService.java+ +((2Ö
-Pservices.DiameterService.getDiameter(components.assembly.Stage)?maxd@42.15:42.19CALL+
-!src\services\DiameterService.java, ,(2Ö
-Pservices.DiameterService.getDiameter(components.assembly.Stage)?maxd@42.15:42.19CALL+
-!src\services\DiameterService.java, ,(2Ç
-Mservices.DiameterService.getDiameter(components.assembly.Stage)?c@43.27:43.28CALL+
-!src\services\DiameterService.java,) ,(*2Ö
-Pservices.DiameterService.getDiameter(components.assembly.Stage)?maxd@42.15:42.19CALL+
-!src\services\DiameterService.java. .(2É
-Iservices.DiameterService.getDiameter(components.assembly.Stage)!component	PARAMETER+
-!src\services\DiameterService.java)1 )(:2å
-Pservices.DiameterService.getDiameter(components.assembly.Stage)?maxd@42.15:42.19DECLARATION+
-!src\services\DiameterService.java* *(2â
-Mservices.DiameterService.getDiameter(components.assembly.Stage)?c@43.27:43.28DECLARATION+
-!src\services\DiameterService.java+ +(2B
-doubleRETURN_TYPE+
-!src\services\DiameterService.java) )(Û
-Pservices.DiameterService.getDiameter(components.assembly.Stage)?maxd@42.15:42.19VARIABLE+
-!src\services\DiameterService.java* *("
-typedouble"
-isFinalfalse"Ç
-declarationStringm<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">maxd</mark> = 0*maxd2;
-doubleTYPE+
-!src\services\DiameterService.java* *(Ï
-Mservices.DiameterService.getDiameter(components.assembly.Stage)?c@43.27:43.28VARIABLE+
-!src\services\DiameterService.java+ +("
-typeBodyComponent"
-isFinalfalse"d
-declarationStringO<mark class="modifier"> </mark>BodyComponent <mark class="class-field">c</mark>*c2R
-components.body.BodyComponentTYPE+
-!src\services\DiameterService.java+ +(§
-Iservices.DiameterService.getDiameter(components.assembly.Stage)!component	PARAMETER+
-!src\services\DiameterService.java)1 )(:"
-typeStage"
-isFinaltrue"$
-declarationStringStage component*	component2N
-components.assembly.StageTYPE+
-!src\services\DiameterService.java)+ )(0Â
-Cservices.DiameterService.getDiameter(components.body.BodyComponent)METHOD+
-!src\services\DiameterService.java7 7($"
-isFinalfalse"À
-declarationStringµ<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getDiameter</mark>(final BodyComponent component)"
-isStatictrue"
-accesspublic"
-
-isAbstractfalse"
-typedouble*getDiameter2`
-+components.body.BodyComponent.getDiameter()CALL+
-!src\services\DiameterService.java8 8($2Ç
-Mservices.DiameterService.getDiameter(components.body.BodyComponent)!componentCALL+
-!src\services\DiameterService.java8 8(2á
-Mservices.DiameterService.getDiameter(components.body.BodyComponent)!component	PARAMETER+
-!src\services\DiameterService.java79 7(B2B
-doubleRETURN_TYPE+
-!src\services\DiameterService.java7 7(º
-Mservices.DiameterService.getDiameter(components.body.BodyComponent)!component	PARAMETER+
-!src\services\DiameterService.java79 7(B"
-typeBodyComponent"
-isFinaltrue",
-declarationStringBodyComponent component*	component2R
-components.body.BodyComponentTYPE+
-!src\services\DiameterService.java7+ 7(8

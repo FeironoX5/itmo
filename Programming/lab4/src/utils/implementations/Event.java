@@ -14,6 +14,8 @@ import utils.enums.EventType;
  * @see EventBus
  * @see EventListener
  */
+
+// FIXME T extends Payload, EngineStartedPayload, AnonimPayload -> EngineStartedPaylaod
 public class Event<T> {
     /**
      * Данные типа {@code T} о событии.

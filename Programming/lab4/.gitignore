@@ -25,7 +25,9 @@ bin/
 
 ### VS Code ###
 .vscode/
-.semanticgraphs/
 
 ### Mac OS ###
 .DS_Store
+
+### EXTENSIONS ###
+.semanticgraphs/

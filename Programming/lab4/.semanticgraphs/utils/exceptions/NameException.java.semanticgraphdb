@@ -1,37 +1,0 @@
-
-'src\utils\exceptions\NameException.java…
-utils.exceptions.NameExceptionCLASS1
-'src\utils\exceptions\NameException.java
- 
-("
-packageutils.exceptions"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"ú
-declarationStringÜ<mark class="modifier">public </mark><mark class="modifier">class </mark>NameException<mark class="modifier"> extends </mark>Exception"
-accesspublic*NameException2Ä
->utils.exceptions.NameException.NameException(java.lang.String)DECLARATION1
-'src\utils\exceptions\NameException.java (2P
-java.lang.ExceptionEXTEND1
-'src\utils\exceptions\NameException.java
-# 
-(,Â
->utils.exceptions.NameException.NameException(java.lang.String)CONSTRUCTOR1
-'src\utils\exceptions\NameException.java ("y
-declarationStringd<mark class="modifier">public </mark><mark class="method">NameException</mark>(final String message)*NameException2j
-/java.lang.Exception.Exception(java.lang.String)CALL1
-'src\utils\exceptions\NameException.java (2Å
-Futils.exceptions.NameException.NameException(java.lang.String)!messageCALL1
-'src\utils\exceptions\NameException.java (2Ü
-Futils.exceptions.NameException.NameException(java.lang.String)!message	PARAMETER1
-'src\utils\exceptions\NameException.java& (-2`
-utils.exceptions.NameExceptionRETURN_TYPE1
-'src\utils\exceptions\NameException.java (¢
-Futils.exceptions.NameException.NameException(java.lang.String)!message	PARAMETER1
-'src\utils\exceptions\NameException.java& (-"
-typeString"
-isFinaltrue"#
-declarationStringString message*message2K
-java.lang.StringTYPE1
-'src\utils\exceptions\NameException.java (%
