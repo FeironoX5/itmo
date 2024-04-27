@@ -1,0 +1,282 @@
+
+&src\components\body\BodyComponent.java¼
+components.body.BodyComponentCLASS0
+&src\components\body\BodyComponent.java (#"
+packagecomponents.body"
+isFinalfalse"
+inner classfalse"
+
+isAbstracttrue"Ã
+declarationString­<mark class="modifier">public </mark><mark class="modifier">abstract </mark><mark class="modifier">class </mark>BodyComponent<mark class="modifier"> extends </mark>Component"
+accesspublic*BodyComponent2Ð
+Žcomponents.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)DECLARATION0
+&src\components\body\BodyComponent.java (2r
+1components.body.BodyComponent.calculateMovement()DECLARATION0
+&src\components\body\BodyComponent.java   (#2j
+)components.body.BodyComponent.getInners()DECLARATION0
+&src\components\body\BodyComponent.java* *(%2j
+)components.body.BodyComponent.getHeight()DECLARATION0
+&src\components\body\BodyComponent.java. .(2l
++components.body.BodyComponent.getDiameter()DECLARATION0
+&src\components\body\BodyComponent.java2 2(2i
+(components.body.BodyComponent.toString()DECLARATION0
+&src\components\body\BodyComponent.java7 7(2q
+0components.body.BodyComponent?inners@13.35:13.41DECLARATION0
+&src\components\body\BodyComponent.java# ()2q
+0components.body.BodyComponent?height@14.25:14.31DECLARATION0
+&src\components\body\BodyComponent.java (2s
+2components.body.BodyComponent?diameter@15.25:15.33DECLARATION0
+&src\components\body\BodyComponent.java (!2P
+components.ComponentEXTEND0
+&src\components\body\BodyComponent.java, (5´&
+Žcomponents.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)CONSTRUCTOR0
+&src\components\body\BodyComponent.java ("Â
+declarationString¬<mark class="modifier">public </mark><mark class="method">BodyComponent</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material<mark class="modifier"><mark class="modifier">,</mark></mark> InnerComponent[] inners<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> height<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> diameter)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*BodyComponent2Š
+Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL0
+&src\components\body\BodyComponent.java (,2Š
+Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL0
+&src\components\body\BodyComponent.java (,2£
+icomponents.Component.Component(java.lang.String, double, utils.enums.Material, utils.enums.ComponentType)CALL0
+&src\components\body\BodyComponent.java (2Î
+“components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!nameCALL0
+&src\components\body\BodyComponent.java (2Î
+“components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!massCALL0
+&src\components\body\BodyComponent.java (2Ò
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!materialCALL0
+&src\components\body\BodyComponent.java ("2Ð
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!innersCALL0
+&src\components\body\BodyComponent.java (2Ð
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!heightCALL0
+&src\components\body\BodyComponent.java (2Ð
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!heightCALL0
+&src\components\body\BodyComponent.java (2Ò
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!diameterCALL0
+&src\components\body\BodyComponent.java (2Ò
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!diameterCALL0
+&src\components\body\BodyComponent.java ( 2j
+0components.body.BodyComponent?inners@13.35:13.41CALL0
+&src\components\body\BodyComponent.java (2j
+0components.body.BodyComponent?height@14.25:14.31CALL0
+&src\components\body\BodyComponent.java (2l
+2components.body.BodyComponent?diameter@15.25:15.33CALL0
+&src\components\body\BodyComponent.java (2Ó
+“components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!name	PARAMETER0
+&src\components\body\BodyComponent.java  ($2Ó
+“components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!mass	PARAMETER0
+&src\components\body\BodyComponent.java- (12×
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!material	PARAMETER0
+&src\components\body\BodyComponent.java< (D2Õ
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!inners	PARAMETER0
+&src\components\body\BodyComponent.java (#2Õ
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!height	PARAMETER0
+&src\components\body\BodyComponent.java, (22×
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!diameter	PARAMETER0
+&src\components\body\BodyComponent.java; (C2^
+components.body.BodyComponentRETURN_TYPE0
+&src\components\body\BodyComponent.java ( é
+“components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!name	PARAMETER0
+&src\components\body\BodyComponent.java  ($"
+typeString"
+isFinalfalse" 
+declarationStringString name*name2J
+java.lang.StringTYPE0
+&src\components\body\BodyComponent.java (ý
+“components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!mass	PARAMETER0
+&src\components\body\BodyComponent.java- (1"
+typedouble"
+isFinalfalse">
+declarationString)<mark class="modifier">double</mark> mass*mass2@
+doubleTYPE0
+&src\components\body\BodyComponent.java& (,ý
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!material	PARAMETER0
+&src\components\body\BodyComponent.java< (D"
+typeMaterial"
+isFinalfalse"&
+declarationStringMaterial material*material2N
+utils.enums.MaterialTYPE0
+&src\components\body\BodyComponent.java3 (;”
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!inners	PARAMETER0
+&src\components\body\BodyComponent.java (#"
+typeInnerComponent[]"
+isFinalfalse",
+declarationStringInnerComponent[] inners*inners2[
+!components.inner.InnerComponent[]TYPE0
+&src\components\body\BodyComponent.java (ƒ
+•components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!height	PARAMETER0
+&src\components\body\BodyComponent.java, (2"
+typedouble"
+isFinalfalse"@
+declarationString+<mark class="modifier">double</mark> height*height2@
+doubleTYPE0
+&src\components\body\BodyComponent.java% (+‰
+—components.body.BodyComponent.BodyComponent(java.lang.String, double, utils.enums.Material, components.inner.InnerComponent[], double, double)!diameter	PARAMETER0
+&src\components\body\BodyComponent.java; (C"
+typedouble"
+isFinalfalse"B
+declarationString-<mark class="modifier">double</mark> diameter*diameter2@
+doubleTYPE0
+&src\components\body\BodyComponent.java4 (:º
+1components.body.BodyComponent.calculateMovement()METHOD0
+&src\components\body\BodyComponent.java   (#"
+isFinalfalse"p
+declarationString[<mark class="modifier">public </mark>Vector <mark class="method">calculateMovement</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeVector*calculateMovement2c
+)components.body.BodyComponent.getInners()CALL0
+&src\components\body\BodyComponent.java"  "()2b
+(components.Vector.set(components.Vector)CALL0
+&src\components\body\BodyComponent.java$ $(2u
+;components.Vector.add(components.Vector, components.Vector)CALL0
+&src\components\body\BodyComponent.java$" $(%2i
+/utils.interfaces.MotorMount.calculateMovement()CALL0
+&src\components\body\BodyComponent.java$? $(P2j
+0components.Vector.Vector(double, double, double)CALL0
+&src\components\body\BodyComponent.java! !("2y
+?components.body.BodyComponent.calculateMovement()?c@34.28:34.29CALL0
+&src\components\body\BodyComponent.java# #(2~
+Dcomponents.body.BodyComponent.calculateMovement()?vector@33.15:33.21CALL0
+&src\components\body\BodyComponent.java$ $(2~
+Dcomponents.body.BodyComponent.calculateMovement()?vector@33.15:33.21CALL0
+&src\components\body\BodyComponent.java$& $(,2y
+?components.body.BodyComponent.calculateMovement()?c@34.28:34.29CALL0
+&src\components\body\BodyComponent.java$< $(=2~
+Dcomponents.body.BodyComponent.calculateMovement()?vector@33.15:33.21CALL0
+&src\components\body\BodyComponent.java' '(2…
+Dcomponents.body.BodyComponent.calculateMovement()?vector@33.15:33.21DECLARATION0
+&src\components\body\BodyComponent.java! !(2€
+?components.body.BodyComponent.calculateMovement()?c@34.28:34.29DECLARATION0
+&src\components\body\BodyComponent.java" "(2R
+components.VectorRETURN_TYPE0
+&src\components\body\BodyComponent.java   (ß
+Dcomponents.body.BodyComponent.calculateMovement()?vector@33.15:33.21VARIABLE0
+&src\components\body\BodyComponent.java! !("
+typeVector"
+isFinalfalse"x
+declarationStringc<mark class="modifier"> </mark>Vector <mark class="class-field">vector</mark> = new Vector(0, 0, 0)*vector2K
+components.VectorTYPE0
+&src\components\body\BodyComponent.java! !(2j
+0components.Vector.Vector(double, double, double)CALL0
+&src\components\body\BodyComponent.java! !("ì
+?components.body.BodyComponent.calculateMovement()?c@34.28:34.29VARIABLE0
+&src\components\body\BodyComponent.java" "("
+typeInnerComponent"
+isFinalfalse"e
+declarationStringP<mark class="modifier"> </mark>InnerComponent <mark class="class-field">c</mark>*c2Y
+components.inner.InnerComponentTYPE0
+&src\components\body\BodyComponent.java" "(š
+)components.body.BodyComponent.getInners()METHOD0
+&src\components\body\BodyComponent.java* *(%"
+isFinalfalse"r
+declarationString]<mark class="modifier">public </mark>InnerComponent[] <mark class="method">getInners</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeInnerComponent[]*	getInners2j
+0components.body.BodyComponent?inners@13.35:13.41CALL0
+&src\components\body\BodyComponent.java+ +(2b
+!components.inner.InnerComponent[]RETURN_TYPE0
+&src\components\body\BodyComponent.java* *(Š
+)components.body.BodyComponent.getHeight()METHOD0
+&src\components\body\BodyComponent.java. .("
+isFinalfalse"†
+declarationStringq<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getHeight</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typedouble*	getHeight2j
+0components.body.BodyComponent?height@14.25:14.31CALL0
+&src\components\body\BodyComponent.java/ /(2G
+doubleRETURN_TYPE0
+&src\components\body\BodyComponent.java. .(’
++components.body.BodyComponent.getDiameter()METHOD0
+&src\components\body\BodyComponent.java2 2("
+isFinalfalse"ˆ
+declarationStrings<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getDiameter</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typedouble*getDiameter2l
+2components.body.BodyComponent?diameter@15.25:15.33CALL0
+&src\components\body\BodyComponent.java3 3(2G
+doubleRETURN_TYPE0
+&src\components\body\BodyComponent.java2 2(ñ
+(components.body.BodyComponent.toString()METHOD0
+&src\components\body\BodyComponent.java7 7("
+isFinalfalse"–
+declarationString€<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeString*toString2x
+>java.lang.String.format(java.lang.String, java.lang.Object...)CALL0
+&src\components\body\BodyComponent.java9 9(2X
+components.Component.getType()CALL0
+&src\components\body\BodyComponent.java9, 9(32X
+components.Component.getName()CALL0
+&src\components\body\BodyComponent.java97 9(>2c
+)components.body.BodyComponent.getInners()CALL0
+&src\components\body\BodyComponent.java:  :()2d
+*components.inner.InnerComponent.toString()CALL0
+&src\components\body\BodyComponent.java; ;(2r
+8components.body.BodyComponent.toString()?res@56.15:56.18CALL0
+&src\components\body\BodyComponent.java9 9(2r
+8components.body.BodyComponent.toString()?res@56.15:56.18CALL0
+&src\components\body\BodyComponent.java; ;(2p
+6components.body.BodyComponent.toString()?c@58.28:58.29CALL0
+&src\components\body\BodyComponent.java; ;(2r
+8components.body.BodyComponent.toString()?res@56.15:56.18CALL0
+&src\components\body\BodyComponent.java= =(2y
+8components.body.BodyComponent.toString()?res@56.15:56.18DECLARATION0
+&src\components\body\BodyComponent.java8 8(2w
+6components.body.BodyComponent.toString()?c@58.28:58.29DECLARATION0
+&src\components\body\BodyComponent.java: :(2Q
+java.lang.StringRETURN_TYPE0
+&src\components\body\BodyComponent.java7 7(Ï
+8components.body.BodyComponent.toString()?res@56.15:56.18VARIABLE0
+&src\components\body\BodyComponent.java8 8("
+typeString"
+isFinalfalse"d
+declarationStringO<mark class="modifier"> </mark>String <mark class="class-field">res</mark> = ""*res2J
+java.lang.StringTYPE0
+&src\components\body\BodyComponent.java8 8(ã
+6components.body.BodyComponent.toString()?c@58.28:58.29VARIABLE0
+&src\components\body\BodyComponent.java: :("
+typeInnerComponent"
+isFinalfalse"e
+declarationStringP<mark class="modifier"> </mark>InnerComponent <mark class="class-field">c</mark>*c2Y
+components.inner.InnerComponentTYPE0
+&src\components\body\BodyComponent.java: :(º
+0components.body.BodyComponent?inners@13.35:13.41VALUE0
+&src\components\body\BodyComponent.java# ()"
+isFinaltrue"
+typeInnerComponent"˜
+declarationString‚<mark class="modifier">private </mark><mark class="modifier">final </mark>InnerComponent[] <mark class="class-field">inners</mark>"
+isStaticfalse"
+accessprivate*inners2[
+!components.inner.InnerComponent[]TYPE0
+&src\components\body\BodyComponent.java ("«
+0components.body.BodyComponent?height@14.25:14.31VALUE0
+&src\components\body\BodyComponent.java ("
+isFinaltrue"
+typedouble"¬
+declarationString–<mark class="modifier">private </mark><mark class="modifier">final </mark><mark class="modifier">double</mark> <mark class="class-field">height</mark>"
+isStaticfalse"
+accessprivate*height2@
+doubleTYPE0
+&src\components\body\BodyComponent.java (±
+2components.body.BodyComponent?diameter@15.25:15.33VALUE0
+&src\components\body\BodyComponent.java (!"
+isFinaltrue"
+typedouble"®
+declarationString˜<mark class="modifier">private </mark><mark class="modifier">final </mark><mark class="modifier">double</mark> <mark class="class-field">diameter</mark>"
+isStaticfalse"
+accessprivate*diameter2@
+doubleTYPE0
+&src\components\body\BodyComponent.java (

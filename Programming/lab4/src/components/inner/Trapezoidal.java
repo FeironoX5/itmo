@@ -1,16 +1,17 @@
 package components.inner;
 
 import components.Fin;
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NaturalNumberException;
-import exceptions.NumberException;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.NumberException;
 
 public class Trapezoidal extends InnerComponent {
     private final Fin[] fins;
     private final double sweep_angle;
 
-    public Trapezoidal(String name, double mass, Material material, Fin[] fins, double sweepAngle)
+    public Trapezoidal(String name, double mass, Material material, 
+            Fin[] fins, double sweepAngle)
             throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         if (fins.length == 0) {

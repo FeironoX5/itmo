@@ -1,17 +1,18 @@
 package components.inner;
 
 import components.Vector;
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NaturalNumberException;
-import exceptions.NumberException;
-import interfaces.MotorMount;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.NumberException;
+import utils.interfaces.MotorMount;
 
 public class ManoeuvringEngine extends InnerComponent implements MotorMount {
     private Vector vector;
     private double velocity;
 
-    public ManoeuvringEngine(String name, double mass, Material material, double rotation)
+    public ManoeuvringEngine(String name, double mass, Material material,
+            double rotation)
             throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         this.vector = new Vector(Math.sin(rotation), Math.cos(rotation), 0);

@@ -1,11 +1,11 @@
 package components.inner;
 
 import components.Vector;
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NaturalNumberException;
-import exceptions.NumberException;
-import interfaces.MotorMount;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.NumberException;
+import utils.interfaces.MotorMount;
 
 public class InnerEngine extends InnerComponent implements MotorMount {
     private final Vector vector;
@@ -13,7 +13,8 @@ public class InnerEngine extends InnerComponent implements MotorMount {
     private final double wallThickness;
     private double velocity;
 
-    public InnerEngine(String name, double mass, Material material, double diameter, double wallThickness)
+    public InnerEngine(String name, double mass, Material material,
+            double diameter, double wallThickness)
             throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         if (diameter <= 0) {

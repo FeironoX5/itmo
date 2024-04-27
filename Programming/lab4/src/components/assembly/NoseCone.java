@@ -1,10 +1,10 @@
 package components.assembly;
 
-import enums.Material;
-import enums.NoseConeShape;
-import exceptions.NaturalNumberException;
-import exceptions.NumberException;
-import exceptions.NameException;
+import utils.enums.Material;
+import utils.enums.NoseConeShape;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.NumberException;
+import utils.exceptions.NameException;
 
 public class NoseCone extends AssemblyComponent {
     private final double diameter;
@@ -12,8 +12,9 @@ public class NoseCone extends AssemblyComponent {
     private final double wallThickness;
     private final NoseConeShape shape;
 
-    public NoseCone(String name, double mass, Material material, double diameter, double height, double wallThickness,
-            NoseConeShape shape) throws NameException, NumberException {
+    public NoseCone(String name, double mass, Material material, 
+            double diameter, double height, double wallThickness, NoseConeShape shape)
+            throws NameException, NumberException {
         super(name, mass, material);
         if (diameter <= 0) {
             throw new NaturalNumberException("Неправильный диаметр компонента");

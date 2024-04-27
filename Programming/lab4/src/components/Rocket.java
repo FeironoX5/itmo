@@ -2,9 +2,13 @@ package components;
 
 import components.assembly.NoseCone;
 import components.assembly.Stage;
-import exceptions.NameException;
-import exceptions.NaturalNumberException;
-import exceptions.StageNotExistsException;
+import utils.enums.EventType;
+import utils.exceptions.NameException;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.StageNotExistsException;
+import utils.implementations.Event;
+import utils.implementations.EventBus;
+import utils.interfaces.EventListener;
 import services.DiameterService;
 import services.HeightService;
 import services.MassService;
@@ -18,8 +22,14 @@ public class Rocket {
     private final Stage[] stages;
     private final NoseCone cone;
     private long activeStages;
+    public static EventBus eventBus = new EventBus();
 
-    public Rocket(String name, String manufacturer, String originCountry, Stage[] stages, NoseCone cone) throws NameException, NaturalNumberException {
+    // TODO implement component adding like:
+    // public <T extends Weapon> T
+    // produce() { ... }
+
+    public Rocket(String name, String manufacturer, String originCountry, Stage[] stages, NoseCone cone)
+            throws NameException, NaturalNumberException {
         if (name.isEmpty()) {
             throw new NameException("Неправильное название ракеты");
         }
@@ -36,8 +46,18 @@ public class Rocket {
             throw new NaturalNumberException("Неправильное количество ступеней ракеты");
         }
         this.stages = stages;
-        this.activeStages = stages.length;
         this.cone = cone;
+        this.activeStages = stages.length;
+    }
+
+    public class RocketStatusHandler implements EventListener {
+        // TODO replace all prints with events
+        // TODO add conscructor and subscribe to events
+        @Override
+        public void handle(Event<?> event) {
+
+        }
+
     }
 
     public String getName() {
@@ -70,9 +90,10 @@ public class Rocket {
 
     public void separateStage() throws StageNotExistsException {
         if (activeStages > 1) {
-            System.out.printf("Ступень %d успешно отсоединена\n", this.activeStages);
             this.stages[this.stages.length - 1] = null;
             activeStages--;
+            System.out.printf("Ступень %d успешно отсоединена\n", this.activeStages);
+            eventBus.notifyListeners(new Event<Long>(this.activeStages, EventType.STAGE_SEPARATED));
         } else {
             throw new StageNotExistsException("Попытка отсоединения несуществующей ступени");
         }

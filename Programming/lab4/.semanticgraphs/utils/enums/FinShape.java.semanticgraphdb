@@ -1,0 +1,17 @@
+
+src\utils\enums\FinShape.java¼
+utils.enums.FinShapeENUM'
+src\utils\enums\FinShape.java ("@
+declarationString+<mark class="modifier">enum </mark>FinShape*FinShape2S
+utils.enums.FinShape?SQUAREDECLARATION'
+src\utils\enums\FinShape.java (
+2T
+utils.enums.FinShape?ROUNDEDDECLARATION'
+src\utils\enums\FinShape.java (c
+utils.enums.FinShape?SQUAREVALUE'
+src\utils\enums\FinShape.java (
+"
+enumtrue*SQUAREe
+utils.enums.FinShape?ROUNDEDVALUE'
+src\utils\enums\FinShape.java ("
+enumtrue*ROUNDED

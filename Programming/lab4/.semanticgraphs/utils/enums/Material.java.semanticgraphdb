@@ -1,0 +1,93 @@
+
+src\utils\enums\Material.java±
+utils.enums.MaterialENUM'
+src\utils\enums\Material.java ("@
+declarationString+<mark class="modifier">enum </mark>Material*Material2]
+%utils.enums.Material.Material(double)DECLARATION'
+src\utils\enums\Material.java" "(2Y
+!utils.enums.Material.getDensity()DECLARATION'
+src\utils\enums\Material.java+ +(2W
+utils.enums.Material.toString()DECLARATION'
+src\utils\enums\Material.java0 0(2`
+(utils.enums.Material?density@32.19:32.26DECLARATION'
+src\utils\enums\Material.java   (2Q
+utils.enums.Material?SILKDECLARATION'
+src\utils\enums\Material.java (2W
+utils.enums.Material?CELLOPHANEDECLARATION'
+src\utils\enums\Material.java (2V
+utils.enums.Material?ALUMINIUMDECLARATION'
+src\utils\enums\Material.java (2R
+utils.enums.Material?STEELDECLARATION'
+src\utils\enums\Material.java (	2Q
+utils.enums.Material?FUELDECLARATION'
+src\utils\enums\Material.java (_
+utils.enums.Material?SILKVALUE'
+src\utils\enums\Material.java ("
+enumtrue*SILKk
+utils.enums.Material?CELLOPHANEVALUE'
+src\utils\enums\Material.java ("
+enumtrue*
+CELLOPHANEi
+utils.enums.Material?ALUMINIUMVALUE'
+src\utils\enums\Material.java ("
+enumtrue*	ALUMINIUMa
+utils.enums.Material?STEELVALUE'
+src\utils\enums\Material.java (	"
+enumtrue*STEEL_
+utils.enums.Material?FUELVALUE'
+src\utils\enums\Material.java ("
+enumtrue*FUELä
+%utils.enums.Material.Material(double)CONSTRUCTOR'
+src\utils\enums\Material.java" "("Œ
+declarationStringw<mark class="modifier"> </mark><mark class="method">Material</mark>(final <mark class="modifier">double</mark> density)*Material2^
+-utils.enums.Material.Material(double)!densityCALL'
+src\utils\enums\Material.java# #(2Y
+(utils.enums.Material?density@32.19:32.26CALL'
+src\utils\enums\Material.java# #(2c
+-utils.enums.Material.Material(double)!density	PARAMETER'
+src\utils\enums\Material.java" "(!2L
+utils.enums.MaterialRETURN_TYPE'
+src\utils\enums\Material.java" "(‰
+-utils.enums.Material.Material(double)!density	PARAMETER'
+src\utils\enums\Material.java" "(!"
+typedouble"
+isFinaltrue"A
+declarationString,<mark class="modifier">double</mark> density*density27
+doubleTYPE'
+src\utils\enums\Material.java" "(á
+!utils.enums.Material.getDensity()METHOD'
+src\utils\enums\Material.java+ +("
+isFinalfalse"‡
+declarationStringr<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getDensity</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typedouble*
+getDensity2Y
+(utils.enums.Material?density@32.19:32.26CALL'
+src\utils\enums\Material.java, ,(2>
+doubleRETURN_TYPE'
+src\utils\enums\Material.java+ +(ö
+utils.enums.Material.toString()METHOD'
+src\utils\enums\Material.java0 0("
+isFinalfalse"–
+declarationString€<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeString*toString2Y
+(utils.enums.Material?density@32.19:32.26CALL'
+src\utils\enums\Material.java1 1(2H
+java.lang.StringRETURN_TYPE'
+src\utils\enums\Material.java0 0(ò
+(utils.enums.Material?density@32.19:32.26VARIABLE'
+src\utils\enums\Material.java   ("
+isFinalfalse"
+typedouble"ˆ
+declarationStrings<mark class="modifier">private </mark><mark class="modifier">double</mark> <mark class="class-field">density</mark>"
+isStaticfalse"
+accessprivate*density27
+doubleTYPE'
+src\utils\enums\Material.java   (

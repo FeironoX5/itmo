@@ -1,0 +1,196 @@
+
+"src\components\assembly\Stage.javaå
+components.assembly.StageCLASS,
+"src\components\assembly\Stage.java ("
+packagecomponents.assembly"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"ú
+declarationStringÜ<mark class="modifier">public </mark><mark class="modifier">class </mark>Stage<mark class="modifier"> extends </mark>AssemblyComponent"
+accesspublic*Stage2≠
+pcomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])DECLARATION,
+"src\components\assembly\Stage.java (2`
+#components.assembly.Stage.getBody()DECLARATION,
+"src\components\assembly\Stage.java ("2j
+-components.assembly.Stage.calculateMovement()DECLARATION,
+"src\components\assembly\Stage.java (#2a
+$components.assembly.Stage.toString()DECLARATION,
+"src\components\assembly\Stage.java (2e
+(components.assembly.Stage?body@9.34:9.38DECLARATION,
+"src\components\assembly\Stage.java	" 	(&2]
+%components.assembly.AssemblyComponentEXTEND,
+"src\components\assembly\Stage.java (,™
+pcomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])CONSTRUCTOR,
+"src\components\assembly\Stage.java ("è
+declarationString˘<mark class="modifier">public </mark><mark class="method">Stage</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material<mark class="modifier"><mark class="modifier">,</mark></mark> BodyComponent[] body)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException*Stage2ù
+gcomponents.assembly.AssemblyComponent.AssemblyComponent(java.lang.String, double, utils.enums.Material)CALL,
+"src\components\assembly\Stage.java (2´
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!nameCALL,
+"src\components\assembly\Stage.java (2´
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!massCALL,
+"src\components\assembly\Stage.java (2Ø
+ycomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!materialCALL,
+"src\components\assembly\Stage.java ("2´
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!bodyCALL,
+"src\components\assembly\Stage.java (2^
+(components.assembly.Stage?body@9.34:9.38CALL,
+"src\components\assembly\Stage.java (2∞
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!name	PARAMETER,
+"src\components\assembly\Stage.java (2∞
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!mass	PARAMETER,
+"src\components\assembly\Stage.java% ()2¥
+ycomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!material	PARAMETER,
+"src\components\assembly\Stage.java4 (<2∞
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!body	PARAMETER,
+"src\components\assembly\Stage.java ( 2V
+components.assembly.StageRETURN_TYPE,
+"src\components\assembly\Stage.java ( ¬
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!name	PARAMETER,
+"src\components\assembly\Stage.java ("
+typeString"
+isFinalfalse" 
+declarationStringString name*name2F
+java.lang.StringTYPE,
+"src\components\assembly\Stage.java (÷
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!mass	PARAMETER,
+"src\components\assembly\Stage.java% ()"
+typedouble"
+isFinalfalse">
+declarationString)<mark class="modifier">double</mark> mass*mass2<
+doubleTYPE,
+"src\components\assembly\Stage.java ($÷
+ycomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!material	PARAMETER,
+"src\components\assembly\Stage.java4 (<"
+typeMaterial"
+isFinalfalse"&
+declarationStringMaterial material*material2J
+utils.enums.MaterialTYPE,
+"src\components\assembly\Stage.java+ (3„
+ucomponents.assembly.Stage.Stage(java.lang.String, double, utils.enums.Material, components.body.BodyComponent[])!body	PARAMETER,
+"src\components\assembly\Stage.java ( "
+typeBodyComponent[]"
+isFinalfalse")
+declarationStringBodyComponent[] body*body2U
+components.body.BodyComponent[]TYPE,
+"src\components\assembly\Stage.java (¯
+#components.assembly.Stage.getBody()METHOD,
+"src\components\assembly\Stage.java (""
+isFinalfalse"o
+declarationStringZ<mark class="modifier">public </mark>BodyComponent[] <mark class="method">getBody</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeBodyComponent[]*getBody2^
+(components.assembly.Stage?body@9.34:9.38CALL,
+"src\components\assembly\Stage.java (2\
+components.body.BodyComponent[]RETURN_TYPE,
+"src\components\assembly\Stage.java (È
+-components.assembly.Stage.calculateMovement()METHOD,
+"src\components\assembly\Stage.java (#"
+isFinalfalse"p
+declarationString[<mark class="modifier">public </mark>Vector <mark class="method">calculateMovement</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeVector*calculateMovement2Y
+#components.assembly.Stage.getBody()CALL,
+"src\components\assembly\Stage.java (&2^
+(components.Vector.set(components.Vector)CALL,
+"src\components\assembly\Stage.java (2q
+;components.Vector.add(components.Vector, components.Vector)CALL,
+"src\components\assembly\Stage.java (!2g
+1components.body.BodyComponent.calculateMovement()CALL,
+"src\components\assembly\Stage.java, (=2f
+0components.Vector.Vector(double, double, double)CALL,
+"src\components\assembly\Stage.java ("2v
+@components.assembly.Stage.calculateMovement()?vector@23.15:23.21CALL,
+"src\components\assembly\Stage.java (2v
+@components.assembly.Stage.calculateMovement()?vector@23.15:23.21CALL,
+"src\components\assembly\Stage.java" ((2q
+;components.assembly.Stage.calculateMovement()?c@24.27:24.28CALL,
+"src\components\assembly\Stage.java* (+2v
+@components.assembly.Stage.calculateMovement()?vector@23.15:23.21CALL,
+"src\components\assembly\Stage.java (2}
+@components.assembly.Stage.calculateMovement()?vector@23.15:23.21DECLARATION,
+"src\components\assembly\Stage.java (2x
+;components.assembly.Stage.calculateMovement()?c@24.27:24.28DECLARATION,
+"src\components\assembly\Stage.java (2N
+components.VectorRETURN_TYPE,
+"src\components\assembly\Stage.java (œ
+@components.assembly.Stage.calculateMovement()?vector@23.15:23.21VARIABLE,
+"src\components\assembly\Stage.java ("
+typeVector"
+isFinalfalse"x
+declarationStringc<mark class="modifier"> </mark>Vector <mark class="class-field">vector</mark> = new Vector(0, 0, 0)*vector2G
+components.VectorTYPE,
+"src\components\assembly\Stage.java (2f
+0components.Vector.Vector(double, double, double)CALL,
+"src\components\assembly\Stage.java ("‹
+;components.assembly.Stage.calculateMovement()?c@24.27:24.28VARIABLE,
+"src\components\assembly\Stage.java ("
+typeBodyComponent"
+isFinalfalse"d
+declarationStringO<mark class="modifier"> </mark>BodyComponent <mark class="class-field">c</mark>*c2S
+components.body.BodyComponentTYPE,
+"src\components\assembly\Stage.java (Ö
+$components.assembly.Stage.toString()METHOD,
+"src\components\assembly\Stage.java ("
+isFinalfalse"ñ
+declarationStringÄ<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeString*toString2t
+>java.lang.String.format(java.lang.String, java.lang.Object...)CALL,
+"src\components\assembly\Stage.java! !(2T
+components.Component.getType()CALL,
+"src\components\assembly\Stage.java!* !(12T
+components.Component.getName()CALL,
+"src\components\assembly\Stage.java!5 !(<2Y
+#components.assembly.Stage.getBody()CALL,
+"src\components\assembly\Stage.java" "(&2^
+(components.body.BodyComponent.toString()CALL,
+"src\components\assembly\Stage.java# #(2j
+4components.assembly.Stage.toString()?res@32.15:32.18CALL,
+"src\components\assembly\Stage.java! !(2j
+4components.assembly.Stage.toString()?res@32.15:32.18CALL,
+"src\components\assembly\Stage.java# #(2h
+2components.assembly.Stage.toString()?c@34.27:34.28CALL,
+"src\components\assembly\Stage.java# #(2j
+4components.assembly.Stage.toString()?res@32.15:32.18CALL,
+"src\components\assembly\Stage.java% %(2j
+0components.assembly.AssemblyComponent.toString()OVERRIDE,
+"src\components\assembly\Stage.java (2q
+4components.assembly.Stage.toString()?res@32.15:32.18DECLARATION,
+"src\components\assembly\Stage.java   (2o
+2components.assembly.Stage.toString()?c@34.27:34.28DECLARATION,
+"src\components\assembly\Stage.java" "(2M
+java.lang.StringRETURN_TYPE,
+"src\components\assembly\Stage.java (√
+4components.assembly.Stage.toString()?res@32.15:32.18VARIABLE,
+"src\components\assembly\Stage.java   ("
+typeString"
+isFinalfalse"d
+declarationStringO<mark class="modifier"> </mark>String <mark class="class-field">res</mark> = ""*res2F
+java.lang.StringTYPE,
+"src\components\assembly\Stage.java   (”
+2components.assembly.Stage.toString()?c@34.27:34.28VARIABLE,
+"src\components\assembly\Stage.java" "("
+typeBodyComponent"
+isFinalfalse"d
+declarationStringO<mark class="modifier"> </mark>BodyComponent <mark class="class-field">c</mark>*c2S
+components.body.BodyComponentTYPE,
+"src\components\assembly\Stage.java" "(°
+(components.assembly.Stage?body@9.34:9.38VALUE,
+"src\components\assembly\Stage.java	" 	(&"
+isFinaltrue"
+typeBodyComponent"î
+declarationString<mark class="modifier">private </mark><mark class="modifier">final </mark>BodyComponent[] <mark class="class-field">body</mark>"
+isStaticfalse"
+accessprivate*body2U
+components.body.BodyComponent[]TYPE,
+"src\components\assembly\Stage.java	 	(!

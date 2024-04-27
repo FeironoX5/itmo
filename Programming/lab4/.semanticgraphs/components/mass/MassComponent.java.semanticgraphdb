@@ -1,0 +1,57 @@
+
+&src\components\mass\MassComponent.javaò
+components.mass.MassComponentCLASS0
+&src\components\mass\MassComponent.java ("
+packagecomponents.mass"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"¡
+declarationString‹<mark class="modifier">public </mark><mark class="modifier">class </mark>MassComponent<mark class="modifier"> extends </mark>InnerComponent"
+accesspublic*MassComponent2œ
+[components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)DECLARATION0
+&src\components\mass\MassComponent.java	 	(2[
+components.inner.InnerComponentEXTEND0
+&src\components\mass\MassComponent.java# (1‡
+[components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)CONSTRUCTOR0
+&src\components\mass\MassComponent.java	 	("™
+declarationStringƒ<mark class="modifier">public </mark><mark class="method">MassComponent</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*MassComponent2˜
+^components.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)CALL0
+&src\components\mass\MassComponent.java (2š
+`components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!nameCALL0
+&src\components\mass\MassComponent.java (2š
+`components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!massCALL0
+&src\components\mass\MassComponent.java (2ž
+dcomponents.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!materialCALL0
+&src\components\mass\MassComponent.java ("2Ÿ
+`components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!name	PARAMETER0
+&src\components\mass\MassComponent.java	  	($2Ÿ
+`components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!mass	PARAMETER0
+&src\components\mass\MassComponent.java	- 	(12£
+dcomponents.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!material	PARAMETER0
+&src\components\mass\MassComponent.java	< 	(D2^
+components.mass.MassComponentRETURN_TYPE0
+&src\components\mass\MassComponent.java
+ 
+( µ
+`components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!name	PARAMETER0
+&src\components\mass\MassComponent.java	  	($"
+typeString"
+isFinalfalse" 
+declarationStringString name*name2J
+java.lang.StringTYPE0
+&src\components\mass\MassComponent.java	 	(É
+`components.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!mass	PARAMETER0
+&src\components\mass\MassComponent.java	- 	(1"
+typedouble"
+isFinalfalse">
+declarationString)<mark class="modifier">double</mark> mass*mass2@
+doubleTYPE0
+&src\components\mass\MassComponent.java	& 	(,É
+dcomponents.mass.MassComponent.MassComponent(java.lang.String, double, utils.enums.Material)!material	PARAMETER0
+&src\components\mass\MassComponent.java	< 	(D"
+typeMaterial"
+isFinalfalse"&
+declarationStringMaterial material*material2N
+utils.enums.MaterialTYPE0
+&src\components\mass\MassComponent.java	3 	(;

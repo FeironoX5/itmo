@@ -3,19 +3,21 @@ package components.body;
 import components.Component;
 import components.Vector;
 import components.inner.InnerComponent;
-import enums.ComponentType;
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NaturalNumberException;
-import exceptions.NumberException;
-import interfaces.MotorMount;
+import utils.enums.ComponentType;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.NumberException;
+import utils.interfaces.MotorMount;
 
 public abstract class BodyComponent extends Component {
     private final InnerComponent[] inners;
     private final double height;
     private final double diameter;
 
-    public BodyComponent(String name, double mass, Material material, InnerComponent[] inners, double height, double diameter) throws NameException, NumberException, NaturalNumberException {
+    public BodyComponent(String name, double mass, Material material, 
+            InnerComponent[] inners, double height, double diameter)
+            throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material, ComponentType.BODY);
         this.inners = inners;
         if (height <= 0) {

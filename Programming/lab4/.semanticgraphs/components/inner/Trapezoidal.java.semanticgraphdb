@@ -1,0 +1,202 @@
+
+%src\components\inner\Trapezoidal.java¥	
+components.inner.TrapezoidalCLASS/
+%src\components\inner\Trapezoidal.java ("
+packagecomponents.inner"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"Ÿ
+declarationString‰<mark class="modifier">public </mark><mark class="modifier">class </mark>Trapezoidal<mark class="modifier"> extends </mark>InnerComponent"
+accesspublic*Trapezoidal2²
+rcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)DECLARATION/
+%src\components\inner\Trapezoidal.java (2f
+&components.inner.Trapezoidal.getFins()DECLARATION/
+%src\components\inner\Trapezoidal.java (2m
+-components.inner.Trapezoidal.getSweep_angle()DECLARATION/
+%src\components\inner\Trapezoidal.java ( 2g
+'components.inner.Trapezoidal.toString()DECLARATION/
+%src\components\inner\Trapezoidal.java# #(2k
++components.inner.Trapezoidal?fins@9.24:9.28DECLARATION/
+%src\components\inner\Trapezoidal.java	 	(2t
+4components.inner.Trapezoidal?sweep_angle@10.25:10.36DECLARATION/
+%src\components\inner\Trapezoidal.java
+ 
+($2Z
+components.inner.InnerComponentEXTEND/
+%src\components\inner\Trapezoidal.java! (/´
+rcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)CONSTRUCTOR/
+%src\components\inner\Trapezoidal.java ("Ì
+declarationString¶<mark class="modifier">public </mark><mark class="method">Trapezoidal</mark>(String name<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> mass<mark class="modifier"><mark class="modifier">,</mark></mark> Material material<mark class="modifier"><mark class="modifier">,</mark></mark> Fin[] fins<mark class="modifier"><mark class="modifier">,</mark></mark> <mark class="modifier">double</mark> sweepAngle)<mark class="modifier"> <mark class="modifier">throws</mark> </mark>NameException<mark class="modifier"><mark class="modifier">,</mark></mark> NumberException<mark class="modifier"><mark class="modifier">,</mark></mark> NaturalNumberException*Trapezoidal2‰
+Putils.exceptions.NaturalNumberException.NaturalNumberException(java.lang.String)CALL/
+%src\components\inner\Trapezoidal.java (,2{
+Butils.exceptions.NumberException.NumberException(java.lang.String)CALL/
+%src\components\inner\Trapezoidal.java (%2—
+^components.inner.InnerComponent.InnerComponent(java.lang.String, double, utils.enums.Material)CALL/
+%src\components\inner\Trapezoidal.java (2°
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!nameCALL/
+%src\components\inner\Trapezoidal.java (2°
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!massCALL/
+%src\components\inner\Trapezoidal.java (2´
+{components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!materialCALL/
+%src\components\inner\Trapezoidal.java ("2°
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!finsCALL/
+%src\components\inner\Trapezoidal.java (2°
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!finsCALL/
+%src\components\inner\Trapezoidal.java (2¶
+}components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!sweepAngleCALL/
+%src\components\inner\Trapezoidal.java (2¶
+}components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!sweepAngleCALL/
+%src\components\inner\Trapezoidal.java ()2m
+4components.inner.Trapezoidal?sweep_angle@10.25:10.36CALL/
+%src\components\inner\Trapezoidal.java (2¶
+}components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!sweepAngleCALL/
+%src\components\inner\Trapezoidal.java ( 2d
++components.inner.Trapezoidal?fins@9.24:9.28CALL/
+%src\components\inner\Trapezoidal.java (2µ
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!name	PARAMETER/
+%src\components\inner\Trapezoidal.java ("2µ
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!mass	PARAMETER/
+%src\components\inner\Trapezoidal.java+ (/2¹
+{components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!material	PARAMETER/
+%src\components\inner\Trapezoidal.java: (B2µ
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!fins	PARAMETER/
+%src\components\inner\Trapezoidal.java (2»
+}components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!sweepAngle	PARAMETER/
+%src\components\inner\Trapezoidal.java ()2\
+components.inner.TrapezoidalRETURN_TYPE/
+%src\components\inner\Trapezoidal.java ( Ê
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!name	PARAMETER/
+%src\components\inner\Trapezoidal.java (""
+typeString"
+isFinalfalse" 
+declarationStringString name*name2I
+java.lang.StringTYPE/
+%src\components\inner\Trapezoidal.java (Þ
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!mass	PARAMETER/
+%src\components\inner\Trapezoidal.java+ (/"
+typedouble"
+isFinalfalse">
+declarationString)<mark class="modifier">double</mark> mass*mass2?
+doubleTYPE/
+%src\components\inner\Trapezoidal.java$ (*Þ
+{components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!material	PARAMETER/
+%src\components\inner\Trapezoidal.java: (B"
+typeMaterial"
+isFinalfalse"&
+declarationStringMaterial material*material2M
+utils.enums.MaterialTYPE/
+%src\components\inner\Trapezoidal.java1 (9È
+wcomponents.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!fins	PARAMETER/
+%src\components\inner\Trapezoidal.java ("
+typeFin[]"
+isFinalfalse"
+declarationString
+Fin[] fins*fins2I
+components.Fin[]TYPE/
+%src\components\inner\Trapezoidal.java (ð
+}components.inner.Trapezoidal.Trapezoidal(java.lang.String, double, utils.enums.Material, components.Fin[], double)!sweepAngle	PARAMETER/
+%src\components\inner\Trapezoidal.java ()"
+typedouble"
+isFinalfalse"D
+declarationString/<mark class="modifier">double</mark> sweepAngle*
+sweepAngle2?
+doubleTYPE/
+%src\components\inner\Trapezoidal.java (ä
+&components.inner.Trapezoidal.getFins()METHOD/
+%src\components\inner\Trapezoidal.java ("
+isFinalfalse"e
+declarationStringP<mark class="modifier">public </mark>Fin[] <mark class="method">getFins</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeFin[]*getFins2d
++components.inner.Trapezoidal?fins@9.24:9.28CALL/
+%src\components\inner\Trapezoidal.java (2P
+components.Fin[]RETURN_TYPE/
+%src\components\inner\Trapezoidal.java (™
+-components.inner.Trapezoidal.getSweep_angle()METHOD/
+%src\components\inner\Trapezoidal.java ( "
+isFinalfalse"‹
+declarationStringv<mark class="modifier">public </mark><mark class="modifier">double</mark> <mark class="method">getSweep_angle</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typedouble*getSweep_angle2m
+4components.inner.Trapezoidal?sweep_angle@10.25:10.36CALL/
+%src\components\inner\Trapezoidal.java (2F
+doubleRETURN_TYPE/
+%src\components\inner\Trapezoidal.java (²
+'components.inner.Trapezoidal.toString()METHOD/
+%src\components\inner\Trapezoidal.java# #("
+isFinalfalse"–
+declarationString€<mark class="annotation">@Override</mark> <br><mark class="modifier">public </mark>String <mark class="method">toString</mark>()"
+isStaticfalse"
+accesspublic"
+
+isAbstractfalse"
+typeString*toString2w
+>java.lang.String.format(java.lang.String, java.lang.Object...)CALL/
+%src\components\inner\Trapezoidal.java% %(2W
+components.Component.getType()CALL/
+%src\components\inner\Trapezoidal.java%. %(52W
+components.Component.getName()CALL/
+%src\components\inner\Trapezoidal.java%9 %(@2_
+&components.inner.Trapezoidal.getFins()CALL/
+%src\components\inner\Trapezoidal.java& &(2R
+components.Fin.toString()CALL/
+%src\components\inner\Trapezoidal.java' '(2p
+7components.inner.Trapezoidal.toString()?res@36.15:36.18CALL/
+%src\components\inner\Trapezoidal.java% %(2p
+7components.inner.Trapezoidal.toString()?res@36.15:36.18CALL/
+%src\components\inner\Trapezoidal.java' '(2n
+5components.inner.Trapezoidal.toString()?c@38.17:38.18CALL/
+%src\components\inner\Trapezoidal.java' '(2p
+7components.inner.Trapezoidal.toString()?res@36.15:36.18CALL/
+%src\components\inner\Trapezoidal.java) )(2g
+*components.inner.InnerComponent.toString()OVERRIDE/
+%src\components\inner\Trapezoidal.java# #(2w
+7components.inner.Trapezoidal.toString()?res@36.15:36.18DECLARATION/
+%src\components\inner\Trapezoidal.java$ $(2u
+5components.inner.Trapezoidal.toString()?c@38.17:38.18DECLARATION/
+%src\components\inner\Trapezoidal.java& &(2P
+java.lang.StringRETURN_TYPE/
+%src\components\inner\Trapezoidal.java# #(Ì
+7components.inner.Trapezoidal.toString()?res@36.15:36.18VARIABLE/
+%src\components\inner\Trapezoidal.java$ $("
+typeString"
+isFinalfalse"d
+declarationStringO<mark class="modifier"> </mark>String <mark class="class-field">res</mark> = ""*res2I
+java.lang.StringTYPE/
+%src\components\inner\Trapezoidal.java$ $(¹
+5components.inner.Trapezoidal.toString()?c@38.17:38.18VARIABLE/
+%src\components\inner\Trapezoidal.java& &("
+typeFin"
+isFinalfalse"Z
+declarationStringE<mark class="modifier"> </mark>Fin <mark class="class-field">c</mark>*c2G
+components.FinTYPE/
+%src\components\inner\Trapezoidal.java& &(‡
++components.inner.Trapezoidal?fins@9.24:9.28VALUE/
+%src\components\inner\Trapezoidal.java	 	("
+isFinaltrue"
+typeFin"Š
+declarationStringu<mark class="modifier">private </mark><mark class="modifier">final </mark>Fin[] <mark class="class-field">fins</mark>"
+isStaticfalse"
+accessprivate*fins2I
+components.Fin[]TYPE/
+%src\components\inner\Trapezoidal.java	 	(·
+4components.inner.Trapezoidal?sweep_angle@10.25:10.36VALUE/
+%src\components\inner\Trapezoidal.java
+ 
+($"
+isFinaltrue"
+typedouble"±
+declarationString›<mark class="modifier">private </mark><mark class="modifier">final </mark><mark class="modifier">double</mark> <mark class="class-field">sweep_angle</mark>"
+isStaticfalse"
+accessprivate*sweep_angle2?
+doubleTYPE/
+%src\components\inner\Trapezoidal.java
+ 
+(

@@ -1,0 +1,222 @@
+
+src\services\MassService.java›
+services.MassServiceCLASS'
+src\services\MassService.java ("
+packageservices"
+isFinaltrue"
+inner classfalse"
+
+isAbstractfalse"ç
+declarationStringx<mark class="modifier">public </mark><mark class="modifier">final </mark><mark class="modifier">class </mark>MassService"
+accesspublic*MassService2Z
+"services.MassService.MassService()DECLARATION'
+src\services\MassService.java (2g
+/services.MassService.getMass(components.Rocket)DECLARATION'
+src\services\MassService.java ( 2o
+7services.MassService.getMass(components.assembly.Stage)DECLARATION'
+src\services\MassService.java' '( 2s
+;services.MassService.getMass(components.body.BodyComponent)DECLARATION'
+src\services\MassService.java5 5( 2j
+2services.MassService.getMass(components.Component)DECLARATION'
+src\services\MassService.javaC C( õ
+"services.MassService.MassService()CONSTRUCTOR'
+src\services\MassService.java ("d
+declarationStringO<mark class="modifier">private </mark><mark class="method">MassService</mark>()*MassService2L
+services.MassServiceRETURN_TYPE'
+src\services\MassService.java (ƒ
+/services.MassService.getMass(components.Rocket)METHOD'
+src\services\MassService.java ( "
+isFinalfalse"Ω
+declarationStringß<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getMass</mark>(final Rocket rocket)"
+isStatictrue"
+accesspublic"
+
+isAbstractfalse"
+typedouble*getMass2T
+#components.Rocket.getActiveStages()CALL'
+src\services\MassService.java# (22h
+7services.MassService.getMass(components.assembly.Stage)CALL'
+src\services\MassService.java (2P
+components.Rocket.getStage(int)CALL'
+src\services\MassService.java" (*2O
+components.Component.getMass()CALL'
+src\services\MassService.java& (-2L
+components.Rocket.getCone()CALL'
+src\services\MassService.java (#2n
+=services.MassService.getMass(components.Rocket)?i@27.17:27.18CALL'
+src\services\MassService.java (2g
+6services.MassService.getMass(components.Rocket)!rocketCALL'
+src\services\MassService.java ("2n
+=services.MassService.getMass(components.Rocket)?i@27.17:27.18CALL'
+src\services\MassService.java6 (72p
+?services.MassService.getMass(components.Rocket)?sum@26.15:26.18CALL'
+src\services\MassService.java (2g
+6services.MassService.getMass(components.Rocket)!rocketCALL'
+src\services\MassService.java (!2n
+=services.MassService.getMass(components.Rocket)?i@27.17:27.18CALL'
+src\services\MassService.java+ (,2p
+?services.MassService.getMass(components.Rocket)?sum@26.15:26.18CALL'
+src\services\MassService.java (2g
+6services.MassService.getMass(components.Rocket)!rocketCALL'
+src\services\MassService.java (2l
+6services.MassService.getMass(components.Rocket)!rocket	PARAMETER'
+src\services\MassService.java. (42w
+?services.MassService.getMass(components.Rocket)?sum@26.15:26.18DECLARATION'
+src\services\MassService.java (2u
+=services.MassService.getMass(components.Rocket)?i@27.17:27.18DECLARATION'
+src\services\MassService.java (2>
+doubleRETURN_TYPE'
+src\services\MassService.java (ÿ
+?services.MassService.getMass(components.Rocket)?sum@26.15:26.18VARIABLE'
+src\services\MassService.java ("
+typedouble"
+isFinalfalse"Å
+declarationStringl<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">sum</mark> = 0*sum27
+doubleTYPE'
+src\services\MassService.java (»
+=services.MassService.getMass(components.Rocket)?i@27.17:27.18VARIABLE'
+src\services\MassService.java ("
+typeint"
+isFinalfalse"|
+declarationStringg<mark class="modifier"> </mark><mark class="modifier">int</mark> <mark class="class-field">i</mark> = 0*i24
+intTYPE'
+src\services\MassService.java (˝
+6services.MassService.getMass(components.Rocket)!rocket	PARAMETER'
+src\services\MassService.java. (4"
+typeRocket"
+isFinaltrue""
+declarationStringRocket rocket*rocket2B
+components.RocketTYPE'
+src\services\MassService.java' (-≤
+7services.MassService.getMass(components.assembly.Stage)METHOD'
+src\services\MassService.java' '( "
+isFinalfalse"ø
+declarationString©<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getMass</mark>(final Stage component)"
+isStatictrue"
+accesspublic"
+
+isAbstractfalse"
+typedouble*getMass2T
+#components.assembly.Stage.getBody()CALL'
+src\services\MassService.java)) )(02l
+;services.MassService.getMass(components.body.BodyComponent)CALL'
+src\services\MassService.java* *(2O
+components.Component.getMass()CALL'
+src\services\MassService.java, ,(&2r
+Aservices.MassService.getMass(components.assembly.Stage)!componentCALL'
+src\services\MassService.java) )((2x
+Gservices.MassService.getMass(components.assembly.Stage)?sum@40.15:40.18CALL'
+src\services\MassService.java* *(2v
+Eservices.MassService.getMass(components.assembly.Stage)?c@41.27:41.28CALL'
+src\services\MassService.java* *(2x
+Gservices.MassService.getMass(components.assembly.Stage)?sum@40.15:40.18CALL'
+src\services\MassService.java, ,(2r
+Aservices.MassService.getMass(components.assembly.Stage)!componentCALL'
+src\services\MassService.java, ,(2w
+Aservices.MassService.getMass(components.assembly.Stage)!component	PARAMETER'
+src\services\MassService.java'- '(62
+Gservices.MassService.getMass(components.assembly.Stage)?sum@40.15:40.18DECLARATION'
+src\services\MassService.java( ((2}
+Eservices.MassService.getMass(components.assembly.Stage)?c@41.27:41.28DECLARATION'
+src\services\MassService.java) )(2>
+doubleRETURN_TYPE'
+src\services\MassService.java' '(‡
+Gservices.MassService.getMass(components.assembly.Stage)?sum@40.15:40.18VARIABLE'
+src\services\MassService.java( (("
+typedouble"
+isFinalfalse"Å
+declarationStringl<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">sum</mark> = 0*sum27
+doubleTYPE'
+src\services\MassService.java( ((‹
+Eservices.MassService.getMass(components.assembly.Stage)?c@41.27:41.28VARIABLE'
+src\services\MassService.java) )("
+typeBodyComponent"
+isFinalfalse"d
+declarationStringO<mark class="modifier"> </mark>BodyComponent <mark class="class-field">c</mark>*c2N
+components.body.BodyComponentTYPE'
+src\services\MassService.java) )(î
+Aservices.MassService.getMass(components.assembly.Stage)!component	PARAMETER'
+src\services\MassService.java'- '(6"
+typeStage"
+isFinaltrue"$
+declarationStringStage component*	component2J
+components.assembly.StageTYPE'
+src\services\MassService.java'' '(,›
+;services.MassService.getMass(components.body.BodyComponent)METHOD'
+src\services\MassService.java5 5( "
+isFinalfalse"«
+declarationString±<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getMass</mark>(final BodyComponent component)"
+isStatictrue"
+accesspublic"
+
+isAbstractfalse"
+typedouble*getMass2Z
+)components.body.BodyComponent.getInners()CALL'
+src\services\MassService.java7* 7(32c
+2services.MassService.getMass(components.Component)CALL'
+src\services\MassService.java8 8(2O
+components.Component.getMass()CALL'
+src\services\MassService.java: :(&2v
+Eservices.MassService.getMass(components.body.BodyComponent)!componentCALL'
+src\services\MassService.java7  7()2|
+Kservices.MassService.getMass(components.body.BodyComponent)?sum@54.15:54.18CALL'
+src\services\MassService.java8 8(2z
+Iservices.MassService.getMass(components.body.BodyComponent)?c@55.28:55.29CALL'
+src\services\MassService.java8 8(2|
+Kservices.MassService.getMass(components.body.BodyComponent)?sum@54.15:54.18CALL'
+src\services\MassService.java: :(2v
+Eservices.MassService.getMass(components.body.BodyComponent)!componentCALL'
+src\services\MassService.java: :(2{
+Eservices.MassService.getMass(components.body.BodyComponent)!component	PARAMETER'
+src\services\MassService.java55 5(>2É
+Kservices.MassService.getMass(components.body.BodyComponent)?sum@54.15:54.18DECLARATION'
+src\services\MassService.java6 6(2Å
+Iservices.MassService.getMass(components.body.BodyComponent)?c@55.28:55.29DECLARATION'
+src\services\MassService.java7 7(2>
+doubleRETURN_TYPE'
+src\services\MassService.java5 5(‰
+Kservices.MassService.getMass(components.body.BodyComponent)?sum@54.15:54.18VARIABLE'
+src\services\MassService.java6 6("
+typedouble"
+isFinalfalse"Å
+declarationStringl<mark class="modifier"> </mark><mark class="modifier">double</mark> <mark class="class-field">sum</mark> = 0*sum27
+doubleTYPE'
+src\services\MassService.java6 6(‰
+Iservices.MassService.getMass(components.body.BodyComponent)?c@55.28:55.29VARIABLE'
+src\services\MassService.java7 7("
+typeInnerComponent"
+isFinalfalse"e
+declarationStringP<mark class="modifier"> </mark>InnerComponent <mark class="class-field">c</mark>*c2P
+components.inner.InnerComponentTYPE'
+src\services\MassService.java7 7(¨
+Eservices.MassService.getMass(components.body.BodyComponent)!component	PARAMETER'
+src\services\MassService.java55 5(>"
+typeBodyComponent"
+isFinaltrue",
+declarationStringBodyComponent component*	component2N
+components.body.BodyComponentTYPE'
+src\services\MassService.java5' 5(4É
+2services.MassService.getMass(components.Component)METHOD'
+src\services\MassService.javaC C( "
+isFinalfalse"√
+declarationString≠<mark class="modifier">public </mark><mark class="modifier">static </mark><mark class="modifier">double</mark> <mark class="method">getMass</mark>(final Component component)"
+isStatictrue"
+accesspublic"
+
+isAbstractfalse"
+typedouble*getMass2O
+components.Component.getMass()CALL'
+src\services\MassService.javaD D( 2m
+<services.MassService.getMass(components.Component)!componentCALL'
+src\services\MassService.javaD D(2r
+<services.MassService.getMass(components.Component)!component	PARAMETER'
+src\services\MassService.javaC1 C(:2>
+doubleRETURN_TYPE'
+src\services\MassService.javaC C(í
+<services.MassService.getMass(components.Component)!component	PARAMETER'
+src\services\MassService.javaC1 C(:"
+type	Component"
+isFinaltrue"(
+declarationStringComponent component*	component2E
+components.ComponentTYPE'
+src\services\MassService.javaC' C(0

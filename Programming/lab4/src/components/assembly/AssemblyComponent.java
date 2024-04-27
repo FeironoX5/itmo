@@ -1,10 +1,10 @@
 package components.assembly;
 
 import components.Component;
-import enums.ComponentType;
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NumberException;
+import utils.enums.ComponentType;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NumberException;
 
 public abstract class AssemblyComponent extends Component {
     public AssemblyComponent(String name, double mass, Material material)

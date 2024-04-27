@@ -1,0 +1,37 @@
+
+)src\utils\exceptions\NumberException.javaŸ
+ utils.exceptions.NumberExceptionCLASS3
+)src\utils\exceptions\NumberException.java
+ 
+("
+packageutils.exceptions"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"û
+declarationStringà<mark class="modifier">public </mark><mark class="modifier">class </mark>NumberException<mark class="modifier"> extends </mark>Exception"
+accesspublic*NumberException2Ü
+Butils.exceptions.NumberException.NumberException(java.lang.String)DECLARATION3
+)src\utils\exceptions\NumberException.java (2R
+java.lang.ExceptionEXTEND3
+)src\utils\exceptions\NumberException.java
+% 
+(.Å
+Butils.exceptions.NumberException.NumberException(java.lang.String)CONSTRUCTOR3
+)src\utils\exceptions\NumberException.java ("{
+declarationStringf<mark class="modifier">public </mark><mark class="method">NumberException</mark>(final String message)*NumberException2l
+/java.lang.Exception.Exception(java.lang.String)CALL3
+)src\utils\exceptions\NumberException.java (2á
+Jutils.exceptions.NumberException.NumberException(java.lang.String)!messageCALL3
+)src\utils\exceptions\NumberException.java (2å
+Jutils.exceptions.NumberException.NumberException(java.lang.String)!message	PARAMETER3
+)src\utils\exceptions\NumberException.java( (/2d
+ utils.exceptions.NumberExceptionRETURN_TYPE3
+)src\utils\exceptions\NumberException.java (™
+Jutils.exceptions.NumberException.NumberException(java.lang.String)!message	PARAMETER3
+)src\utils\exceptions\NumberException.java( (/"
+typeString"
+isFinaltrue"#
+declarationStringString message*message2M
+java.lang.StringTYPE3
+)src\utils\exceptions\NumberException.java! ('

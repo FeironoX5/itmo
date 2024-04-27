@@ -2,14 +2,15 @@ package components.assembly;
 
 import components.Vector;
 import components.body.BodyComponent;
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NumberException;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NumberException;
 
 public class Stage extends AssemblyComponent {
     private final BodyComponent[] body;
 
-    public Stage(String name, double mass, Material material, BodyComponent[] body)
+    public Stage(String name, double mass, Material material,
+            BodyComponent[] body)
             throws NameException, NumberException {
         super(name, mass, material);
         this.body = body;

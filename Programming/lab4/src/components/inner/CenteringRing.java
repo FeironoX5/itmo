@@ -1,15 +1,16 @@
 package components.inner;
 
-import enums.Material;
-import exceptions.NameException;
-import exceptions.NaturalNumberException;
-import exceptions.NumberException;
+import utils.enums.Material;
+import utils.exceptions.NameException;
+import utils.exceptions.NaturalNumberException;
+import utils.exceptions.NumberException;
 
 public class CenteringRing extends InnerComponent {
     private final double diameter;
     private final double wallThickness;
 
-    public CenteringRing(String name, double mass, Material material, double diameter, double wallThickness)
+    public CenteringRing(String name, double mass, Material material,
+            double diameter, double wallThickness)
             throws NameException, NumberException, NaturalNumberException {
         super(name, mass, material);
         if (diameter <= 0) {

@@ -1,0 +1,33 @@
+
+1src\utils\exceptions\StageNotExistsException.javaß
+(utils.exceptions.StageNotExistsExceptionCLASS;
+1src\utils\exceptions\StageNotExistsException.java ($"
+packageutils.exceptions"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"≠
+declarationStringó<mark class="modifier">public </mark><mark class="modifier">class </mark>StageNotExistsException<mark class="modifier"> extends </mark>RuntimeException"
+accesspublic*StageNotExistsException2û
+Rutils.exceptions.StageNotExistsException.StageNotExistsException(java.lang.String)DECLARATION;
+1src\utils\exceptions\StageNotExistsException.java ("2a
+java.lang.RuntimeExceptionEXTEND;
+1src\utils\exceptions\StageNotExistsException.java- (=Å
+Rutils.exceptions.StageNotExistsException.StageNotExistsException(java.lang.String)CONSTRUCTOR;
+1src\utils\exceptions\StageNotExistsException.java (""É
+declarationStringn<mark class="modifier">public </mark><mark class="method">StageNotExistsException</mark>(final String message)*StageNotExistsException2Ç
+=java.lang.RuntimeException.RuntimeException(java.lang.String)CALL;
+1src\utils\exceptions\StageNotExistsException.java (2ü
+Zutils.exceptions.StageNotExistsException.StageNotExistsException(java.lang.String)!messageCALL;
+1src\utils\exceptions\StageNotExistsException.java (2§
+Zutils.exceptions.StageNotExistsException.StageNotExistsException(java.lang.String)!message	PARAMETER;
+1src\utils\exceptions\StageNotExistsException.java0 (72t
+(utils.exceptions.StageNotExistsExceptionRETURN_TYPE;
+1src\utils\exceptions\StageNotExistsException.java (" 
+Zutils.exceptions.StageNotExistsException.StageNotExistsException(java.lang.String)!message	PARAMETER;
+1src\utils\exceptions\StageNotExistsException.java0 (7"
+typeString"
+isFinaltrue"#
+declarationStringString message*message2U
+java.lang.StringTYPE;
+1src\utils\exceptions\StageNotExistsException.java) (/

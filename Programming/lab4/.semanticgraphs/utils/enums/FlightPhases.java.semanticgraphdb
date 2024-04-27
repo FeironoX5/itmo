@@ -1,0 +1,39 @@
+
+!src\utils\enums\FlightPhases.javaç
+utils.enums.FlightPhasesENUM+
+!src\utils\enums\FlightPhases.java ("D
+declarationString/<mark class="modifier">enum </mark>FlightPhases*FlightPhases2[
+utils.enums.FlightPhases?LAUNCHDECLARATION+
+!src\utils\enums\FlightPhases.java (
+2c
+'utils.enums.FlightPhases?POWERED_ASCENTDECLARATION+
+!src\utils\enums\FlightPhases.java (2[
+utils.enums.FlightPhases?FLIGHTDECLARATION+
+!src\utils\enums\FlightPhases.java (
+2d
+(utils.enums.FlightPhases?EJECTION_CHANGEDECLARATION+
+!src\utils\enums\FlightPhases.java   (2a
+%utils.enums.FlightPhases?SLOW_DESCENTDECLARATION+
+!src\utils\enums\FlightPhases.java% %(2\
+ utils.enums.FlightPhases?LANDINGDECLARATION+
+!src\utils\enums\FlightPhases.java* *(k
+utils.enums.FlightPhases?LAUNCHVALUE+
+!src\utils\enums\FlightPhases.java (
+"
+enumtrue*LAUNCH{
+'utils.enums.FlightPhases?POWERED_ASCENTVALUE+
+!src\utils\enums\FlightPhases.java ("
+enumtrue*POWERED_ASCENTk
+utils.enums.FlightPhases?FLIGHTVALUE+
+!src\utils\enums\FlightPhases.java (
+"
+enumtrue*FLIGHT}
+(utils.enums.FlightPhases?EJECTION_CHANGEVALUE+
+!src\utils\enums\FlightPhases.java   ("
+enumtrue*EJECTION_CHANGEw
+%utils.enums.FlightPhases?SLOW_DESCENTVALUE+
+!src\utils\enums\FlightPhases.java% %("
+enumtrue*SLOW_DESCENTm
+ utils.enums.FlightPhases?LANDINGVALUE+
+!src\utils\enums\FlightPhases.java* *("
+enumtrue*LANDING
