@@ -15,7 +15,15 @@ import services.MassService;
 
 import java.util.Objects;
 
-public class Rocket {
+/**
+ * {@code Rocket} это ракета, которая отправится в долгий полёт.
+ *
+ * @author Gleb Kiva
+ */
+public final class Rocket {
+    /**
+     * Название ракеты, 
+     */
     private final String name;
     private final String manufacturer;
     private final String originCountry;
@@ -28,7 +36,8 @@ public class Rocket {
     // public <T extends Weapon> T
     // produce() { ... }
 
-    public Rocket(String name, String manufacturer, String originCountry, Stage[] stages, NoseCone cone)
+    public Rocket(final String name, final String manufacturer, final String originCountry, final Stage[] stages,
+            final NoseCone cone)
             throws NameException, NaturalNumberException {
         if (name.isEmpty()) {
             throw new NameException("Неправильное название ракеты");
@@ -54,7 +63,7 @@ public class Rocket {
         // TODO replace all prints with events
         // TODO add conscructor and subscribe to events
         @Override
-        public void handle(Event<?> event) {
+        public void handle(final Event<?> event) {
 
         }
 
@@ -112,11 +121,13 @@ public class Rocket {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object)
+    public boolean equals(final Object object) {
+        if (this == object) {
             return true;
-        if (object == null || getClass() != object.getClass())
+        }
+        if (object == null || getClass() != object.getClass()) {
             return false;
+        }
         Rocket other = (Rocket) object;
         return Objects.equals(this.getName(), other.getName())
                 && Objects.equals(this.getManufacturer(), other.getManufacturer())
@@ -139,7 +150,7 @@ public class Rocket {
         return activeStages;
     }
 
-    public Stage getStage(int i) {
+    public Stage getStage(final int i) {
         return stages[i];
     }
 }

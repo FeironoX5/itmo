@@ -14,7 +14,7 @@ import utils.exceptions.NumberException;
  *
  * @author Gleb Kiva
  */
-public class Fin extends Component {
+public final class Fin extends Component {
     /**
      * Форма стабилизатора.
      */
@@ -29,10 +29,14 @@ public class Fin extends Component {
      * которая проверяет введенные данные
      * на правильность.
      *
-     * //FIXME НЕДОДЕЛАНО!!!
+     * @param name     Название стабилизатора
+     * @param mass     Вес стабилизатора (кг)
+     * @param material Материал стабилизатора
+     * @param shape    Форма стабилизатора
+     * @param length   Длина стабилизатора
      */
-    public Fin(String name, double mass, Material material,
-            FinShape shape, double length)
+    public Fin(final String name, final double mass, final Material material,
+            final FinShape shape, final double length)
             throws NameException, NumberException {
         super(name, mass, material, ComponentType.OUTER);
         this.shape = shape;
@@ -42,10 +46,20 @@ public class Fin extends Component {
         this.length = length;
     }
 
+    /**
+     * Возвращает форму стабилизатора.
+     *
+     * @return Форма стабилизатора
+     */
     public FinShape getShape() {
         return shape;
     }
 
+    /**
+     * Возвращает длину стабилизатора.
+     *
+     * @return Длина стабилизатора
+     */
     public double getLength() {
         return length;
     }

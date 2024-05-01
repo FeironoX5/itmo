@@ -1,7 +1,7 @@
 package utils.enums;
 
 /**
- * Материал, из которого состоит {@link Component}.
+ * Материал, из которого состоит {@link components.Component}.
  *
  * @author Gleb Kiva
  */
