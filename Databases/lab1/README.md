@@ -4,3 +4,4 @@
 - rename time -> timestamp
 - ! patient + teacher -> person
 - \+ metrics -> TreatmentResults
+- UNIQUE -> Disease name
