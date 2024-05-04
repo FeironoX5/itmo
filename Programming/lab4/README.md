@@ -11,6 +11,18 @@ checked и unchecked, а также их обработку исключений
 
 ![Стадии полёта ракеты](model_rocket_flight_phases.gif)
 
+## ПМИшные комментарии:
+- NULL CHECK
+- private final -> public
+- случайные числа в main
+- геттеры вообще не нужны где-то
+- StringBuilder
+- убрать инициализацию строки, её вообще сразу можно возвращать
+- equals -> hash
+- УБРАТЬ КОПИПАСТУ: разобраться с сервисами: сейчас сервисы подсчета массы и высоту выполняют одну функцию -> AccumulativeSerivice
+- для вектора реализовать set() убрать конструктор vector
+- разобраться с calcMovement
+
 ## Материалы
 [Мой конспект](https://www.figma.com/file/hOuMEJWxsm1P3NWnyoEWed/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5?type=whiteboard&node-id=1-20&t=X9sA1AGvbd4dSVTT-4)
 
