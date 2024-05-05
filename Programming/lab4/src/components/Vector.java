@@ -2,6 +2,11 @@ package components;
 
 import java.util.Objects;
 
+/**
+ * {@code Vector} это вектор который.
+ *
+ * @author Gleb Kiva
+ */
 public class Vector {
     public double x;
     public double y;
