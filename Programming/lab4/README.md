@@ -22,13 +22,15 @@ checked и unchecked, а также их обработку исключений
 
 ## Схемы
 ### Наследование компонентов ракеты
-![](images/components_inheritance.png)
+<img alt="Наследование компонентов ракеты" src="images/components_inheritance.png" width="100%">
+
 Подробнее: https://app.eraser.io/workspace/a1ddOea1jwJJCEwztSbC?elements=CUuNWfsUtwZ1Eq6dRdUbKg
+
 ### Композиция ракеты
-![](images/rocket_composition.png)
+<img alt="Композиция ракеты" src="images/rocket_composition.png" width="80%">
 
 ### Стадии полёта ракеты
-![Стадии полёта ракеты](images/model_rocket_flight_phases.gif)
+<img alt="Стадии полёта ракеты" src="images/model_rocket_flight_phases.gif" width="80%">
 
 ## Комментарии и идеи
 
