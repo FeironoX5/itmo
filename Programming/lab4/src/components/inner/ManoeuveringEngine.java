@@ -7,16 +7,15 @@ import utils.exceptions.EmptyStringException;
 import utils.exceptions.NonPositiveNumberException;
 import utils.interfaces.MotorMount;
 
-public class InnerEngine extends InnerComponent implements MotorMount {
+public class ManoeuveringEngine extends InnerComponent implements MotorMount {
     private final Vector vector;
-    public final double wallThickness;
     private double velocity;
 
-    public InnerEngine(final ComponentBase componentBase, final double wallThickness)
+    public ManoeuveringEngine(final ComponentBase componentBase,
+            final double rotation)
             throws EmptyStringException, NonPositiveNumberException {
         super(componentBase);
-        this.wallThickness = RequirementHandler.requirePositive(wallThickness);
-        this.vector = new Vector(0, 0, -1);
+        this.vector = new Vector(Math.sin(rotation), Math.cos(rotation), 0);
         setVelocity(0);
     }
 
@@ -26,8 +25,14 @@ public class InnerEngine extends InnerComponent implements MotorMount {
     }
 
     @Override
+    public Vector getVector() {
+        return vector;
+    }
+
+    @Override
     public void setVelocity(double velocity) throws NonPositiveNumberException {
         this.velocity = RequirementHandler.requirePositive(velocity);
+        System.out.printf("Скорость %s успешно назначена на %f\n", name, this.velocity);
     }
 
     @Override
@@ -35,8 +40,4 @@ public class InnerEngine extends InnerComponent implements MotorMount {
         return velocity;
     }
 
-    @Override
-    public Vector getVector() {
-        return vector;
-    }
 }

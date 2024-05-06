@@ -14,6 +14,10 @@ public class NumberException extends Exception {
      *
      * @param message Сообщение исключения
      */
+    public NumberException() {
+        super("Числовой аргумент принимает неверное значение");
+    }
+
     public NumberException(final String message) {
         super(message);
     }

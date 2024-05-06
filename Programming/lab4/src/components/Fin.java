@@ -1,11 +1,10 @@
 package components;
 
-import utils.enums.ComponentType;
+import utils.ComponentBase;
+import utils.RequirementHandler;
 import utils.enums.FinShape;
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 
 /**
  * {@code Fin} реализует {@link Component},
@@ -18,11 +17,11 @@ public final class Fin extends Component {
     /**
      * Форма стабилизатора.
      */
-    private final FinShape shape;
+    public final FinShape shape;
     /**
      * Длина стабилизатора.
      */
-    private final double length;
+    public final double length;
 
     /**
      * Создаёт {@code Fin},
@@ -35,39 +34,18 @@ public final class Fin extends Component {
      * @param shape    Форма стабилизатора
      * @param length   Длина стабилизатора
      */
-    public Fin(final String name, final double mass, final Material material,
-            final FinShape shape, final double length)
-            throws NameException, NumberException {
-        super(name, mass, material, ComponentType.OUTER);
+    public Fin(final ComponentBase componentBase, final FinShape shape, final double length)
+            throws NonPositiveNumberException, EmptyStringException {
+        super(componentBase);
         this.shape = shape;
-        if (length <= 0) {
-            throw new NaturalNumberException("Неправильная длина компонента");
-        }
-        this.length = length;
-    }
-
-    /**
-     * Возвращает форму стабилизатора.
-     *
-     * @return Форма стабилизатора
-     */
-    public FinShape getShape() {
-        return shape;
-    }
-
-    /**
-     * Возвращает длину стабилизатора.
-     *
-     * @return Длина стабилизатора
-     */
-    public double getLength() {
-        return length;
+        this.length = RequirementHandler.requirePositive(length);
     }
 
     @Override
     public String toString() {
         String res = "";
-        res += String.format("| | | |_%s %s\n", getType(), getName());
+        res += String.format("| | | |_Внешний %s\n", name);
         return res;
     }
+
 }

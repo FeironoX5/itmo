@@ -1,10 +1,11 @@
 package components;
 
-import utils.enums.ComponentType;
+import utils.ComponentBase;
+import utils.RequirementHandler;
 import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
+import utils.interfaces.Physical;
 
 /**
  * {@code Component} используется для построения ракеты.
@@ -20,28 +21,21 @@ import utils.exceptions.NumberException;
  *
  * @author Gleb Kiva
  */
-public abstract class Component {
+public abstract class Component implements Physical {
     /**
      * Название компонента, предполагает описание
      * области его применения, если возможно.
      */
-    private final String name;
-    /**
-     * Вес компонента (кг).
-     */
-    private final double mass;
-    /**
-     * Тип компонента.
-     *
-     * @see ComponentType
-     */
-    private final ComponentType type;
+    public final String name;
+    public final double width;
+    public final double height;
+    public final double weight;
     /**
      * Материал компонента.
      *
      * @see Material
      */
-    private final Material material;
+    public final Material material;
 
     /**
      * Реализация конструктора {@code Component},
@@ -52,61 +46,41 @@ public abstract class Component {
      * @param mass     Вес компонента (кг)
      * @param material Материал компонента
      * @param type     Тип компонента
-     * @throws NameException
-     * @throws NumberException
-     * @throws NaturalNumberException
+     * @throws EmptyStringException
+     * @throws NonPositiveNumberException
      */
-    public Component(final String name, final double mass,
-            final Material material, final ComponentType type)
-            throws NameException, NumberException, NaturalNumberException {
-        if (name.isEmpty()) {
-            throw new NameException("Неправильное имя компонента");
-        }
-        this.name = name;
-        if (mass <= 0) {
-            // TODO масса -> вес
-            throw new NaturalNumberException("Неправильная масса компонента");
-        }
-        this.mass = mass;
-        this.material = material;
-        this.type = type;
-        System.out.printf("Создан новый %s '%s'\n", this.type, this.name);
+    public Component(ComponentBase componentBase)
+            throws EmptyStringException, NonPositiveNumberException {
+        this.name = RequirementHandler.requireNonEmptyString(componentBase.name);
+        this.width = RequirementHandler.requirePositive(componentBase.width);
+        this.height = RequirementHandler.requirePositive(componentBase.height);
+        this.weight = RequirementHandler.requirePositive(componentBase.weight);
+        this.material = componentBase.material;
+        System.out.printf("Создан новый '%s'\n", this.name);
     }
 
-    /**
-     * Возвращает название компонента.
-     *
-     * @return Название компонента
-     */
-    public String getName() {
-        return name;
+    public Component(final Component base)
+            throws EmptyStringException, NonPositiveNumberException {
+        this.name = RequirementHandler.requireNonEmptyString(base.name);
+        this.width = RequirementHandler.requirePositive(base.width);
+        this.height = RequirementHandler.requirePositive(base.height);
+        this.weight = RequirementHandler.requirePositive(base.weight);
+        this.material = base.material;
     }
 
-    /**
-     * Возвращает вес компонента.
-     *
-     * @return Вес компонента
-     */
-    public double getMass() {
-        return mass;
+    @Override
+    public double getWidth() {
+        return width;
     }
 
-    /**
-     * Возвращает тип компонента.
-     *
-     * @return Тип компонента
-     */
-    public ComponentType getType() {
-        return this.type;
+    @Override
+    public double getHeight() {
+        return height;
     }
 
-    /**
-     * Возвращает материал компонента.
-     *
-     * @return Материал компонента
-     */
-    public Material getMaterial() {
-        return material;
+    @Override
+    public double getWeight() {
+        return weight;
     }
 
 }

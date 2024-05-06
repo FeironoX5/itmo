@@ -1,49 +1,20 @@
 package components.assembly;
 
-import utils.enums.Material;
+import utils.ComponentBase;
+import utils.RequirementHandler;
 import utils.enums.NoseConeShape;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
-import utils.exceptions.NameException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 
 public class NoseCone extends AssemblyComponent {
-    private final double diameter;
-    private final double height;
-    private final double wallThickness;
-    private final NoseConeShape shape;
+    public final double wallThickness;
+    public final NoseConeShape shape;
 
-    public NoseCone(String name, double mass, Material material, 
-            double diameter, double height, double wallThickness, NoseConeShape shape)
-            throws NameException, NumberException {
-        super(name, mass, material);
-        if (diameter <= 0) {
-            throw new NaturalNumberException("Неправильный диаметр компонента");
-        }
-        this.diameter = diameter;
-        if (height <= 0) {
-            throw new NaturalNumberException("Неправильная высота компонента");
-        }
-        this.height = height;
-        if (wallThickness <= 0) {
-            throw new NaturalNumberException("Неправильная толщина стенок компонента");
-        }
-        this.wallThickness = wallThickness;
+    public NoseCone(final ComponentBase componentBase, final double wallThickness, final NoseConeShape shape)
+            throws EmptyStringException, NonPositiveNumberException {
+        super(componentBase);
+        this.wallThickness = RequirementHandler.requirePositive(wallThickness);
         this.shape = shape;
     }
 
-    public double getDiameter() {
-        return diameter;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public double getWallThickness() {
-        return wallThickness;
-    }
-
-    public NoseConeShape getShape() {
-        return shape;
-    }
 }

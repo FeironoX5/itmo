@@ -1,7 +1,7 @@
 package utils.interfaces;
 
+import utils.exceptions.NonPositiveNumberException;
 import components.Vector;
-import utils.exceptions.NaturalNumberException;
 
 /**
  * Интерфейс, предназначенный для реализации двигателей ракеты.
@@ -15,7 +15,7 @@ public interface MotorMount {
      * @param velocity Мощность (ватт/ньютон тяги)
      * @throws NaturalNumberException
      */
-    void setVelocity(double velocity) throws NaturalNumberException;
+    void setVelocity(double velocity) throws NonPositiveNumberException;
 
     /**
      * Возвращает мощность двигателя.

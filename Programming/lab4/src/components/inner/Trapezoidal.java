@@ -1,41 +1,37 @@
 package components.inner;
 
+import java.util.LinkedList;
+
 import components.Fin;
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
+import utils.ComponentBase;
+import utils.RequirementHandler;
+import utils.exceptions.EmptyArrayException;
+import utils.exceptions.EmptyStringException;
 import utils.exceptions.NumberException;
 
 public class Trapezoidal extends InnerComponent {
-    private final Fin[] fins;
-    private final double sweep_angle;
+    private final LinkedList<Fin> fins;
+    public final double sweep_angle;
 
-    public Trapezoidal(String name, double mass, Material material, 
-            Fin[] fins, double sweepAngle)
-            throws NameException, NumberException, NaturalNumberException {
-        super(name, mass, material);
-        if (fins.length == 0) {
-            throw new NaturalNumberException("Неправильная длина компонента");
-        }
-        this.fins = fins;
+    public Trapezoidal(final ComponentBase componentBase,
+            final LinkedList<Fin> fins, final double sweepAngle)
+            throws EmptyStringException, NumberException, EmptyArrayException {
+        super(componentBase);
+        this.fins = RequirementHandler.requireNonEmptyArray(fins);
         if (sweepAngle <= 0 || sweepAngle >= 90) {
             throw new NumberException("Неправильная угол наклона плавников");
         }
         sweep_angle = sweepAngle;
     }
 
-    public Fin[] getFins() {
+    public LinkedList<Fin> getFins() {
         return fins;
-    }
-
-    public double getSweep_angle() {
-        return sweep_angle;
     }
 
     @Override
     public String toString() {
         String res = "";
-        res += String.format("| | |_%s %s\n", getType(), getName());
+        res += String.format("| | |_Внутренний %s\n", name);
         for (Fin c : getFins()) {
             res += c.toString();
         }

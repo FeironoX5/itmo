@@ -1,32 +1,26 @@
 package components.body;
 
+import java.util.LinkedList;
+
 import components.inner.InnerComponent;
-import utils.enums.Material;
+import utils.ComponentBase;
+import utils.RequirementHandler;
 import utils.enums.TransitionShape;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
+import utils.exceptions.EmptyArrayException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 
 public class Transition extends BodyComponent {
-    private final double innerDiameter;
-    private final TransitionShape shape;
+    public final double innerDiameter;
+    public final TransitionShape shape;
 
-    public Transition(String name, double mass, Material material,
-            InnerComponent[] inners, double height, double diameter, double innerDiameter, TransitionShape shape)
-            throws NameException, NumberException, NaturalNumberException {
-        super(name, mass, material, inners, height, diameter);
-        if (innerDiameter <= 0) {
-            throw new NaturalNumberException("Неправильный внутренний диаметр компонента");
-        }
-        this.innerDiameter = innerDiameter;
+    public Transition(final ComponentBase componentBase,
+            final LinkedList<InnerComponent> inners,
+            final double innerDiameter, final TransitionShape shape)
+            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+        super(componentBase, inners);
+        this.innerDiameter = RequirementHandler.requirePositive(innerDiameter);
         this.shape = shape;
     }
 
-    public double getInnerDiameter() {
-        return innerDiameter;
-    }
-
-    public TransitionShape getShape() {
-        return shape;
-    }
 }

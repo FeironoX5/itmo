@@ -1,33 +1,26 @@
 package components.body;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+
 import components.Component;
 import components.Vector;
 import components.inner.InnerComponent;
-import utils.enums.ComponentType;
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
+import utils.ComponentBase;
+import utils.RequirementHandler;
+import utils.exceptions.EmptyArrayException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 import utils.interfaces.MotorMount;
 
 public abstract class BodyComponent extends Component {
-    private final InnerComponent[] inners;
-    private final double height;
-    private final double diameter;
+    private final LinkedList<InnerComponent> inners;
 
-    public BodyComponent(String name, double mass, Material material, 
-            InnerComponent[] inners, double height, double diameter)
-            throws NameException, NumberException, NaturalNumberException {
-        super(name, mass, material, ComponentType.BODY);
-        this.inners = inners;
-        if (height <= 0) {
-            throw new NaturalNumberException("Неправильная высота компонента");
-        }
-        this.height = height;
-        if (diameter <= 0) {
-            throw new NaturalNumberException("Неправильный диаметр компонента");
-        }
-        this.diameter = diameter;
+    public BodyComponent(final ComponentBase componentBase, final LinkedList<InnerComponent> inners)
+            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+        super(componentBase);
+        this.inners = RequirementHandler.requireNonEmptyArray(inners);
     }
 
     public Vector calculateMovement() {
@@ -40,22 +33,30 @@ public abstract class BodyComponent extends Component {
         return vector;
     }
 
-    public InnerComponent[] getInners() {
+    public LinkedList<InnerComponent> getInners() {
         return inners;
     }
 
-    public double getHeight() {
-        return height;
+    @Override
+    public double getWidth() {
+        return Collections.max(inners, Comparator.comparing(inner -> inner.getWidth())).getWidth();
     }
 
-    public double getDiameter() {
-        return diameter;
+    @Override
+    public double getHeight() {
+        return Collections.max(inners, Comparator.comparing(inner -> inner.getHeight())).getWidth();
+    }
+
+    @Override
+    public double getWeight() {
+        return inners.stream().map(InnerComponent::getWeight).mapToDouble(Double::doubleValue).sum()
+                + this.weight;
     }
 
     @Override
     public String toString() {
         String res = "";
-        res += String.format("| |_%s %s\n", getType(), getName());
+        res += String.format("| |_Основной%s %s\n", name);
         for (InnerComponent c : getInners()) {
             res += c.toString();
         }

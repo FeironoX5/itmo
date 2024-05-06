@@ -2,17 +2,20 @@ package components;
 
 import components.assembly.NoseCone;
 import components.assembly.Stage;
+import utils.RequirementHandler;
 import utils.enums.EventType;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
+import utils.exceptions.EmptyArrayException;
+import utils.exceptions.EmptyStringException;
 import utils.exceptions.StageNotExistsException;
 import utils.implementations.Event;
 import utils.implementations.EventBus;
 import utils.interfaces.EventListener;
-import services.DiameterService;
-import services.HeightService;
-import services.MassService;
+import utils.interfaces.Physical;
+import static java.lang.Double.max;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.Objects;
 
 /**
@@ -20,43 +23,30 @@ import java.util.Objects;
  *
  * @author Gleb Kiva
  */
-public final class Rocket {
+public final class Rocket implements Physical {
     /**
-     * Название ракеты, 
+     * Название ракеты,
      */
-    private final String name;
-    private final String manufacturer;
-    private final String originCountry;
-    private final Stage[] stages;
-    private final NoseCone cone;
-    private long activeStages;
+    public final String name;
+    public final String manufacturer;
+    public final String originCountry;
+    private final LinkedList<Stage> stages;
+    public final NoseCone cone;
     public static EventBus eventBus = new EventBus();
 
     // TODO implement component adding like:
     // public <T extends Weapon> T
     // produce() { ... }
 
-    public Rocket(final String name, final String manufacturer, final String originCountry, final Stage[] stages,
-            final NoseCone cone)
-            throws NameException, NaturalNumberException {
-        if (name.isEmpty()) {
-            throw new NameException("Неправильное название ракеты");
-        }
-        this.name = name;
-        if (manufacturer.isEmpty()) {
-            throw new NameException("Неправильный производитель ракеты");
-        }
-        this.manufacturer = manufacturer;
-        if (originCountry.isEmpty()) {
-            throw new NameException("Неправильная страна производства ракеты");
-        }
-        this.originCountry = originCountry;
-        if (stages.length <= 0) {
-            throw new NaturalNumberException("Неправильное количество ступеней ракеты");
-        }
-        this.stages = stages;
+    public Rocket(final String name,
+            final String manufacturer, final String originCountry,
+            final LinkedList<Stage> stages, final NoseCone cone)
+            throws EmptyStringException, EmptyArrayException {
+        this.name = RequirementHandler.requireNonEmptyString(name);
+        this.manufacturer = RequirementHandler.requireNonEmptyString(manufacturer);
+        this.originCountry = RequirementHandler.requireNonEmptyString(originCountry);
+        this.stages = RequirementHandler.requireNonEmptyArray(stages);
         this.cone = cone;
-        this.activeStages = stages.length;
     }
 
     public class RocketStatusHandler implements EventListener {
@@ -69,50 +59,50 @@ public final class Rocket {
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public String getOriginCountry() {
-        return originCountry;
-    }
-
-    public Stage[] getStages() {
-        return stages;
-    }
-
-    public NoseCone getCone() {
-        return cone;
-    }
-
     public Vector calculateMovement() {
         Vector vector = new Vector(0, 0, 0);
-        for (int i = 0; i < getActiveStages(); i++) {
-            vector.set(Vector.add(vector, getStage(i).calculateMovement()));
-        }
+        // FIXME for (int i = 0; i < getActiveStages(); i++) {
+        // vector.set(Vector.add(vector, getStage(i).calculateMovement()));
+        // }
         return Vector.multiply(vector, -1);
     }
 
     public void separateStage() throws StageNotExistsException {
-        if (activeStages > 1) {
-            this.stages[this.stages.length - 1] = null;
-            activeStages--;
-            System.out.printf("Ступень %d успешно отсоединена\n", this.activeStages);
-            eventBus.notifyListeners(new Event<Long>(this.activeStages, EventType.STAGE_SEPARATED));
-        } else {
-            throw new StageNotExistsException("Попытка отсоединения несуществующей ступени");
+        if (stages.size() == 0) {
+            throw new StageNotExistsException();
         }
+        this.stages.removeLast();
+        System.out.printf("Ступень %d успешно отсоединена\n", stages.size() + 1);
+        eventBus.notifyListeners(new Event<Integer>(stages.size() + 1, EventType.STAGE_SEPARATED));
     }
 
     public String getProperties() {
         return String.format(
                 "Название: %s\nПроизводитель: %s\nСтрана производства: %s\nКоличество ступеней: %d\nВес: %f\nДиаметр: %f\nВысота: %f",
-                getName(), getManufacturer(), getOriginCountry(), getStages().length, MassService.getMass(this),
-                DiameterService.getDiameter(this), HeightService.getHeight(this));
+                name, manufacturer, originCountry, getStages().size(), getWeight(), getWidth(), getHeight());
+    }
+
+    public LinkedList<Stage> getStages() {
+        return stages;
+    }
+
+    @Override
+    public double getWidth() {
+        return max(
+                Collections.max(stages, Comparator.comparing(stage -> stage.getWidth())).getWidth(),
+                cone.width);
+    }
+
+    @Override
+    public double getHeight() {
+        return stages.stream().map(Stage::getHeight).mapToDouble(Double::doubleValue).sum()
+                + cone.getHeight();
+    }
+
+    @Override
+    public double getWeight() {
+        return stages.stream().map(Stage::getWeight).mapToDouble(Double::doubleValue).sum()
+                + cone.getWeight();
     }
 
     @Override
@@ -129,28 +119,20 @@ public final class Rocket {
             return false;
         }
         Rocket other = (Rocket) object;
-        return Objects.equals(this.getName(), other.getName())
-                && Objects.equals(this.getManufacturer(), other.getManufacturer())
-                && Objects.equals(this.getOriginCountry(), other.getOriginCountry());
+        return Objects.equals(name, other.name)
+                && Objects.equals(manufacturer, other.manufacturer)
+                && Objects.equals(this.originCountry, other.originCountry);
     }
 
     @Override
     public String toString() {
         String res = "";
-        res += String.format("%s\n", getName());
-        res += getCone().toString();
-        for (int i = 0; i < getActiveStages(); i++) {
-            res += getStage(i).toString();
+        res += String.format("%s\n", name);
+        res += cone.toString();
+        for (int i = 0; i < stages.size(); i++) {
+            res += stages.get(i).toString();
         }
         res += "|_|_|_________";
         return res;
-    }
-
-    public long getActiveStages() {
-        return activeStages;
-    }
-
-    public Stage getStage(final int i) {
-        return stages[i];
     }
 }

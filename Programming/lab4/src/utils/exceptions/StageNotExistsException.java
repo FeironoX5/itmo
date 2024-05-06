@@ -12,10 +12,8 @@ package utils.exceptions;
 public class StageNotExistsException extends RuntimeException {
     /**
      * Конструктор, инициализирующий {@link StageNotExistsException}.
-     *
-     * @param message Сообщение исключения
      */
-    public StageNotExistsException(final String message) {
-        super(message);
+    public StageNotExistsException() {
+        super("Попытка отсоединения несуществующей ступени");
     }
 }

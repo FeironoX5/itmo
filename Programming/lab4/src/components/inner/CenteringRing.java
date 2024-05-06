@@ -1,33 +1,18 @@
 package components.inner;
 
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
+import utils.ComponentBase;
+import utils.RequirementHandler;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 
 public class CenteringRing extends InnerComponent {
-    private final double diameter;
-    private final double wallThickness;
+    public final double wallThickness;
 
-    public CenteringRing(String name, double mass, Material material,
-            double diameter, double wallThickness)
-            throws NameException, NumberException, NaturalNumberException {
-        super(name, mass, material);
-        if (diameter <= 0) {
-            throw new NaturalNumberException("Неправильный диаметр компонента");
-        }
-        this.diameter = diameter;
-        if (wallThickness <= 0) {
-            throw new NaturalNumberException("Неправильная толщина стенок компонента");
-        }
-        this.wallThickness = wallThickness;
+    public CenteringRing(final ComponentBase componentBase,
+            final double wallThickness)
+            throws EmptyStringException, NonPositiveNumberException {
+        super(componentBase);
+        this.wallThickness = RequirementHandler.requirePositive(wallThickness);
     }
 
-    public double getDiameter() {
-        return diameter;
-    }
-
-    public double getWallThickness() {
-        return wallThickness;
-    }
 }

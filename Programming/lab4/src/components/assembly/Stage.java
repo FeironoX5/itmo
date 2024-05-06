@@ -1,22 +1,27 @@
 package components.assembly;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+
 import components.Vector;
 import components.body.BodyComponent;
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NumberException;
+import utils.ComponentBase;
+import utils.RequirementHandler;
+import utils.exceptions.EmptyArrayException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 
 public class Stage extends AssemblyComponent {
-    private final BodyComponent[] body;
+    private final LinkedList<BodyComponent> body;
 
-    public Stage(String name, double mass, Material material,
-            BodyComponent[] body)
-            throws NameException, NumberException {
-        super(name, mass, material);
-        this.body = body;
+    public Stage(final ComponentBase componentBase, final LinkedList<BodyComponent> body)
+            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+        super(componentBase);
+        this.body = RequirementHandler.requireNonEmptyArray(body);
     }
 
-    public BodyComponent[] getBody() {
+    public LinkedList<BodyComponent> getBody() {
         return body;
     }
 
@@ -29,9 +34,25 @@ public class Stage extends AssemblyComponent {
     }
 
     @Override
+    public double getWidth() {
+        return Collections.max(body, Comparator.comparing(bodyComponent -> bodyComponent.getWidth())).getWidth();
+    }
+
+    @Override
+    public double getHeight() {
+        return body.stream().map(BodyComponent::getHeight).mapToDouble(Double::doubleValue).sum();
+    }
+
+    @Override
+    public double getWeight() {
+        return body.stream().map(BodyComponent::getWeight).mapToDouble(Double::doubleValue).sum()
+                + this.weight;
+    }
+
+    @Override
     public String toString() {
         String res = "";
-        res += String.format("|_%s %s\n", getType(), getName());
+        res += String.format("|_Сборочный %s\n", name);
         for (BodyComponent c : getBody()) {
             res += c.toString();
         }

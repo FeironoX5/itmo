@@ -2,30 +2,30 @@ package components.body;
 
 import utils.interfaces.EventListener;
 
+import java.util.LinkedList;
+
 import components.Rocket;
 import components.Vector;
 import components.inner.InnerComponent;
+import utils.ComponentBase;
+import utils.RequirementHandler;
 import utils.enums.EventType;
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NaturalNumberException;
-import utils.exceptions.NumberException;
+import utils.exceptions.EmptyArrayException;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 import utils.implementations.Event;
 import utils.interfaces.Rotatable;
 
 public class BodyTube extends BodyComponent implements Rotatable {
-    private final double wallThickness;
+    public final double wallThickness;
     private double rotation;
     IndoorTemperatureController indoorTemperatureController;
 
-    public BodyTube(String name, double mass, Material material,
-            InnerComponent[] inners, double height, double diameter, double wallThickness)
-            throws NameException, NumberException, NaturalNumberException {
-        super(name, mass, material, inners, height, diameter);
-        if (wallThickness <= 0) {
-            throw new NaturalNumberException("Неправильная толщина стенок компонента");
-        }
-        this.wallThickness = wallThickness;
+    public BodyTube(final ComponentBase componentBase,
+            final LinkedList<InnerComponent> inners, final double wallThickness)
+            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+        super(componentBase, inners);
+        this.wallThickness = RequirementHandler.requirePositive(wallThickness);
         this.rotation = 0;
         this.indoorTemperatureController = new IndoorTemperatureController();
     }
@@ -63,7 +63,7 @@ public class BodyTube extends BodyComponent implements Rotatable {
     @Override
     public void rotate(double delta) {
         rotation = (rotation + delta + 180) % 360 - 180;
-        System.out.printf("Поворот %s успешно назначен на %f градусов\n", getName(), rotation);
+        System.out.printf("Поворот %s успешно назначен на %f градусов\n", name, rotation);
     }
 
     @Override
@@ -71,7 +71,4 @@ public class BodyTube extends BodyComponent implements Rotatable {
         return rotation;
     }
 
-    public double getWallThickness() {
-        return wallThickness;
-    }
 }

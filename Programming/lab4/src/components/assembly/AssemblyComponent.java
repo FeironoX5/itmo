@@ -1,21 +1,18 @@
 package components.assembly;
 
 import components.Component;
-import utils.enums.ComponentType;
-import utils.enums.Material;
-import utils.exceptions.NameException;
-import utils.exceptions.NumberException;
+import utils.ComponentBase;
+import utils.exceptions.EmptyStringException;
+import utils.exceptions.NonPositiveNumberException;
 
 public abstract class AssemblyComponent extends Component {
-    public AssemblyComponent(String name, double mass, Material material)
-            throws NameException, NumberException {
-        super(name, mass, material, ComponentType.ASSEMBLY);
+    public AssemblyComponent(final ComponentBase componentBase)
+            throws EmptyStringException, NonPositiveNumberException {
+        super(componentBase);
     }
 
     @Override
     public String toString() {
-        String res = "";
-        res += String.format("|_%s %s\n", getType(), getName());
-        return res;
+        return String.format("|_Сборочный %s\n", name);
     }
 }
