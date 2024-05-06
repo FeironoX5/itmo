@@ -4,8 +4,6 @@ import components.assembly.NoseCone;
 import components.assembly.Stage;
 import utils.RequirementHandler;
 import utils.enums.EventType;
-import utils.exceptions.EmptyArrayException;
-import utils.exceptions.EmptyStringException;
 import utils.exceptions.StageNotExistsException;
 import utils.implementations.Event;
 import utils.implementations.EventBus;
@@ -41,7 +39,7 @@ public final class Rocket implements Physical {
     public Rocket(final String name,
             final String manufacturer, final String originCountry,
             final LinkedList<Stage> stages, final NoseCone cone)
-            throws EmptyStringException, EmptyArrayException {
+            throws IllegalArgumentException {
         this.name = RequirementHandler.requireNonEmptyString(name);
         this.manufacturer = RequirementHandler.requireNonEmptyString(manufacturer);
         this.originCountry = RequirementHandler.requireNonEmptyString(originCountry);
@@ -61,9 +59,6 @@ public final class Rocket implements Physical {
 
     public Vector calculateMovement() {
         Vector vector = new Vector(0, 0, 0);
-        // FIXME for (int i = 0; i < getActiveStages(); i++) {
-        // vector.set(Vector.add(vector, getStage(i).calculateMovement()));
-        // }
         return Vector.multiply(vector, -1);
     }
 

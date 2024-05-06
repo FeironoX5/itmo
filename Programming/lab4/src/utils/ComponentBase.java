@@ -1,8 +1,10 @@
 package utils;
 
+import java.util.Objects;
+
 import utils.enums.Material;
 
-public class ComponentBase {
+public final class ComponentBase {
     public final String name;
     public final double width;
     public final double height;
@@ -12,12 +14,13 @@ public class ComponentBase {
     public ComponentBase(
             final String name,
             final double width, final double height, final double weight,
-            final Material material) {
-        this.name = name;
-        this.width = width;
-        this.height = height;
-        this.weight = weight;
-        this.material = material;
+            final Material material)
+            throws IllegalArgumentException, NullPointerException {
+        this.name = RequirementHandler.requireNonEmptyString(name);
+        this.width = RequirementHandler.requirePositive(width);
+        this.height = RequirementHandler.requirePositive(height);
+        this.weight = RequirementHandler.requirePositive(weight);
+        this.material = Objects.requireNonNull(material);
     }
 
 }

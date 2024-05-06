@@ -7,7 +7,7 @@ package utils.exceptions;
  *
  * @author Gleb Kiva
  */
-public class EmptyStringException extends Exception {
+public class EmptyStringException extends IllegalArgumentException {
     /**
      * Конструктор, инициализирующий {@link NameException}.
      *

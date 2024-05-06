@@ -68,8 +68,6 @@ public class Main {
             System.out.printf("\u001B[1mАЛО вы слишком далеко... мы теряем конта#@()!....\u001B[0m\n");
             Thread.sleep(1300);
             System.out.printf("\u001B[1m$*$#()@$\u001B[0m\n");
-            // ((BodyTube) rocket.getStages()[0].getBody()[1]).rotate(30);
-            // rocket.getStages()[0].getBody()[1].rotate();
 
         } catch (EmptyStringException e) {
             System.err.println("Обнаружены ошибки в имени:");

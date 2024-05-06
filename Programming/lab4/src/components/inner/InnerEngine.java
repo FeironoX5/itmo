@@ -3,7 +3,6 @@ package components.inner;
 import components.Vector;
 import utils.ComponentBase;
 import utils.RequirementHandler;
-import utils.exceptions.EmptyStringException;
 import utils.exceptions.NonPositiveNumberException;
 import utils.interfaces.MotorMount;
 
@@ -12,8 +11,9 @@ public class InnerEngine extends InnerComponent implements MotorMount {
     public final double wallThickness;
     private double velocity;
 
-    public InnerEngine(final ComponentBase componentBase, final double wallThickness)
-            throws EmptyStringException, NonPositiveNumberException {
+    public InnerEngine(final ComponentBase componentBase,
+            final double wallThickness)
+            throws IllegalArgumentException {
         super(componentBase);
         this.wallThickness = RequirementHandler.requirePositive(wallThickness);
         this.vector = new Vector(0, 0, -1);

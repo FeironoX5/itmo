@@ -3,7 +3,6 @@ package components.inner;
 import components.Vector;
 import utils.ComponentBase;
 import utils.RequirementHandler;
-import utils.exceptions.EmptyStringException;
 import utils.exceptions.NonPositiveNumberException;
 import utils.interfaces.MotorMount;
 
@@ -11,9 +10,8 @@ public class ManoeuveringEngine extends InnerComponent implements MotorMount {
     private final Vector vector;
     private double velocity;
 
-    public ManoeuveringEngine(final ComponentBase componentBase,
-            final double rotation)
-            throws EmptyStringException, NonPositiveNumberException {
+    public ManoeuveringEngine(final ComponentBase componentBase, final double rotation)
+            throws IllegalArgumentException {
         super(componentBase);
         this.vector = new Vector(Math.sin(rotation), Math.cos(rotation), 0);
         setVelocity(0);

@@ -10,9 +10,6 @@ import components.inner.InnerComponent;
 import utils.ComponentBase;
 import utils.RequirementHandler;
 import utils.enums.EventType;
-import utils.exceptions.EmptyArrayException;
-import utils.exceptions.EmptyStringException;
-import utils.exceptions.NonPositiveNumberException;
 import utils.implementations.Event;
 import utils.interfaces.Rotatable;
 
@@ -23,7 +20,7 @@ public class BodyTube extends BodyComponent implements Rotatable {
 
     public BodyTube(final ComponentBase componentBase,
             final LinkedList<InnerComponent> inners, final double wallThickness)
-            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+            throws IllegalArgumentException {
         super(componentBase, inners);
         this.wallThickness = RequirementHandler.requirePositive(wallThickness);
         this.rotation = 0;

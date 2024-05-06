@@ -3,8 +3,6 @@ package components;
 import utils.ComponentBase;
 import utils.RequirementHandler;
 import utils.enums.FinShape;
-import utils.exceptions.EmptyStringException;
-import utils.exceptions.NonPositiveNumberException;
 
 /**
  * {@code Fin} реализует {@link Component},
@@ -35,7 +33,7 @@ public final class Fin extends Component {
      * @param length   Длина стабилизатора
      */
     public Fin(final ComponentBase componentBase, final FinShape shape, final double length)
-            throws NonPositiveNumberException, EmptyStringException {
+            throws IllegalArgumentException {
         super(componentBase);
         this.shape = shape;
         this.length = RequirementHandler.requirePositive(length);

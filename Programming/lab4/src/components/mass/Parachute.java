@@ -5,8 +5,6 @@ import utils.ComponentBase;
 import utils.RequirementHandler;
 import utils.enums.EventType;
 import utils.enums.FlightPhases;
-import utils.exceptions.EmptyStringException;
-import utils.exceptions.NonPositiveNumberException;
 import utils.implementations.Event;
 import utils.interfaces.EventListener;
 
@@ -14,7 +12,7 @@ public class Parachute extends MassComponent implements EventListener {
     public final double weightCapacity;
 
     public Parachute(final ComponentBase componentBase, final double weightCapacity)
-            throws NonPositiveNumberException, EmptyStringException {
+            throws IllegalArgumentException {
         super(componentBase);
         this.weightCapacity = RequirementHandler.requirePositive(weightCapacity);
         Rocket.eventBus.addListener(EventType.FLIGHT_PHASE_ENTERED, this);

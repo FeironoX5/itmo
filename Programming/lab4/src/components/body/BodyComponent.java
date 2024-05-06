@@ -9,16 +9,14 @@ import components.Vector;
 import components.inner.InnerComponent;
 import utils.ComponentBase;
 import utils.RequirementHandler;
-import utils.exceptions.EmptyArrayException;
-import utils.exceptions.EmptyStringException;
-import utils.exceptions.NonPositiveNumberException;
 import utils.interfaces.MotorMount;
 
 public abstract class BodyComponent extends Component {
     private final LinkedList<InnerComponent> inners;
 
-    public BodyComponent(final ComponentBase componentBase, final LinkedList<InnerComponent> inners)
-            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+    public BodyComponent(final ComponentBase componentBase,
+            final LinkedList<InnerComponent> inners)
+            throws IllegalArgumentException {
         super(componentBase);
         this.inners = RequirementHandler.requireNonEmptyArray(inners);
     }

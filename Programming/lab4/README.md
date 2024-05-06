@@ -35,17 +35,17 @@ checked и unchecked, а также их обработку исключений
 ## Комментарии и идеи
 
 ### ПМИшные комментарии:
-- [ ] NULL CHECK:
+- [x] NULL CHECK:
   - https://youtu.be/32r-5a-6bz4?si=CPlQkh8hsOWv3bq-
   - https://youtu.be/_z0xB2-swYY?si=S0MpoEJp5R1rGF7y
-- [ ] private final -> public
+- [x] private final -> public
 - [x] magic numbers в main:
     - точно ли надо фиксить? ладно, потом всё равно из json читать
-- [ ] геттеры вообще не нужны где-то
+- [x] геттеры вообще не нужны где-то
 - [ ] StringBuilder
 - [ ] убрать инициализацию строки, её вообще сразу можно возвращать
 - [ ] equals -> hash
-- [ ] УБРАТЬ КОПИПАСТУ: разобраться с сервисами: сейчас сервисы подсчета массы и высоту выполняют одну функцию -> AccumulativeService
+- [x] УБРАТЬ КОПИПАСТУ: разобраться с сервисами: сейчас сервисы подсчета массы и высоту выполняют одну функцию -> AccumulativeService
 - [ ] для вектора реализовать set() убрать конструктор vector
 - [ ] разобраться с calcMovement
 - [ ] javadoc > https://www.youtube.com/watch?v=c7byISvHPqw&list=PLBAwg87wLtfI11gzB1dR6n705sC7zGvFW&index=6&pp=iAQB

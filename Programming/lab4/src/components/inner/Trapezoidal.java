@@ -5,8 +5,6 @@ import java.util.LinkedList;
 import components.Fin;
 import utils.ComponentBase;
 import utils.RequirementHandler;
-import utils.exceptions.EmptyArrayException;
-import utils.exceptions.EmptyStringException;
 import utils.exceptions.NumberException;
 
 public class Trapezoidal extends InnerComponent {
@@ -15,7 +13,7 @@ public class Trapezoidal extends InnerComponent {
 
     public Trapezoidal(final ComponentBase componentBase,
             final LinkedList<Fin> fins, final double sweepAngle)
-            throws EmptyStringException, NumberException, EmptyArrayException {
+            throws IllegalArgumentException {
         super(componentBase);
         this.fins = RequirementHandler.requireNonEmptyArray(fins);
         if (sweepAngle <= 0 || sweepAngle >= 90) {

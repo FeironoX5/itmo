@@ -1,6 +1,6 @@
 package utils.exceptions;
 
-public class EmptyArrayException extends Exception {
+public class EmptyArrayException extends IllegalArgumentException {
     public EmptyArrayException() {
         super("Массив компонент не может быть пустым");
     }

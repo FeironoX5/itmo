@@ -1,7 +1,8 @@
 package components;
 
+import java.util.Objects;
+
 import utils.ComponentBase;
-import utils.RequirementHandler;
 import utils.enums.Material;
 import utils.exceptions.EmptyStringException;
 import utils.exceptions.NonPositiveNumberException;
@@ -49,23 +50,15 @@ public abstract class Component implements Physical {
      * @throws EmptyStringException
      * @throws NonPositiveNumberException
      */
-    public Component(ComponentBase componentBase)
-            throws EmptyStringException, NonPositiveNumberException {
-        this.name = RequirementHandler.requireNonEmptyString(componentBase.name);
-        this.width = RequirementHandler.requirePositive(componentBase.width);
-        this.height = RequirementHandler.requirePositive(componentBase.height);
-        this.weight = RequirementHandler.requirePositive(componentBase.weight);
+    public Component(final ComponentBase componentBase)
+            throws IllegalArgumentException {
+        Objects.requireNonNull(componentBase);
+        this.name = componentBase.name;
+        this.width = componentBase.width;
+        this.height = componentBase.height;
+        this.weight = componentBase.weight;
         this.material = componentBase.material;
         System.out.printf("Создан новый '%s'\n", this.name);
-    }
-
-    public Component(final Component base)
-            throws EmptyStringException, NonPositiveNumberException {
-        this.name = RequirementHandler.requireNonEmptyString(base.name);
-        this.width = RequirementHandler.requirePositive(base.width);
-        this.height = RequirementHandler.requirePositive(base.height);
-        this.weight = RequirementHandler.requirePositive(base.weight);
-        this.material = base.material;
     }
 
     @Override

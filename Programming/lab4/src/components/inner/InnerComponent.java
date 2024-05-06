@@ -2,12 +2,10 @@ package components.inner;
 
 import components.Component;
 import utils.ComponentBase;
-import utils.exceptions.EmptyStringException;
-import utils.exceptions.NonPositiveNumberException;
 
 public abstract class InnerComponent extends Component {
     public InnerComponent(final ComponentBase componentBase)
-            throws EmptyStringException, NonPositiveNumberException {
+            throws IllegalArgumentException {
         super(componentBase);
     }
 

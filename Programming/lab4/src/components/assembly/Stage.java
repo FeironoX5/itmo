@@ -8,15 +8,13 @@ import components.Vector;
 import components.body.BodyComponent;
 import utils.ComponentBase;
 import utils.RequirementHandler;
-import utils.exceptions.EmptyArrayException;
-import utils.exceptions.EmptyStringException;
-import utils.exceptions.NonPositiveNumberException;
 
 public class Stage extends AssemblyComponent {
     private final LinkedList<BodyComponent> body;
 
-    public Stage(final ComponentBase componentBase, final LinkedList<BodyComponent> body)
-            throws EmptyStringException, NonPositiveNumberException, EmptyArrayException {
+    public Stage(final ComponentBase componentBase,
+            final LinkedList<BodyComponent> body)
+            throws IllegalArgumentException {
         super(componentBase);
         this.body = RequirementHandler.requireNonEmptyArray(body);
     }

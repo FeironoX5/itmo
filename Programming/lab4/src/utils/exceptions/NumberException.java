@@ -8,7 +8,7 @@ package utils.exceptions;
  *
  * @author Gleb Kiva
  */
-public class NumberException extends Exception {
+public class NumberException extends IllegalArgumentException {
     /**
      * Конструктор, инициализирующий {@link NumberException}.
      *
