@@ -1,7 +1,7 @@
 package utils.interfaces;
 
+import utils.Vector;
 import utils.exceptions.NonPositiveNumberException;
-import components.Vector;
 
 /**
  * Интерфейс, предназначенный для реализации двигателей ракеты.

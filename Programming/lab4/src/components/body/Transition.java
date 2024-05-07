@@ -37,7 +37,7 @@ import utils.enums.TransitionShape;
  * with specific shapes or functionalities.
  * </p>
  *
- * @author [Author Name]
+ * @author Gleb Kiva
  * @see BodyComponent
  */
 public class Transition extends BodyComponent {

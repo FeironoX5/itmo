@@ -5,10 +5,10 @@ import utils.interfaces.EventListener;
 import java.util.LinkedList;
 
 import components.Rocket;
-import components.Vector;
 import components.inner.InnerComponent;
 import utils.ComponentBase;
 import utils.RequirementHandler;
+import utils.Vector;
 import utils.enums.EventType;
 import utils.implementations.Event;
 import utils.interfaces.Rotatable;

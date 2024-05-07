@@ -3,6 +3,7 @@ package components;
 import components.assembly.NoseCone;
 import components.assembly.Stage;
 import utils.RequirementHandler;
+import utils.Vector;
 import utils.enums.EventType;
 import utils.exceptions.StageNotExistsException;
 import utils.implementations.Event;

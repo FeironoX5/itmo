@@ -5,10 +5,10 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 import components.Component;
-import components.Vector;
 import components.inner.InnerComponent;
 import utils.ComponentBase;
 import utils.RequirementHandler;
+import utils.Vector;
 import utils.interfaces.MotorMount;
 
 /**

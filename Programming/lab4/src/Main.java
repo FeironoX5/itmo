@@ -1,3 +1,5 @@
+package src;
+
 import components.Rocket;
 import components.assembly.*;
 import components.body.*;

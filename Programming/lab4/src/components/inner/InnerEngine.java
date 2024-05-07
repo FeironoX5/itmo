@@ -1,8 +1,8 @@
 package components.inner;
 
-import components.Vector;
 import utils.ComponentBase;
 import utils.RequirementHandler;
+import utils.Vector;
 import utils.exceptions.NonPositiveNumberException;
 import utils.interfaces.MotorMount;
 

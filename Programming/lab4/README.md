@@ -6,8 +6,9 @@
     - [Композиция ракеты](#композиция-ракеты)
     - [Стадии полёта ракеты](#стадии-полёта-ракеты)
   - [Комментарии и идеи](#комментарии-и-идеи)
-    - [ПМИшные комментарии:](#пмишные-комментарии)
-    - [Что мне не нравится:](#что-мне-не-нравится)
+    - [ПМИшные комментарии](#пмишные-комментарии)
+    - [Что мне не нравится](#что-мне-не-нравится)
+  - [Компиляция](#компиляция)
   - [Материалы](#материалы)
 
 ## Задание
@@ -54,6 +55,14 @@ checked и unchecked, а также их обработку исключений
     - https://www.youtube.com/watch?v=FyCYva9DhsI&t=1674s
     - https://stackoverflow.com/questions/8485689/too-many-imports-are-spamming-my-java-code
     - https://stackoverflow.com/questions/147454/why-is-using-a-wild-card-with-a-java-import-statement-bad
+
+## Компиляция
+```
+dir /s /B *.java > build-info.txt
+javac -d C:\Users\quick\projects\itmo\Programming\lab4\out @build-info.txt
+
+```
+
 
 ## Материалы
 - [Мой конспект](https://www.figma.com/file/hOuMEJWxsm1P3NWnyoEWed/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5?type=whiteboard&node-id=1-20&t=X9sA1AGvbd4dSVTT-4)

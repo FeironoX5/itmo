@@ -4,10 +4,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-import components.Vector;
 import components.body.BodyComponent;
 import utils.ComponentBase;
 import utils.RequirementHandler;
+import utils.Vector;
 
 /**
  * Represents a stage assembly component used in rocket construction.
