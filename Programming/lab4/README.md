@@ -34,7 +34,7 @@ checked и unchecked, а также их обработку исключений
 
 ## Комментарии и идеи
 
-### ПМИшные комментарии:
+### ПМИшные комментарии
 - [x] NULL CHECK:
   - https://youtu.be/32r-5a-6bz4?si=CPlQkh8hsOWv3bq-
   - https://youtu.be/_z0xB2-swYY?si=S0MpoEJp5R1rGF7y
@@ -44,13 +44,12 @@ checked и unchecked, а также их обработку исключений
 - [x] геттеры вообще не нужны где-то
 - [x] StringBuilder
 - [x] убрать инициализацию строки, её вообще сразу можно возвращать
-- [ ] equals -> hash
 - [x] УБРАТЬ КОПИПАСТУ: разобраться с сервисами: сейчас сервисы подсчета массы и высоту выполняют одну функцию -> AccumulativeService
 - [ ] для вектора реализовать set() убрать конструктор vector
 - [ ] разобраться с calcMovement
 - [ ] javadoc > https://www.youtube.com/watch?v=c7byISvHPqw&list=PLBAwg87wLtfI11gzB1dR6n705sC7zGvFW&index=6&pp=iAQB
 
-### Что мне не нравится:
+### Что мне не нравится
 - [ ] слишком много импортов в rocket. почитать:
     - https://www.youtube.com/watch?v=FyCYva9DhsI&t=1674s
     - https://stackoverflow.com/questions/8485689/too-many-imports-are-spamming-my-java-code

@@ -5,43 +5,63 @@ import utils.RequirementHandler;
 import utils.enums.FinShape;
 
 /**
- * {@code Fin} реализует {@link Component},
- * представляя собой стабилизатор на хвосте ракеты,
- * который крепится к оперению {@link components.inner.Trapezoidal}.
+ * Represents a stabilizing fin component attached to the tail of a rocket.
+ * Fins provide aerodynamic stability during flight.
+ *
+ * <p>
+ * A {@code Fin} is typically attached to the empennage
+ * {@link components.inner.Trapezoidal} of a rocket to stabilize its trajectory.
+ * </p>
+ *
+ * <p>
+ * The shape and length of the fin are key characteristics defining its
+ * aerodynamic properties.
+ * </p>
+ *
+ * <p>
+ * This class is authored by Gleb Kiva.
+ * </p>
  *
  * @author Gleb Kiva
+ * @see Component
+ * @see components.inner.Trapezoidal
  */
 public final class Fin extends Component {
+
     /**
-     * Форма стабилизатора.
+     * The shape of the fin.
      */
     public final FinShape shape;
+
     /**
-     * Длина стабилизатора.
+     * The length of the fin in meters.
      */
     public final double length;
 
     /**
-     * Создаёт {@code Fin},
-     * которая проверяет введенные данные
-     * на правильность.
+     * Constructs a new {@code Fin} object with specified base information,
+     * fin shape, and length.
      *
-     * @param name     Название стабилизатора
-     * @param mass     Вес стабилизатора (кг)
-     * @param material Материал стабилизатора
-     * @param shape    Форма стабилизатора
-     * @param length   Длина стабилизатора
+     * @param componentBase The base information of the fin component.
+     * @param shape         The shape of the fin.
+     * @param length        The length of the fin in meters.
+     * @throws IllegalArgumentException If the length is not positive.
      */
-    public Fin(final ComponentBase componentBase, final FinShape shape, final double length)
+    public Fin(final ComponentBase componentBase,
+            final FinShape shape, final double length)
             throws IllegalArgumentException {
         super(componentBase);
         this.shape = shape;
         this.length = RequirementHandler.requirePositive(length);
     }
 
+    /**
+     * Returns a string representation of the fin.
+     *
+     * @return A string representation of the fin.
+     */
     @Override
     public String toString() {
-        return String.format("| | | |_Внешний %s\n", name);
+        return String.format("| | | |_External %s\n", name);
     }
-
 }

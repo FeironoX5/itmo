@@ -23,5 +23,6 @@ public enum EventType {
      */
     ENGINE_POWER_SET;
     // TODO engine power set event call
-    // FIXME potential risk, may be should state <T> type here -> интерфейс Payload , Event <- EventType, 
+    // TODO potential risk, may be should state
+    // <T> type here -> интерфейс Payload , Event <- EventType
 }
