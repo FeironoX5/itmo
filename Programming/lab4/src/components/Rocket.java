@@ -121,13 +121,12 @@ public final class Rocket implements Physical {
 
     @Override
     public String toString() {
-        String res = "";
-        res += String.format("%s\n", name);
-        res += cone.toString();
+        StringBuilder res = new StringBuilder(String.format("%s\n", name));
+        res.append(cone);
         for (int i = 0; i < stages.size(); i++) {
-            res += stages.get(i).toString();
+            res.append(stages.get(i));
         }
-        res += "|_|_|_________";
-        return res;
+        res.append("|_|_|_________");
+        return res.toString();
     }
 }

@@ -28,12 +28,11 @@ public class Trapezoidal extends InnerComponent {
 
     @Override
     public String toString() {
-        String res = "";
-        res += String.format("| | |_Внутренний %s\n", name);
+        StringBuilder res = new StringBuilder(String.format("| | |_Внутренний %s\n", name));
         for (Fin c : getFins()) {
-            res += c.toString();
+            res.append(c);
         }
-        return res;
+        return res.toString();
     }
 
 }

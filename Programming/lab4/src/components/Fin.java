@@ -41,9 +41,7 @@ public final class Fin extends Component {
 
     @Override
     public String toString() {
-        String res = "";
-        res += String.format("| | | |_Внешний %s\n", name);
-        return res;
+        return String.format("| | | |_Внешний %s\n", name);
     }
 
 }

@@ -49,11 +49,10 @@ public class Stage extends AssemblyComponent {
 
     @Override
     public String toString() {
-        String res = "";
-        res += String.format("|_Сборочный %s\n", name);
+        StringBuilder res = new StringBuilder(String.format("%s\n", name));
         for (BodyComponent c : getBody()) {
-            res += c.toString();
+            res.append(c);
         }
-        return res;
+        return res.toString();
     }
 }

@@ -53,11 +53,10 @@ public abstract class BodyComponent extends Component {
 
     @Override
     public String toString() {
-        String res = "";
-        res += String.format("| |_Основной%s %s\n", name);
+        StringBuilder res = new StringBuilder(String.format("| |_Основной%s %s\n", name));
         for (InnerComponent c : getInners()) {
-            res += c.toString();
+            res.append(c);
         }
-        return res;
+        return res.toString();
     }
 }
