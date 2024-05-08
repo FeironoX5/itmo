@@ -67,10 +67,11 @@ public class Location {
 - filter_starts_with_name name : вывести элементы, значение поля name которых начинается с заданной подстроки
 - print_field_descending_distance : вывести значения поля distance всех элементов в порядке убывания
 
-## Схемы
+## Документация
+
+Документация: https://itmo-eight.vercel.app/
 
 ### Наследование компонентов ракеты
-
 <img alt="Наследование компонентов ракеты" src="images/components_inheritance.png" width="100%">
 
  Подробнее: https://app.eraser.io/workspace/a1ddOea1jwJJCEwztSbC?elements=CUuNWfsUtwZ1Eq6dRdUbKg
