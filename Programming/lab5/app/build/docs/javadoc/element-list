@@ -1,0 +1,11 @@
+teapot_rocket
+teapot_rocket.components
+teapot_rocket.components.assembly
+teapot_rocket.components.body
+teapot_rocket.components.inner
+teapot_rocket.components.mass
+teapot_rocket.utils
+teapot_rocket.utils.enums
+teapot_rocket.utils.exceptions
+teapot_rocket.utils.implementations
+teapot_rocket.utils.interfaces

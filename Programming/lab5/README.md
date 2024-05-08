@@ -82,8 +82,6 @@ public class Location {
 <img alt="Стадии полёта ракеты" src="images/model_rocket_flight_phases.gif" width="100%">
 
 ## Комментарии и идеи
-
-### ПМИшные комментарии
 - [ ] разобраться с calcMovement
 - [ ] добавить бургер паттерн
 

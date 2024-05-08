@@ -23,10 +23,6 @@ bin/
 /nbdist/
 /.nb-gradle/
 
-### JAVDOC ###
-docs/
-build-info.txt
-
 ### VS Code ###
 .vscode/
 
@@ -40,4 +36,5 @@ build-info.txt
 .gradle
 
 # Ignore Gradle build output directory
-build
+app/build/*
+!app/build/docs
