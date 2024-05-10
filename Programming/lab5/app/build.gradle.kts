@@ -6,6 +6,11 @@ repositories {
     mavenCentral() 
 }
 
+dependencies {
+    // https://mvnrepository.com/artifact/com.opencsv/opencsv
+    implementation("com.opencsv:opencsv:3.7")
+}
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(20)
@@ -13,5 +18,5 @@ java {
 }
 
 application {
-    mainClass = "org.teapot_rocket.App"
+    mainClass = "org.teapot.manager.App"
 }
