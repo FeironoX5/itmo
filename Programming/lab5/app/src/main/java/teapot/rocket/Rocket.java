@@ -78,7 +78,7 @@ public final class Rocket implements Physical {
                 .requireNonEmptyString(originCountry);
         this.stages = RequirementHandler
                 .requireNonEmptyArray(stages);
-        this.cone = cone;
+        this.cone = Objects.requireNonNull(cone);
     }
 
     /**

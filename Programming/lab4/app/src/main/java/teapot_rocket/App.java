@@ -22,7 +22,7 @@ import teapot_rocket.utils.exceptions.*;
  * Exception handling ensures robustness during rocket initialization and
  * launch.
  * </p>
- * 
+ *
  * @author Gleb Kiva
  */
 public final class App {
