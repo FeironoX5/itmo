@@ -9,7 +9,7 @@ public final class Location {
     private final Float y;
     private final String name;
 
-    Location(final long x, final Float y, final String name) {
+    public Location(final long x, final Float y, final String name) {
         this.x = Objects.requireNonNull(x);
         this.y = Objects.requireNonNull(y);
         this.name = RequirementHandler.requireNonEmptyString(name);

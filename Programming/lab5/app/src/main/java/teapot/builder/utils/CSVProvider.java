@@ -11,18 +11,19 @@ import java.io.Reader;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-import teapot.builder.utils.interfaces.CSVStorable;
+import teapot.builder.utils.interfaces.Converter;
 
 public final class CSVProvider {
     private CSVProvider() {
     }
 
-    public static <T extends Collection<? extends CSVStorable>> void save(String absolutePath, T collection) {
+    public static <T> void save(String absolutePath, T[] collection, Converter<T> converter) {
         try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
-            outputStream.write(parseToBytes(collection));
+            outputStream.write(parseToBytes(collection, converter));
             outputStream.flush();
             System.out.println("Changes saved");
         } catch (FileNotFoundException e) {
@@ -32,29 +33,27 @@ public final class CSVProvider {
         }
     }
 
-    public static <T extends CSVStorable> Object[] load(String absolutePath) {
+    public static <T> T[] load(String absolutePath, Converter<T> converter) {
         // output
-        T[] res; // FIXME unable to make ArrayList
+        ArrayList<T> res = new ArrayList<>();
         // init file
         File inputFile = new File(absolutePath);
         // try with resources
         try (InputStreamReader inputReader = new InputStreamReader(
                 new FileInputStream(inputFile), StandardCharsets.UTF_8)) {
-            ArrayList<String> lines = parseLines(inputReader);
-            lines.forEach(line -> {
-                
-            });
-        } catch (FileNotFoundException e) {
-            System.err.println("No such file");
+            ArrayList<String> lines = readLines(inputReader);
+            lines.forEach(line -> res.add(converter.decode(line)));
+            return res.toArray(T[]::new);
+        } catch (FileNotFoundException e) { // TODO reconsider exceptions
+            throw new IllegalArgumentException("No such file");
         } catch (IOException e) {
-            System.err.println("IO error");
+            throw new IllegalArgumentException("IO exception");
         } catch (SecurityException e) {
-            System.err.println("No access");
+            throw new IllegalArgumentException("No access granted");
         }
-        return res.toArray();
     }
 
-    private static ArrayList<String> parseLines(final InputStreamReader inputReader) throws IOException {
+    private static ArrayList<String> readLines(final InputStreamReader inputReader) throws IOException {
         ArrayList<String> lines = new ArrayList<>();
         StringBuilder lineBuffer = new StringBuilder();
         int c;
@@ -72,9 +71,9 @@ public final class CSVProvider {
         return lines;
     }
 
-    public static <T extends Collection<? extends CSVStorable>> byte[] parseToBytes(T collection) {
-        return collection.stream()
-                .map(CSVStorable::encode)
-                .collect(Collectors.joining(",")).getBytes(StandardCharsets.UTF_8);
+    public static <T> byte[] parseToBytes(T[] collection, Converter<T> converter) {
+        return Arrays.stream(collection)
+                .map(el -> converter.encode(el))
+                .collect(Collectors.joining("")).getBytes(StandardCharsets.UTF_8);
     }
 }

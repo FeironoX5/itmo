@@ -2,13 +2,12 @@ package teapot;
 
 import java.util.HashMap;
 
-import teapot.builder.utils.enums.CommandType;
+import teapot.builder.utils.Console;
 import teapot.builder.utils.interfaces.Command;
-import teapot.builder.utils.managers.ConsoleManager;
 
 public class App {
     public static void main(String[] args) {
-        var consoleManager = ConsoleManager.instance;
+        var console = Console.instance;
         consoleManager.addCommands(new HashMap<CommandType, Command>() {
             {
                 put(CommandType.EXECUTE_SCRIPT, (String... args) -> {

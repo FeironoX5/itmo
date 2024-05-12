@@ -1,11 +1,11 @@
 package teapot.builder;
 
+import java.time.ZonedDateTime;
 import java.util.Objects;
 
 import teapot.builder.utils.RequirementHandler;
-import teapot.builder.utils.interfaces.CSVStorable;
 
-public class Route implements Comparable, CSVStorable {
+public class Route implements Comparable {
     private final int id;
     private final String name;
     private final Coordinates coordinates;
@@ -14,8 +14,11 @@ public class Route implements Comparable, CSVStorable {
     private final Location to;
     private final Long distance;
 
-    Route(final int id, final String name, final Coordinates coordinates,
-            final java.time.ZonedDateTime creationDate, final Location from, final Location to, final Long distance) {
+    public Route(final int id,
+            final String name, final Coordinates coordinates,
+            final java.time.ZonedDateTime creationDate,
+            final Location from, final Location to,
+            final Long distance) {
         this.id = RequirementHandler.requirePositive(id);
         this.name = RequirementHandler.requireNonEmptyString(name);
         this.coordinates = Objects.requireNonNull(coordinates);
@@ -37,7 +40,7 @@ public class Route implements Comparable, CSVStorable {
         return coordinates;
     }
 
-    public java.time.ZonedDateTime getCreationDate() {
+    public ZonedDateTime getCreationDate() {
         return creationDate;
     }
 
@@ -51,6 +54,12 @@ public class Route implements Comparable, CSVStorable {
 
     public Long getDistance() {
         return distance;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
     }
 
 }
