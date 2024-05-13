@@ -6,7 +6,6 @@ import teapot.builder.models.Location;
 import teapot.builder.utils.interfaces.Converter;
 
 public final class LocationConverter implements Converter<Location> {
-
     @Override
     public String encode(Location coordinates) {
         ArrayList<String> values = new ArrayList<>();
@@ -24,5 +23,4 @@ public final class LocationConverter implements Converter<Location> {
                 Float.parseFloat(args[i++]),
                 args[i++]);
     }
-
 }

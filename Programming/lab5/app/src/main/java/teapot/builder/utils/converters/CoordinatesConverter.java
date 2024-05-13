@@ -22,5 +22,4 @@ public final class CoordinatesConverter implements Converter<Coordinates> {
                 Integer.parseInt(args[i++]),
                 Double.parseDouble(args[i++]));
     }
-
 }

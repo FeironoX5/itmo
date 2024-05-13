@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class CollectionManager<T extends Comparable<T>> {
+public final class CollectionManager<T extends Comparable<T>> {
     private final HashSet<T> collection;
     private final Date creationDate;
 
@@ -44,6 +44,10 @@ public class CollectionManager<T extends Comparable<T>> {
 
     public void add(T o) {
         collection.add(o);
+    }
+
+    public void add(ArrayList<T> l) {
+        collection.addAll(l);
     }
 
     public void addConditional(T o, Predicate<T> p) throws IllegalArgumentException {

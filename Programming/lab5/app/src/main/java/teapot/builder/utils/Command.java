@@ -44,7 +44,7 @@ public final class Command implements Executable {
                                 i + 1, requiredTypeName, e),
                         e);
             } catch (DateTimeException e) {
-                throw new IllegalArgumentException( // TODO test this
+                throw new IllegalArgumentException(
                         String.format("Invalid datetime format with index %s. Caused by %s",
                                 i + 1, e),
                         e);

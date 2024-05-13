@@ -1,18 +1,18 @@
 package teapot.builder.utils.converters;
 
-import java.text.SimpleDateFormat;
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.TimeZone;
+import java.time.ZonedDateTime;
 
+import teapot.builder.models.ComparableByDistance;
 import teapot.builder.models.Route;
 import teapot.builder.utils.interfaces.Converter;
 
-public class RouteConverter implements Converter<Route> {
-    private TimeZone CURRENT_TIMEZONE;
+public final class RouteConverter implements Converter<Route> {
+    private TimeZone CURRENT_TIMEZONE; // TODO
     public static final RouteConverter instance = new RouteConverter(TimeZone.getDefault());
-    public static final CoordinatesConverter coordinatesConverter = new CoordinatesConverter();
-    public static final LocationConverter locationConverter = new LocationConverter();
+    private final CoordinatesConverter coordinatesConverter = new CoordinatesConverter();
+    private final LocationConverter locationConverter = new LocationConverter();
 
     public RouteConverter(TimeZone CURRENT_TIMEZONE) {
         this.CURRENT_TIMEZONE = CURRENT_TIMEZONE;
@@ -23,9 +23,9 @@ public class RouteConverter implements Converter<Route> {
         ArrayList<String> values = new ArrayList<>();
         values.add(Integer.toString(route.getId()));
         values.add(route.getName());
-        values.add(coordinatesConverter.encode(route.getCoordinates()));// FIXME replace with coordinates converter
-        values.add(new SimpleDateFormat().format(route.getCreationDate()));
-        values.add(locationConverter.encode(route.getTo())); // TODO Timezone??
+        values.add(coordinatesConverter.encode(route.getCoordinates()));
+        values.add(route.getCreationDate().toString());
+        values.add(locationConverter.encode(route.getTo()));
         values.add(locationConverter.encode(route.getFrom()));
         values.add(Long.toString(route.getDistance()));
         return String.join(";", values);
@@ -33,18 +33,22 @@ public class RouteConverter implements Converter<Route> {
 
     @Override
     public Route decode(String... args) {
-        var i = 0;
-        return new Route(
+        int i = 0;
+        if (args.length == 12) {
+            return new Route(                                                                       // sometimes you look at other people's code and think
+                                                                                                    // why am i here? just to suffer?
+                Integer.parseInt(args[i++]),
                 args[i++],
                 coordinatesConverter.decode(args[i++], args[i++]),
+                ZonedDateTime.parse(args[i++]),
                 locationConverter.decode(args[i++], args[i++], args[i++]),
                 locationConverter.decode(args[i++], args[i++], args[i++]),
                 Long.parseLong(args[i++]));
+        }
     }
 
     public void setTimeZone(TimeZone timeZone) {
         CURRENT_TIMEZONE = timeZone;
 
     }
-
 }

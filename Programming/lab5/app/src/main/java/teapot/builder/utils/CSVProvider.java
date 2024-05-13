@@ -8,13 +8,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import teapot.builder.utils.interfaces.Converter;
 
 public class CSVProvider { // TODO class modifiers?
-    public static <T> void save(String absolutePath, T[] collection, Converter<T> converter) {
+    public static <T> void save(String absolutePath, List<T> collection, Converter<T> converter) {
         try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
             outputStream.write(parseToBytes(collection, converter));
             outputStream.flush();
@@ -65,8 +65,8 @@ public class CSVProvider { // TODO class modifiers?
         return lines;
     }
 
-    public static <T> byte[] parseToBytes(T[] collection, Converter<T> converter) {
-        return Arrays.stream(collection)
+    public static <T> byte[] parseToBytes(List<T> collection, Converter<T> converter) {
+        return collection.stream()
                 .map(el -> converter.encode(el))
                 .collect(Collectors.joining("")).getBytes(StandardCharsets.UTF_8);
     }

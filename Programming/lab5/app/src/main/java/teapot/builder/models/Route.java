@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import teapot.builder.utils.RequirementHandler;
 
-public class Route implements Comparable<Route> {
+public class Route implements ComparableByDistance {
     private static int LAST_USED_ID = 1;
     private final int id;
     private String name;
@@ -15,17 +15,26 @@ public class Route implements Comparable<Route> {
     private Location to;
     private Long distance;
 
+    public Route(final int id,
+            final String name,
+            final Coordinates coordinates,
+            final ZonedDateTime creationDate,
+            final Location from, final Location to,
+            final Long distance) {
+        this.id = id;
+        this.name = RequirementHandler.requireNonEmptyString(name);
+        this.coordinates = Objects.requireNonNull(coordinates);
+        this.creationDate = creationDate;
+        this.from = Objects.requireNonNull(from);
+        this.to = Objects.requireNonNull(to);
+        this.distance = RequirementHandler.requireGreaterThan(distance, 1l);
+    }
+
     public Route(final String name,
             final Coordinates coordinates,
             final Location from, final Location to,
             final Long distance) {
-        this.id = LAST_USED_ID++;
-        this.name = RequirementHandler.requireNonEmptyString(name);
-        this.coordinates = Objects.requireNonNull(coordinates);
-        this.creationDate = ZonedDateTime.now();
-        this.from = Objects.requireNonNull(from);
-        this.to = Objects.requireNonNull(to);
-        this.distance = RequirementHandler.requireGreaterThan(distance, 1l);
+        this(LAST_USED_ID++, name, coordinates, ZonedDateTime.now(), from, to, distance);
     }
 
     public void setData(Route otherRoute) {
@@ -60,6 +69,7 @@ public class Route implements Comparable<Route> {
         return to;
     }
 
+    @Override
     public Long getDistance() {
         return distance;
     }
@@ -68,11 +78,6 @@ public class Route implements Comparable<Route> {
     public String toString() {
         return String.format("Route #%s named %s with coordinates %s created at %s\nFrom: %s\nTo: %s\nDistance: %s",
                 id, name, coordinates, creationDate, from, to, distance);
-    }
-
-    @Override
-    public int compareTo(Route o) {
-        return (int) (distance - o.getDistance());
     }
 
 }

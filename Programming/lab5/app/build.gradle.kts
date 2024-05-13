@@ -6,11 +6,6 @@ repositories {
     mavenCentral() 
 }
 
-dependencies {
-    // https://mvnrepository.com/artifact/com.opencsv/opencsv
-    implementation("com.opencsv:opencsv:3.7")
-}
-
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(20)
@@ -18,5 +13,9 @@ java {
 }
 
 application {
-    mainClass = "org.teapot.manager.App"
+    mainClass = "teapot.App"
+}
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }

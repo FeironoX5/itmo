@@ -7,19 +7,17 @@ import java.util.Scanner;
 
 public final class Console {
     public static final Console instance = new Console();
-    private final Scanner in;
+    private final Scanner in = new Scanner(System.in);
     private final HashMap<String, Command> commandByAbbreviationMap;
-    private final LinkedList<String> history; // TODO change to queue
+    private final LinkedList<String> history;
     private boolean running;
 
     private Console() {
-        in = new Scanner(System.in);
         commandByAbbreviationMap = new HashMap<>();
         history = new LinkedList<>();
         running = true;
     }
 
-    // TODO stdin/file stdout/file switches
     public void listen() {
         while (running) {
             System.out.print("\nType any command: ");
