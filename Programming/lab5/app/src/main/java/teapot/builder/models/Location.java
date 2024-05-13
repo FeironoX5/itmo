@@ -1,4 +1,4 @@
-package teapot.builder;
+package teapot.builder.models;
 
 import java.util.Objects;
 
@@ -25,5 +25,10 @@ public final class Location {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s {%s, %s}", name, x, y);
     }
 }

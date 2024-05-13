@@ -5,22 +5,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.stream.Collectors;
 
 import teapot.builder.utils.interfaces.Converter;
 
-public final class CSVProvider {
-    private CSVProvider() {
-    }
-
+public class CSVProvider { // TODO class modifiers?
     public static <T> void save(String absolutePath, T[] collection, Converter<T> converter) {
         try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
             outputStream.write(parseToBytes(collection, converter));
@@ -33,7 +26,7 @@ public final class CSVProvider {
         }
     }
 
-    public static <T> T[] load(String absolutePath, Converter<T> converter) {
+    public static <T> ArrayList<T> load(String absolutePath, Converter<T> converter) {
         // output
         ArrayList<T> res = new ArrayList<>();
         // init file
@@ -43,7 +36,7 @@ public final class CSVProvider {
                 new FileInputStream(inputFile), StandardCharsets.UTF_8)) {
             ArrayList<String> lines = readLines(inputReader);
             lines.forEach(line -> res.add(converter.decode(line)));
-            return res.toArray(T[]::new);
+            return res;
         } catch (FileNotFoundException e) { // TODO reconsider exceptions
             throw new IllegalArgumentException("No such file");
         } catch (IOException e) {
@@ -53,7 +46,8 @@ public final class CSVProvider {
         }
     }
 
-    private static ArrayList<String> readLines(final InputStreamReader inputReader) throws IOException {
+    private static ArrayList<String> readLines(final InputStreamReader inputReader)
+            throws IOException {
         ArrayList<String> lines = new ArrayList<>();
         StringBuilder lineBuffer = new StringBuilder();
         int c;
@@ -66,7 +60,7 @@ public final class CSVProvider {
             lineBuffer.append(c);
         }
         if (!lineBuffer.isEmpty()) {
-
+            lines.add(lineBuffer.toString());
         }
         return lines;
     }

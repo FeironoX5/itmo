@@ -1,6 +1,5 @@
 package teapot.builder.utils.interfaces;
 
-@FunctionalInterface
-public interface Command {
+public interface Executable {
     void execute(String... args);
 }

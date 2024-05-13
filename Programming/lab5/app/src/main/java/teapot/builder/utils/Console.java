@@ -1,31 +1,40 @@
 package teapot.builder.utils;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Scanner;
-
-import teapot.builder.utils.interfaces.Command;
 
 public final class Console {
     public static final Console instance = new Console();
     private final Scanner in;
     private final HashMap<String, Command> commandByAbbreviationMap;
-    private final ArrayList<String> history;
+    private final LinkedList<String> history; // TODO change to queue
+    private boolean running;
 
     private Console() {
         in = new Scanner(System.in);
         commandByAbbreviationMap = new HashMap<>();
-        history = new ArrayList<>();
+        history = new LinkedList<>();
+        running = true;
     }
 
     // TODO stdin/file stdout/file switches
     public void listen() {
-        while (true) {
-            String[] userCommand = in.nextLine().split("\\s+");
+        while (running) {
+            System.out.print("\nType any command: ");
+            String[] userCommand = in.nextLine().toLowerCase().split("\\s+");
             Command c = commandByAbbreviationMap.getOrDefault(userCommand[0],
-                    (String... args) -> System.err.println("No such command"));
-            c.execute(Arrays.copyOfRange(userCommand, 1, userCommand.length));
+                    new Command((String... args) -> System.err.println("No such command")));
+            try {
+                c.execute(Arrays.copyOfRange(userCommand, 1, userCommand.length));
+                history.addLast(userCommand[0]);
+                if (history.size() > 15) {
+                    history.removeFirst();
+                }
+            } catch (IllegalArgumentException e) {
+                System.err.println(String.format("Illegal argument found: %s", e.getMessage()));
+            }
         }
     }
 
@@ -41,12 +50,11 @@ public final class Console {
         return commandByAbbreviationMap;
     }
 
-    public Command[] getHistory() {
-        ArrayList<Command> commands = new ArrayList<>();
-        history.forEach(s -> {
-            Command c = commandByAbbreviationMap.get(s);
-            commands.add(c);
-        });
-        return commands.toArray(Command[]::new);
+    public LinkedList<String> getHistory() {
+        return history;
+    }
+
+    public void close() {
+        running = false;
     }
 }

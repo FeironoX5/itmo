@@ -1,4 +1,4 @@
-package teapot.builder;
+package teapot.builder.models;
 
 import teapot.builder.utils.RequirementHandler;
 
@@ -17,5 +17,10 @@ public class Coordinates {
 
     public Double getY() {
         return y;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("{%s, %s}", x, y);
     }
 }

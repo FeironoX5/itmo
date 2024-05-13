@@ -2,7 +2,7 @@ package teapot.builder.utils.converters;
 
 import java.util.ArrayList;
 
-import teapot.builder.Location;
+import teapot.builder.models.Location;
 import teapot.builder.utils.interfaces.Converter;
 
 public final class LocationConverter implements Converter<Location> {
@@ -17,12 +17,12 @@ public final class LocationConverter implements Converter<Location> {
     }
 
     @Override
-    public Location decode(String args) {
-        String[] values = args.split(";");
+    public Location decode(String... args) {
+        var i = 0;
         return new Location(
-                Long.parseLong(values[0]),
-                Float.parseFloat(values[1]),
-                values[2]);
+                Long.parseLong(args[i++]),
+                Float.parseFloat(args[i++]),
+                args[i++]);
     }
 
 }

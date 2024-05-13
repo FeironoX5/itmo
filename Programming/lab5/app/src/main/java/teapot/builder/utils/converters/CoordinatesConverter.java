@@ -1,7 +1,8 @@
 package teapot.builder.utils.converters;
 
 import java.util.ArrayList;
-import teapot.builder.Coordinates;
+
+import teapot.builder.models.Coordinates;
 import teapot.builder.utils.interfaces.Converter;
 
 public final class CoordinatesConverter implements Converter<Coordinates> {
@@ -15,11 +16,11 @@ public final class CoordinatesConverter implements Converter<Coordinates> {
     }
 
     @Override
-    public Coordinates decode(String args) {
-        String[] values = args.split(";");
+    public Coordinates decode(String... args) {
+        var i = 0;
         return new Coordinates(
-                Integer.parseInt(values[0]),
-                Double.parseDouble(values[1]));
+                Integer.parseInt(args[i++]),
+                Double.parseDouble(args[i++]));
     }
 
 }
