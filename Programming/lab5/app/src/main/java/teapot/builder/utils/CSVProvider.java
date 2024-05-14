@@ -18,7 +18,7 @@ public class CSVProvider { // TODO class modifiers?
         try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
             outputStream.write(parseToBytes(collection, converter));
             outputStream.flush();
-            System.out.println("Changes saved"); // FIXME to throw 
+            System.out.println("Changes saved"); // FIXME to throw
         } catch (FileNotFoundException e) {
             System.err.println("No such file");
         } catch (IOException e) {
@@ -35,7 +35,7 @@ public class CSVProvider { // TODO class modifiers?
         try (InputStreamReader inputReader = new InputStreamReader(
                 new FileInputStream(inputFile), StandardCharsets.UTF_8)) {
             ArrayList<String> lines = readLines(inputReader);
-            lines.forEach(line -> res.add(converter.decode(line)));
+            lines.forEach(line -> res.add(converter.decode(line.split(";"))));
             return res;
         } catch (FileNotFoundException e) { // TODO reconsider exceptions
             throw new IllegalArgumentException("No such file");
@@ -52,6 +52,9 @@ public class CSVProvider { // TODO class modifiers?
         StringBuilder lineBuffer = new StringBuilder();
         int c;
         while ((c = inputReader.read()) != -1) {
+            if (c == '\r') {
+                continue;
+            }
             if (c == '\n') {
                 lines.add(lineBuffer.toString());
                 lineBuffer = new StringBuilder();

@@ -227,6 +227,25 @@ public class RoutesBuilder implements Executable {
 
     @Override
     public void execute(String... args) {
+        System.out.println(
+                """
+                    
+                          ##                                           ##                                         ##                  ##
+                          ##                                           ##                                         ##  ##              ##
+                        ######    ####     #####   #####     ####    ######            #####     ####     #####   #####     ####    ######
+                          ##     ######       ##   ##  ##   ##  ##     ##              ### ##   ##  ##   ###      ####     ######     ##
+                          ##     ###      ######   #####    ##  ##     ##              ##       ##  ##   ###      ######   ###        ##
+                          ##      ####     #####   ##        ####      ##              ##        ####     #####   ## ###    ####      ##
+                                                   ##
+
+                                                                          by Gleb Kiva
+
+
+                                                          Type (help) to list all command descriptions
+                                                          and parameter types they accept. Parameters
+                                                          should be entered on the same line as command,
+                                                          separated by space.
+                              """);
         console.listen();
     }
 }

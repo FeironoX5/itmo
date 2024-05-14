@@ -22,6 +22,15 @@ public final class RouteBaseConverter implements Converter<Route.Base> {
     @Override
     public Route.Base decode(String... args) {
         int i = 0;
+        // System.err.println("XXXXXXXXXX");
+        // for (var c: args) {
+        //     System.err.println(c);
+        // }
+        // for (char ch : args[9].toCharArray()) {
+        //     System.err.print((int) ch);
+        //     System.err.println("!");
+        // }
+        // System.err.println("\" 987654321" + args[9] + "0123456789\"");
         return new Route.Base(
                 args[i++],
                 coordinatesConverter.decode(args[i++], args[i++]),

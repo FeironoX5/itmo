@@ -32,7 +32,7 @@ public final class RouteConverter implements Converter<Route> {
         return new Route(
                 Integer.parseInt(args[i++]),
                 ZonedDateTime.parse(args[i++]),
-                routeBaseConverter.decode(Arrays.copyOfRange(args, 2, args.length)));
+                routeBaseConverter.decode(Arrays.copyOfRange(args, i, args.length)));
     }
 
     public void setTimeZone(TimeZone timeZone) {
