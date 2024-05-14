@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.io.File;
 
+import teapot.App;
 import teapot.builder.models.Route;
-import teapot.builder.utils.CSVProvider;
 import teapot.builder.utils.CollectionManager;
 import teapot.builder.utils.Command;
 import teapot.builder.utils.Console;
 import teapot.builder.utils.RequirementHandler;
 import teapot.builder.utils.converters.RouteConverter;
 import teapot.builder.utils.interfaces.Executable;
+import teapot.builder.utils.providers.CSVProvider;
+import teapot.builder.utils.providers.ConsoleProvider;
 
 public class RoutesBuilder implements Executable {
     private String FILE_PATH;
@@ -34,9 +37,9 @@ public class RoutesBuilder implements Executable {
                                 interactively.""",
                         new Class<?>[] { String.class },
                         (String... args) -> {
-                            // String path = args[0];
-                            // TODO read file
-                            System.out.println("0 commands executed");
+                            ConsoleProvider.runScript(
+                                    App.class.getResource(String.format("/%s", args[0])).getPath(),
+                                    console);
                         }));
                 put("info", new Command(
                         """
@@ -229,23 +232,21 @@ public class RoutesBuilder implements Executable {
     public void execute(String... args) {
         System.out.println(
                 """
-                    
-                          ##                                           ##                                         ##                  ##
-                          ##                                           ##                                         ##  ##              ##
-                        ######    ####     #####   #####     ####    ######            #####     ####     #####   #####     ####    ######
-                          ##     ######       ##   ##  ##   ##  ##     ##              ### ##   ##  ##   ###      ####     ######     ##
-                          ##     ###      ######   #####    ##  ##     ##              ##       ##  ##   ###      ######   ###        ##
-                          ##      ####     #####   ##        ####      ##              ##        ####     #####   ## ###    ####      ##
-                                                   ##
 
-                                                                          by Gleb Kiva
+                                            __            __     __            __  __     __
+                        .----..-----..----.|  |--..-----.|  |_  |  |--..--.--.|__||  |.--|  |.-----..----.
+                        |   _||  _  ||  __||    < |  -__||   _| |  _  ||  |  ||  ||  ||  _  ||  -__||   _|
+                        |__|  |_____||____||__|__||_____||____| |_____||_____||__||__||_____||_____||__|
 
 
-                                                          Type (help) to list all command descriptions
-                                                          and parameter types they accept. Parameters
-                                                          should be entered on the same line as command,
-                                                          separated by space.
-                              """);
+                                                            by Gleb Kiva
+
+
+                                        Type (help) to list all command descriptions
+                                        and parameter types they accept. Parameters
+                                        should be entered on the same line as command,
+                                        separated by space.
+                                      """);
         console.listen();
     }
 }

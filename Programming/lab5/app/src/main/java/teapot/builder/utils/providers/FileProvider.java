@@ -1,4 +1,4 @@
-package teapot.builder.utils;
+package teapot.builder.utils.providers;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,35 +8,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
-import teapot.builder.utils.interfaces.Converter;
-
-public class CSVProvider { // TODO class modifiers?
-    public static <T> void save(String absolutePath, List<T> collection, Converter<T> converter) {
+public class FileProvider {
+    public static void save(String absolutePath, byte[] data) {
         try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
-            outputStream.write(parseToBytes(collection, converter));
+            outputStream.write(data);
             outputStream.flush();
-            System.out.println("Changes saved"); // FIXME to throw
+            System.out.println("Changes saved");
         } catch (FileNotFoundException e) {
-            System.err.println("No such file");
+            System.err.println("No such file"); // FIXME to throw
         } catch (IOException e) {
             System.err.println("IO error");
         }
     }
 
-    public static <T> ArrayList<T> load(String absolutePath, Converter<T> converter) {
-        // output
-        ArrayList<T> res = new ArrayList<>();
-        // init file
+    public static ArrayList<String> load(String absolutePath) {
         File inputFile = new File(absolutePath);
-        // try with resources
         try (InputStreamReader inputReader = new InputStreamReader(
                 new FileInputStream(inputFile), StandardCharsets.UTF_8)) {
-            ArrayList<String> lines = readLines(inputReader);
-            lines.forEach(line -> res.add(converter.decode(line.split(";"))));
-            return res;
+            return readLines(inputReader);
         } catch (FileNotFoundException e) { // TODO reconsider exceptions
             throw new IllegalArgumentException("No such file");
         } catch (IOException e) {
@@ -44,6 +34,7 @@ public class CSVProvider { // TODO class modifiers?
         } catch (SecurityException e) {
             throw new IllegalArgumentException("No access granted");
         }
+
     }
 
     private static ArrayList<String> readLines(final InputStreamReader inputReader)
@@ -52,7 +43,7 @@ public class CSVProvider { // TODO class modifiers?
         StringBuilder lineBuffer = new StringBuilder();
         int c;
         while ((c = inputReader.read()) != -1) {
-            if (c == '\r') {
+            if (c == '\r') { // windows issue
                 continue;
             }
             if (c == '\n') {
@@ -60,17 +51,11 @@ public class CSVProvider { // TODO class modifiers?
                 lineBuffer = new StringBuilder();
                 continue;
             }
-            lineBuffer.append((char) c); // FIXME from bytes
+            lineBuffer.append((char) c);
         }
         if (!lineBuffer.isEmpty()) {
             lines.add(lineBuffer.toString());
         }
         return lines;
-    }
-
-    public static <T> byte[] parseToBytes(List<T> collection, Converter<T> converter) {
-        return collection.stream()
-                .map(el -> converter.encode(el))
-                .collect(Collectors.joining("\n")).getBytes(StandardCharsets.UTF_8);
     }
 }

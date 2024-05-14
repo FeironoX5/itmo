@@ -22,17 +22,21 @@ public final class Console {
         while (running) {
             System.out.print("\nType any command: ");
             String[] userCommand = in.nextLine().toLowerCase().split("\\s+");
-            Command c = commandByAbbreviationMap.getOrDefault(userCommand[0],
-                    new Command((String... args) -> System.err.println("No such command")));
-            try {
-                c.execute(Arrays.copyOfRange(userCommand, 1, userCommand.length));
-                history.addLast(userCommand[0]);
-                if (history.size() > 15) {
-                    history.removeFirst();
-                }
-            } catch (IllegalArgumentException e) {
-                System.err.println(String.format("Illegal argument found: %s", e.getMessage()));
+            runCommand(userCommand[0], Arrays.copyOfRange(userCommand, 1, userCommand.length));
+        }
+    }
+
+    public void runCommand(String abbreviation, String... args) {
+        Command c = commandByAbbreviationMap.getOrDefault(abbreviation,
+                new Command((String... emptyArgs) -> System.err.println("No such command")));
+        try {
+            c.execute(args);
+            history.addLast(abbreviation);
+            if (history.size() > 15) {
+                history.removeFirst();
             }
+        } catch (IllegalArgumentException e) {
+            System.err.println(String.format("Illegal argument found: %s", e.getMessage()));
         }
     }
 
