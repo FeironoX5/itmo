@@ -5,79 +5,92 @@ import java.util.Objects;
 
 import teapot.builder.utils.RequirementHandler;
 
-public class Route implements ComparableByDistance {
+public class Route implements Comparable<Route> {
     private static int LAST_USED_ID = 1;
     private final int id;
-    private String name;
-    private Coordinates coordinates;
     private final ZonedDateTime creationDate;
-    private Location from;
-    private Location to;
-    private Long distance;
+    private Base base;
 
     public Route(final int id,
-            final String name,
-            final Coordinates coordinates,
             final ZonedDateTime creationDate,
-            final Location from, final Location to,
-            final Long distance) {
+            final Base base) {
         this.id = id;
-        this.name = RequirementHandler.requireNonEmptyString(name);
-        this.coordinates = Objects.requireNonNull(coordinates);
         this.creationDate = creationDate;
-        this.from = Objects.requireNonNull(from);
-        this.to = Objects.requireNonNull(to);
-        this.distance = RequirementHandler.requireGreaterThan(distance, 1l);
+        this.base = base;
     }
 
-    public Route(final String name,
-            final Coordinates coordinates,
-            final Location from, final Location to,
-            final Long distance) {
-        this(LAST_USED_ID++, name, coordinates, ZonedDateTime.now(), from, to, distance);
+    public Route(final Base base) {
+        this(LAST_USED_ID++, ZonedDateTime.now(), base);
     }
 
-    public void setData(Route otherRoute) {
-        this.name = otherRoute.name;
-        this.coordinates = otherRoute.coordinates;
-        this.from = otherRoute.from;
-        this.to = otherRoute.to;
-        this.distance = otherRoute.distance;
+    static public class Base implements Comparable<Base> {
+        private String name;
+        private Coordinates coordinates;
+        private Location from;
+        private Location to;
+        private Long distance;
+
+        public Base(final String name,
+                final Coordinates coordinates,
+                final Location from, final Location to,
+                final Long distance) {
+            this.name = RequirementHandler.requireNonEmptyString(name);
+            this.coordinates = Objects.requireNonNull(coordinates);
+            this.from = Objects.requireNonNull(from);
+            this.to = Objects.requireNonNull(to);
+            this.distance = RequirementHandler.requireGreaterThan(distance, 1l);
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public Coordinates getCoordinates() {
+            return coordinates;
+        }
+
+        public Location getFrom() {
+            return from;
+        }
+
+        public Location getTo() {
+            return to;
+        }
+
+        public Long getDistance() {
+            return distance;
+        }
+
+        @Override
+        public int compareTo(Base o) {
+            return -distance.compareTo(o.getDistance());
+        }
     }
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Coordinates getCoordinates() {
-        return coordinates;
-    }
-
     public ZonedDateTime getCreationDate() {
         return creationDate;
     }
 
-    public Location getFrom() {
-        return from;
+    public void setBase(Base base) {
+        this.base = base;
     }
 
-    public Location getTo() {
-        return to;
-    }
-
-    @Override
-    public Long getDistance() {
-        return distance;
+    public Base getBase() {
+        return base;
     }
 
     @Override
     public String toString() {
         return String.format("Route #%s named %s with coordinates %s created at %s\nFrom: %s\nTo: %s\nDistance: %s",
-                id, name, coordinates, creationDate, from, to, distance);
+                id, base.name, base.coordinates, creationDate, base.from, base.to, base.distance);
     }
 
+    @Override
+    public int compareTo(Route o) {
+        return getBase().compareTo(o.getBase());
+    }
 }

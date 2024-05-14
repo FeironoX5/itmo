@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.stream.Stream;
 
-import teapot.builder.models.ComparableByDistance;
 import teapot.builder.models.Route;
 import teapot.builder.utils.CSVProvider;
 import teapot.builder.utils.CollectionManager;
@@ -25,7 +23,7 @@ public class RoutesBuilder implements Executable {
         FILE_PATH = RequirementHandler.requireNonEmptyString(filePath);
         console = Console.instance;
         routesManager = new CollectionManager<>();
-        routesManager.add(CSVProvider.load(FILE_PATH, RouteConverter.instance));
+        routesManager.addAll(CSVProvider.load(FILE_PATH, RouteConverter.instance));
         console.addCommands(new HashMap<String, Command>() {
             {
                 put("exec", new Command(
@@ -98,7 +96,7 @@ public class RoutesBuilder implements Executable {
                                 all items in descending order.""",
                         (String... args) -> {
                             var routes = routesManager.getSorted();
-                            routes.forEach(route -> System.out.println(route.getDistance()));
+                            routes.forEach(route -> System.out.println(route.getBase().getDistance()));
                         }));
                 put("search", new Command(
                         """
@@ -108,7 +106,7 @@ public class RoutesBuilder implements Executable {
                         new Class<?>[] { String.class },
                         (String... args) -> {
                             var query = args[0];
-                            var routes = routesManager.search(route -> route.getName().startsWith(query));
+                            var routes = routesManager.search(route -> route.getBase().getName().startsWith(query));
                             routes.forEach(route -> System.out.println(route));
                         }));
                 put("save", new Command(
@@ -128,8 +126,7 @@ public class RoutesBuilder implements Executable {
                                 Print the last 15 commands (with-
                                 out their arguments)""",
                         (String... args) -> {
-                            console.getHistory()
-                                    .forEach(abbreviation -> System.out.println(abbreviation));
+                            console.getHistory().forEach(abbreviation -> System.out.println(abbreviation));
                         }));
                 put("exit", new Command(
                         """
@@ -149,8 +146,8 @@ public class RoutesBuilder implements Executable {
                                 Long.class, Float.class, String.class,
                                 Long.class },
                         (String... args) -> {
-                            var newRoute = RouteConverter.instance.decode(args);
-                            routesManager.addConditional(newRoute, route -> route.getId() == newRoute.getId());
+                            var newRouteBase = RouteConverter.instance.routeBaseConverter.decode(args);
+                            routesManager.add(new Route(newRouteBase));
                         }));
                 put("rm", new Command(
                         """
@@ -175,29 +172,13 @@ public class RoutesBuilder implements Executable {
                                 Long.class, Float.class, String.class,
                                 Long.class },
                         (String... args) -> {
-                            // STAY CAREFUL SHITTY CODE IN 2 LINES
                             int id = Integer.parseInt(args[0]);
                             var oldRoute = routesManager.searchFirst(route -> route.getId() == id);
-                            // DANGER ZONE BAD CODE
-                            // there is a price to pay for bad data organization.
-                            // this is still not much
-                            // @author scarleteagle
-                            String[] newArgs = new String[args.length + 1];
-                            for (int i = 0; i < 3; ++i) {
-                                newArgs[i] = args[i];
-                            }
-                            newArgs[4] = oldRoute.getCreationDate().toString();
-                            for (int i = 4; i < args.length; ++i) {
-                                newArgs[i + 1] = args[i];
-                            }
-                            var newRoute = RouteConverter.instance.decode(newArgs); // DON'T TOUCH
-                            // BE AWARE XXX 18+
-                            // for free? @author scarleteagle
-                            // var newRoute = RouteConverter.instance.decode(
-                            // ArrayUtils.addAll(Arrays.copyOfRange(args, 1, args.length), second));
+                            var newRouteBase = RouteConverter.instance.routeBaseConverter.decode(
+                                    Arrays.copyOfRange(args, 1, args.length));
+                            oldRoute.setBase(newRouteBase);
                             routesManager.filter(route -> route.getId() == id);
-                            oldRoute.setData(newRoute);
-                            routesManager.addConditional(oldRoute, route -> route.getId() == oldRoute.getId());
+                            routesManager.add(oldRoute);
                         }));
                 put("rmg", new Command(
                         """
@@ -212,20 +193,8 @@ public class RoutesBuilder implements Executable {
                                 Long.class, Float.class, String.class,
                                 Long.class },
                         (String... args) -> {
-                            // var comparedRoute = new ComparableByDistance() {
-                            // @Override
-                            // public Long getDistance() {
-                            // return Long.parseLong(args[9]);
-                            // }
-                            // };
-                            // var comparedRoute = RouteConverter.instance.decode(args);
-                            routesManager.filter(route -> route.compareTo(
-                                    new ComparableByDistance() {
-                                        @Override
-                                        public Long getDistance() {
-                                            return Long.parseLong(args[9]);
-                                        }
-                                    }) >= 0);
+                            var comparedBase = RouteConverter.instance.routeBaseConverter.decode(args);
+                            routesManager.filter(route -> route.getBase().compareTo(comparedBase) <= 0);
                         }));
                 put("rml", new Command(
                         """
@@ -239,8 +208,8 @@ public class RoutesBuilder implements Executable {
                                 Long.class, Float.class, String.class,
                                 Long.class },
                         (String... args) -> {
-                            var comparedRoute = RouteConverter.instance.decodeTemp(args);
-                            routesManager.filter(route -> route.compareTo(comparedRoute) <= 0);
+                            var comparedBase = RouteConverter.instance.routeBaseConverter.decode(args);
+                            routesManager.filter(route -> route.getBase().compareTo(comparedBase) >= 0);
                         }));
                 put("rmd", new Command(
                         """
@@ -250,7 +219,7 @@ public class RoutesBuilder implements Executable {
                         new Class<?>[] { Long.class },
                         (String... args) -> {
                             long distance = Long.parseLong(args[0]);
-                            routesManager.filter(route -> route.getDistance() == distance);
+                            routesManager.filter(route -> route.getBase().getDistance() == distance);
                         }));
             }
         });

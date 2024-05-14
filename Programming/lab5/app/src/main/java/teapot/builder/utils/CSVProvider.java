@@ -18,7 +18,7 @@ public class CSVProvider { // TODO class modifiers?
         try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
             outputStream.write(parseToBytes(collection, converter));
             outputStream.flush();
-            System.out.println("Changes saved");
+            System.out.println("Changes saved"); // FIXME to throw 
         } catch (FileNotFoundException e) {
             System.err.println("No such file");
         } catch (IOException e) {
@@ -57,7 +57,7 @@ public class CSVProvider { // TODO class modifiers?
                 lineBuffer = new StringBuilder();
                 continue;
             }
-            lineBuffer.append(c);
+            lineBuffer.append((char) c); // FIXME from bytes
         }
         if (!lineBuffer.isEmpty()) {
             lines.add(lineBuffer.toString());
@@ -68,6 +68,6 @@ public class CSVProvider { // TODO class modifiers?
     public static <T> byte[] parseToBytes(List<T> collection, Converter<T> converter) {
         return collection.stream()
                 .map(el -> converter.encode(el))
-                .collect(Collectors.joining("")).getBytes(StandardCharsets.UTF_8);
+                .collect(Collectors.joining("\n")).getBytes(StandardCharsets.UTF_8);
     }
 }

@@ -16,6 +16,22 @@ public final class CollectionManager<T extends Comparable<T>> {
         creationDate = new Date();
     }
 
+    public void add(T o) {
+        collection.add(o);
+    }
+
+    public void addAll(ArrayList<T> l) {
+        collection.addAll(l);
+    }
+
+    public void filter(Predicate<T> p) {
+        collection.removeIf(p);
+    }
+
+    public void remove(Predicate<T> p) {
+        collection.removeIf(p);
+    }
+
     public void clear() {
         collection.clear();
     }
@@ -36,30 +52,6 @@ public final class CollectionManager<T extends Comparable<T>> {
 
     public T searchFirst(Predicate<T> p) {
         return collection.stream().filter(p).findFirst().orElse(null);
-    }
-
-    public void filter(Predicate<T> p) {
-        collection.removeIf(p);
-    }
-
-    public void add(T o) {
-        collection.add(o);
-    }
-
-    public void add(ArrayList<T> l) {
-        collection.addAll(l);
-    }
-
-    public void addConditional(T o, Predicate<T> p) throws IllegalArgumentException {
-        if (collection.stream().anyMatch(p)) {
-            throw new IllegalArgumentException("Element satisfying the condition already exists");
-        } else {
-            collection.add(o);
-        }
-    }
-
-    public void remove(Predicate<T> p) {
-        collection.removeIf(p);
     }
 
     public Date getCreationDate() {
