@@ -12,6 +12,11 @@ import teapot.builder.utils.interfaces.Converter;
  * @author Gleb Kiva
  */
 public final class CoordinatesConverter implements Converter<Coordinates> {
+    /**
+     * Constructs a RouteBaseConverter instance.
+     */
+    public CoordinatesConverter() {
+    }
 
     /**
      * Encodes a Coordinates object into a CSV string representation.

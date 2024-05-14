@@ -9,15 +9,25 @@ import teapot.builder.models.Route;
 import teapot.builder.utils.interfaces.Converter;
 
 /**
- * Converter implementation for encoding and decoding Route objects to and from
- * CSV format.
+ * Converter implementation for encoding and decoding {@link Route} objects to
+ * and from CSV format.
  *
  * @author Gleb Kiva
+ * 
+ * @see RouteBaseConverter
  */
 public final class RouteConverter implements Converter<Route> {
-
+    /**
+     * The current time zone used for conversions.
+     */
     private TimeZone CURRENT_TIMEZONE; // TODO
+    /**
+     * Singleton instance of RouteConverter with default time zone.
+     */
     public static final RouteConverter instance = new RouteConverter(TimeZone.getDefault());
+    /**
+     * Converter for {@link Route.Base} objects.
+     */
     public final RouteBaseConverter routeBaseConverter = new RouteBaseConverter();
 
     /**

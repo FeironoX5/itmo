@@ -13,7 +13,10 @@ import teapot.builder.utils.interfaces.Converter;
  *
  * @author Gleb Kiva
  */
-public class CSVProvider {
+public final class CSVProvider {
+    private CSVProvider() {
+        // Private constructor to prevent instantiation
+    }
 
     /**
      * Saves a collection of objects to a CSV file using the specified converter.

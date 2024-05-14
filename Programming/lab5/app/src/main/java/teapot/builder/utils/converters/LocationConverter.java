@@ -12,6 +12,11 @@ import teapot.builder.utils.interfaces.Converter;
  * @author Gleb Kiva
  */
 public final class LocationConverter implements Converter<Location> {
+    /**
+     * Constructs a RouteBaseConverter instance.
+     */
+    public LocationConverter() {
+    }
 
     /**
      * Encodes a Location object into a CSV string representation.

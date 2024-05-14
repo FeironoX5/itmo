@@ -14,7 +14,10 @@ import java.util.ArrayList;
  *
  * @author Gleb Kiva
  */
-public class FileProvider {
+public final class FileProvider {
+    private FileProvider() {
+        // Private constructor to prevent instantiation
+    }
 
     /**
      * Saves binary data to a specified file.

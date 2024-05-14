@@ -8,7 +8,6 @@ package teapot.builder.utils.interfaces;
  * @author Gleb Kiva
  */
 public interface Converter<T> {
-
     /**
      * Encodes an object of type T into a string representation.
      *

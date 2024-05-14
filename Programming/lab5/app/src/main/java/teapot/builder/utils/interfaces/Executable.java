@@ -6,7 +6,6 @@ package teapot.builder.utils.interfaces;
  * @author Gleb Kiva
  */
 public interface Executable {
-
     /**
      * Executes an operation with the specified arguments.
      *

@@ -5,21 +5,35 @@ import teapot.builder.models.Route;
 import teapot.builder.utils.interfaces.Converter;
 
 /**
- * Converter implementation for encoding and decoding Route.Base objects to and
+ * Converter implementation for encoding and decoding {@link Route.Base} objects
+ * to and
  * from CSV format.
  *
  * @author Gleb Kiva
+ * 
+ * @see RouteConverter
  */
 public final class RouteBaseConverter implements Converter<Route.Base> {
-
+    /**
+     * Converter for coordinates within the base properties.
+     */
     private final CoordinatesConverter coordinatesConverter = new CoordinatesConverter();
+    /**
+     * Converter for locations within the base properties.
+     */
     private final LocationConverter locationConverter = new LocationConverter();
 
     /**
-     * Encodes a Route.Base object into a CSV string representation.
+     * Constructs a RouteBaseConverter instance.
+     */
+    public RouteBaseConverter() {
+    }
+
+    /**
+     * Encodes a {@link Route.Base} object into a CSV string representation.
      *
-     * @param base The Route.Base object to encode.
-     * @return The CSV string representing the encoded Route.Base.
+     * @param base The {@link Route.Base} object to encode.
+     * @return The CSV string representing the encoded {@link Route.Base}.
      */
     @Override
     public String encode(Route.Base base) {
@@ -36,7 +50,7 @@ public final class RouteBaseConverter implements Converter<Route.Base> {
      * Decodes CSV data into a Route.Base object.
      *
      * @param args The array of string arguments representing CSV data.
-     * @return The decoded Route.Base object.
+     * @return The decoded {@link Route.Base} object.
      * @throws NumberFormatException If the CSV data cannot be parsed into valid
      *                               numeric values.
      */
