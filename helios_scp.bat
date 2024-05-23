@@ -1,0 +1,1 @@
+start "" "C:\Program Files (x86)\WinSCP\WinSCP.exe" sftp://%HELIOS_LOGIN%:%HELIOS_PW%@se.ifmo.ru:2222
