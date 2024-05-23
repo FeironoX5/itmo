@@ -36,5 +36,5 @@ bin/
 .gradle
 
 # Ignore Gradle build output directory
-app/build/*
-!app/build/docs
+client/build/*
+!client/build/docs
