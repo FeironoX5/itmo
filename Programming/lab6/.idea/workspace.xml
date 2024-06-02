@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="19d60735-78c5-4e94-8fd2-c4e1ef4e8c5b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/teapot/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/RoutesBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/models/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/models/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/models/Route.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/CollectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/RequirementHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/converters/CoordinatesConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/converters/LocationConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/converters/RouteBaseConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/converters/RouteConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/exceptions/EmptyArrayException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/exceptions/EmptyStringException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/exceptions/NonPositiveNumberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/exceptions/NumberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/interfaces/Converter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/providers/CSVProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/providers/FileProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/Rocket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/Component.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/Fin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/assembly/AssemblyComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/assembly/NoseCone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/assembly/Stage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/assembly/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/body/BodyComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/body/BodyTube.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/body/Transition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/body/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/inner/CenteringRing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/inner/InnerComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/inner/InnerEngine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/inner/ManoeuveringEngine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/inner/Trapezoidal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/inner/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/mass/MassComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/mass/Parachute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/mass/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/components/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/ComponentBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/RequirementHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/Vector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/EventType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/FinShape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/FlightPhases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/Material.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/NoseConeShape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/TransitionShape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/enums/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/exceptions/EmptyArrayException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/exceptions/EmptyStringException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/exceptions/NonPositiveNumberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/exceptions/NumberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/exceptions/StageNotExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/exceptions/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/implementations/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/implementations/EventBus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/implementations/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/interfaces/EventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/interfaces/MotorMount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/interfaces/Physical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/interfaces/Rotatable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/interfaces/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/rocket/utils/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/components_inheritance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/model_rocket_flight_phases.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rocket_composition.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../helios_connection.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../helios_connection.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FeironoX5&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FeironoX5/itmo.git&quot;,
+    &quot;accountId&quot;: &quot;9b9aadca-a783-411b-8bef-24ce72d91771&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;2d6928ff&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2hEs1kXyWDklIA37ep9dPkXBt77" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/quick/projects/itmo/Programming/lab6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\quick\\.gradle"
+    ]
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19d60735-78c5-4e94-8fd2-c4e1ef4e8c5b" name="Changes" comment="" />
+      <created>1717170367360</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717170367360</updated>
+      <workItem from="1717170375750" duration="225000" />
+      <workItem from="1717338659343" duration="2536000" />
+      <workItem from="1717341251743" duration="277000" />
+      <workItem from="1717341565795" duration="687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value=" pum pum pum...." />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
