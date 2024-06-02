@@ -1,21 +1,11 @@
 plugins {
-    application
+    id("buildlogic.java-application-conventions")
 }
 
-repositories {
-    mavenCentral() 
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(20)
-    }
+dependencies {
+    implementation(project(":shared"))
 }
 
 application {
     mainClass = "teapot.App"
-}
-
-tasks.named<JavaExec>("run") {
-    standardInput = System.`in`
 }
