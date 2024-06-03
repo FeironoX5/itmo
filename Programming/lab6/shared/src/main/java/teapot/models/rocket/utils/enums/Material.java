@@ -1,4 +1,4 @@
-package teapot.rocket.utils.enums;
+package teapot.models.rocket.utils.enums;
 
 /**
  * Represents materials that can be used in rocket components.
@@ -41,7 +41,6 @@ public enum Material {
      * Fuel material.
      */
     FUEL(1950);
-
     /**
      * The density of the material (in kg/m^3).
      */

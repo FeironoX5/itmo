@@ -1,13 +1,16 @@
-package teapot.rocket.utils.enums;
+package teapot.models.rocket.utils.enums;
+
+import teapot.models.rocket.utils.implementations.EventBus;
+import teapot.models.rocket.utils.interfaces.EventListener;
 
 /**
  * Represents different types of events that can occur in rocket systems.
  * Each event type corresponds to a specific event that can be handled by
- * the {@link teapot.rocket.utils.implementations.EventBus} and processed by
- * registered {@link teapot.rocket.utils.interfaces.EventListener}.
+ * the {@link EventBus} and processed by
+ * registered {@link EventListener}.
  * 
  * @author Gleb Kiva
- * @see teapot.rocket.utils.implementations.EventBus
+ * @see EventBus
  */
 public enum EventType {
 

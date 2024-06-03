@@ -1,4 +1,4 @@
-package teapot.rocket.utils.exceptions;
+package teapot.utils.exceptions;
 
 /**
  * Exception thrown to indicate that an array of components is empty, which is not allowed.

@@ -9,3 +9,7 @@ dependencies {
 application {
     mainClass = "teapot.App"
 }
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}

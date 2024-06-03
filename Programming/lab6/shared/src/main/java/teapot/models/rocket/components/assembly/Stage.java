@@ -1,13 +1,13 @@
-package teapot.rocket.components.assembly;
+package teapot.models.rocket.components.assembly;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-import teapot.rocket.components.body.BodyComponent;
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.Vector;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.Vector;
+import teapot.models.rocket.components.body.BodyComponent;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a stage assembly component used in rocket construction.
@@ -15,7 +15,7 @@ import teapot.rocket.utils.Vector;
  * <p>
  * This class extends {@link AssemblyComponent} and represents a stage
  * of a rocket, consisting of
- * {@link teapot.rocket.components.body.BodyComponent} instances.
+ * {@link BodyComponent} instances.
  * </p>
  *
  * <p>
@@ -44,7 +44,7 @@ public final class Stage extends AssemblyComponent {
      *
      * @param componentBase The base information of the stage.
      * @param body          The list of
-     *                      {@link teapot.rocket.components.body.BodyComponent}
+     *                      {@link BodyComponent}
      *                      instances within the stage.
      *                      Represents body components that compose the stage.
      * @throws IllegalArgumentException If component configuration is invalid.
@@ -59,7 +59,7 @@ public final class Stage extends AssemblyComponent {
     /**
      * Retrieves body components of the stage.
      *
-     * @return The list of {@link teapot.rocket.components.body.BodyComponent}
+     * @return The list of {@link BodyComponent}
      *         instances within the stage.
      *         Represents body components that compose the stage.
      */

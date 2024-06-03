@@ -11,4 +11,4 @@
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.utils;
+package teapot.models.rocket.utils;

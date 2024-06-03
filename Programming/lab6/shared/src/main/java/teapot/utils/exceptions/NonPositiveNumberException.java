@@ -1,4 +1,4 @@
-package teapot.rocket.utils.exceptions;
+package teapot.utils.exceptions;
 
 /**
  * Signals that a numeric argument must be positive, but a non-positive value

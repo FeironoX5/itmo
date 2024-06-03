@@ -1,4 +1,4 @@
-package teapot.rocket.utils.enums;
+package teapot.models.rocket.utils.enums;
 
 /**
  * Represents different flight phases of a rocket, used for determining

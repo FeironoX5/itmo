@@ -1,78 +1,40 @@
-package teapot.builder.utils;
+package teapot.utils;
+
+import teapot.models.Response;
+import teapot.utils.interfaces.Executable;
 
 import java.time.DateTimeException;
+import java.util.TreeMap;
 
-import teapot.builder.utils.interfaces.Executable;
-
-/**
- * Represents a command that can be executed with specified arguments.
- *
- * @author Gleb Kiva
- */
 public final class Command implements Executable {
-
-    /**
-     * Description of the command.
-     */
     public final String description;
-
-    /**
-     * Array of required argument types for the command.
-     */
-    public final Class<?>[] requiredArgs;
-
-    /**
-     * Action to be executed when the command is invoked.
-     */
+    public final TreeMap<String, Class<?>> requiredArgs;
     public final Executable action;
 
-    /**
-     * Constructs a Command with a description, required argument types, and action.
-     *
-     * @param description  The description of the command.
-     * @param requiredArgs The array of required argument types.
-     * @param action       The action to be executed when the command is invoked.
-     */
-    public Command(final String description, final Class<?>[] requiredArgs, final Executable action) {
+    public Command(final String description,
+                   final TreeMap<String, Class<?>> requiredArgs,
+                   final Executable action) {
         this.description = description;
         this.requiredArgs = requiredArgs;
         this.action = action;
     }
 
-    /**
-     * Constructs a Command with a description and action.
-     *
-     * @param description The description of the command.
-     * @param action      The action to be executed when the command is invoked.
-     */
     public Command(final String description, final Executable action) {
-        this(description, new Class<?>[0], action);
+        this(description, new TreeMap<>(), action);
     }
 
-    /**
-     * Constructs a Command with a default description.
-     *
-     * @param action The action to be executed when the command is invoked.
-     */
     public Command(final Executable action) {
         this("No description provided", action);
     }
 
-    /**
-     * Executes the command with the specified arguments.
-     *
-     * @param args The arguments to be passed to the command.
-     * @throws IllegalArgumentException If any of the arguments are invalid or
-     *                                  missing.
-     */
     @Override
-    public void execute(String... args) throws IllegalArgumentException {
+    public Response execute(String... args) throws IllegalArgumentException {
         // validating argument types
-        for (int i = 0; i < requiredArgs.length; i++) {
-            var requiredArg = requiredArgs[i];
+        int i = 0;
+        for (var requiredArg : requiredArgs.values()) {
             var requiredTypeName = requiredArg.getSimpleName();
             try {
-                var arg = args[i];
+                var arg = args[i++];
                 RequirementHandler.requireParsable(arg, requiredTypeName);
             } catch (IndexOutOfBoundsException e) {
                 throw new IllegalArgumentException(
@@ -92,6 +54,6 @@ public final class Command implements Executable {
             }
         }
         // if everything's alright, executing
-        action.execute(args);
+        return action.execute(args);
     }
 }

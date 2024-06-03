@@ -4,9 +4,9 @@ plugins {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("com.google.code.gson:gson:2.11.0")
+    implementation("org.slf4j:slf4j-simple:1.6.2")
 }
 
 application {
-    mainClass = "teapot.Server"
+    mainClass = "teapot.App"
 }

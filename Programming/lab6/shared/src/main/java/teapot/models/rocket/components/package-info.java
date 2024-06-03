@@ -12,18 +12,18 @@
  * Key classes in this package are:
  * </p>
  * <ul>
- * <li>{@link teapot.rocket.components.Component}: The base class for all rocket
+ * <li>{@link teapot.models.rocket.components.Component}: The base class for all rocket
  * components.</li>
- * <li>{@link teapot.rocket.components.assembly.AssemblyComponent}: Represents
+ * <li>{@link teapot.models.rocket.components.assembly.AssemblyComponent}: Represents
  * assembly components used in rocket construction.</li>
- * <li>{@link teapot.rocket.components.body.BodyComponent}: Represents body
+ * <li>{@link teapot.models.rocket.components.body.BodyComponent}: Represents body
  * components of a rocket, stored in
- * {@link teapot.rocket.components.assembly.Stage} instances.</li>
- * <li>{@link teapot.rocket.components.inner.InnerComponent}: Represents
+ * {@link teapot.models.rocket.components.assembly.Stage} instances.</li>
+ * <li>{@link teapot.models.rocket.components.inner.InnerComponent}: Represents
  * internal components within
- * {@link teapot.rocket.components.body.BodyComponent} instances.</li>
+ * {@link teapot.models.rocket.components.body.BodyComponent} instances.</li>
  * </ul>
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.components;
+package teapot.models.rocket.components;

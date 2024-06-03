@@ -1,7 +1,7 @@
-package teapot.rocket.components.inner;
+package teapot.models.rocket.components.inner;
 
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a centering ring, which is an inner component used in rocket

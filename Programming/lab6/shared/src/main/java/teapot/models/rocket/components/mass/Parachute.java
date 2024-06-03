@@ -1,12 +1,13 @@
-package teapot.rocket.components.mass;
+package teapot.models.rocket.components.mass;
 
-import teapot.rocket.Rocket;
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.enums.EventType;
-import teapot.rocket.utils.enums.FlightPhases;
-import teapot.rocket.utils.implementations.Event;
-import teapot.rocket.utils.interfaces.EventListener;
+import teapot.models.rocket.Rocket;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.enums.EventType;
+import teapot.models.rocket.utils.enums.FlightPhases;
+import teapot.models.rocket.utils.implementations.Event;
+import teapot.models.rocket.utils.implementations.EventBus;
+import teapot.models.rocket.utils.interfaces.EventListener;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a parachute component used in rocket construction.
@@ -24,7 +25,7 @@ import teapot.rocket.utils.interfaces.EventListener;
  *
  * @author Gleb Kiva
  * @see FlightPhases
- * @see teapot.rocket.utils.implementations.EventBus
+ * @see EventBus
  */
 public final class Parachute extends MassComponent implements EventListener {
 

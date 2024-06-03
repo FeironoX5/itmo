@@ -1,50 +1,34 @@
-package teapot.builder.utils.providers;
+package teapot.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import teapot.models.Response;
+
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-/**
- * Utility class for saving and loading data from files.
- *
- * @author Gleb Kiva
- */
 public final class FileProvider {
+
+
     private FileProvider() {
         // Private constructor to prevent instantiation
     }
 
-    /**
-     * Saves binary data to a specified file.
-     *
-     * @param absolutePath The absolute path of the file to save to.
-     * @param data         The binary data to be saved.
-     */
-    public static void save(String absolutePath, byte[] data) {
-        try (FileOutputStream outputStream = new FileOutputStream(absolutePath)) {
+    public static Response save(String absolutePath, byte[] data) {
+        Response response = new Response();
+        try (FileOutputStream outputStream = new FileOutputStream(
+                RequirementHandler.requireNonEmptyString(absolutePath)
+        )) {
             outputStream.write(data);
             outputStream.flush();
-            System.out.println("Changes saved");
+            response.print("Changes saved");
         } catch (FileNotFoundException e) {
-            System.err.println("No such file"); // FIXME to throw
+            response.err("No such file");
         } catch (IOException e) {
-            System.err.println("IO error");
+            response.err("IO error");
         }
+        return response;
     }
 
-    /**
-     * Loads lines of text from a specified file.
-     *
-     * @param absolutePath The absolute path of the file to load from.
-     * @return A list of strings representing lines of text from the file.
-     * @throws IllegalArgumentException If the file does not exist or cannot be
-     *                                  accessed.
-     */
     public static ArrayList<String> load(String absolutePath) {
         File inputFile = new File(absolutePath);
         try (InputStreamReader inputReader = new InputStreamReader(
@@ -59,13 +43,6 @@ public final class FileProvider {
         }
     }
 
-    /**
-     * Reads lines of text from an InputStreamReader.
-     *
-     * @param inputReader The InputStreamReader to read from.
-     * @return A list of strings representing lines of text read from the reader.
-     * @throws IOException If an I/O error occurs while reading from the reader.
-     */
     private static ArrayList<String> readLines(final InputStreamReader inputReader)
             throws IOException {
         ArrayList<String> lines = new ArrayList<>();
@@ -82,7 +59,7 @@ public final class FileProvider {
             }
             lineBuffer.append((char) c);
         }
-        if (lineBuffer.length() > 0) {
+        if (!lineBuffer.isEmpty()) {
             lines.add(lineBuffer.toString());
         }
         return lines;

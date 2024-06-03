@@ -1,8 +1,7 @@
-package teapot.rocket.utils.implementations;
+package teapot.models.rocket.utils.implementations;
 
-import teapot.rocket.utils.enums.EventType;
-import teapot.rocket.utils.implementations.Event;
-import teapot.rocket.utils.interfaces.EventListener;
+import teapot.models.rocket.utils.enums.EventType;
+import teapot.models.rocket.utils.interfaces.EventListener;
 
 /**
  * The {@code Event} class represents an event that carries information of type

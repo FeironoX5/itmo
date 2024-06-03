@@ -1,4 +1,4 @@
-package teapot.rocket.utils.enums;
+package teapot.models.rocket.utils.enums;
 
 /**
  * Represents the shape of a nose cone used in rocket assemblies.

@@ -8,4 +8,4 @@
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.components.body;
+package teapot.models.rocket.components.body;

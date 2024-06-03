@@ -1,7 +1,7 @@
-package teapot.rocket.components.mass;
+package teapot.models.rocket.components.mass;
 
-import teapot.rocket.components.inner.InnerComponent;
-import teapot.rocket.utils.ComponentBase;
+import teapot.models.rocket.components.inner.InnerComponent;
+import teapot.models.rocket.utils.ComponentBase;
 
 /**
  * Represents a mass component used in rocket construction.

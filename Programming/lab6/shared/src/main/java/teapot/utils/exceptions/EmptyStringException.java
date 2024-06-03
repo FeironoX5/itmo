@@ -1,4 +1,4 @@
-package teapot.rocket.utils.exceptions;
+package teapot.utils.exceptions;
 
 /**
  * Signals that a string value is empty, which is not allowed.

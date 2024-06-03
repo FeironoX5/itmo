@@ -1,22 +1,22 @@
-package teapot.rocket.components.body;
+package teapot.models.rocket.components.body;
 
 import java.util.LinkedList;
 
-import teapot.rocket.Rocket;
-import teapot.rocket.components.inner.InnerComponent;
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.Vector;
-import teapot.rocket.utils.enums.EventType;
-import teapot.rocket.utils.implementations.Event;
-import teapot.rocket.utils.interfaces.EventListener;
-import teapot.rocket.utils.interfaces.Rotatable;
+import teapot.models.rocket.Rocket;
+import teapot.models.rocket.components.inner.InnerComponent;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.Vector;
+import teapot.models.rocket.utils.enums.EventType;
+import teapot.models.rocket.utils.implementations.Event;
+import teapot.models.rocket.utils.interfaces.EventListener;
+import teapot.models.rocket.utils.interfaces.Rotatable;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a body tube component used in rocket construction.
  *
  * <p>
- * This class extends {@link teapot.rocket.components.body.BodyComponent} and
+ * This class extends {@link BodyComponent} and
  * implements the {@link Rotatable} interface.
  * It represents a cylindrical body tube of a rocket with wall thickness and
  * rotational capabilities.

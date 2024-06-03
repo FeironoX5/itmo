@@ -1,10 +1,10 @@
-package teapot.rocket.components;
+package teapot.models.rocket.components;
 
 import java.util.Objects;
 
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.enums.Material;
-import teapot.rocket.utils.interfaces.Physical;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.enums.Material;
+import teapot.models.rocket.utils.interfaces.Physical;
 
 /**
  * The {@code Component} class is used for building rockets.

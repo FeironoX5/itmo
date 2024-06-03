@@ -1,15 +1,16 @@
-package teapot.rocket.components.body;
+package teapot.models.rocket.components.body;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-import teapot.rocket.components.Component;
-import teapot.rocket.components.inner.InnerComponent;
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.Vector;
-import teapot.rocket.utils.interfaces.MotorMount;
+import teapot.models.rocket.components.Component;
+import teapot.models.rocket.components.assembly.Stage;
+import teapot.models.rocket.components.inner.InnerComponent;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.Vector;
+import teapot.models.rocket.utils.interfaces.MotorMount;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a body component used in rocket construction.
@@ -25,7 +26,7 @@ import teapot.rocket.utils.interfaces.MotorMount;
  * </p>
  *
  * @author Gleb Kiva
- * @see teapot.rocket.components.assembly.Stage
+ * @see Stage
  */
 public abstract class BodyComponent extends Component {
     private final LinkedList<InnerComponent> inners;

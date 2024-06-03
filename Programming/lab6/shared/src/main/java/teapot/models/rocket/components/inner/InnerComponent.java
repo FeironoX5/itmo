@@ -1,7 +1,8 @@
-package teapot.rocket.components.inner;
+package teapot.models.rocket.components.inner;
 
-import teapot.rocket.components.Component;
-import teapot.rocket.utils.ComponentBase;
+import teapot.models.rocket.components.Component;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.components.body.BodyComponent;
 
 /**
  * Represents an inner component used in rocket construction.
@@ -9,7 +10,7 @@ import teapot.rocket.utils.ComponentBase;
  * <p>
  * This class extends {@link Component} and serves as a base class for various
  * internal components used within
- * {@link teapot.rocket.components.body.BodyComponent} instances.
+ * {@link BodyComponent} instances.
  * </p>
  *
  * <p>
@@ -23,7 +24,7 @@ import teapot.rocket.utils.ComponentBase;
  * </p>
  *
  * @author Gleb Kiva
- * @see teapot.rocket.components.body.BodyComponent
+ * @see BodyComponent
  */
 public abstract class InnerComponent extends Component {
     /**

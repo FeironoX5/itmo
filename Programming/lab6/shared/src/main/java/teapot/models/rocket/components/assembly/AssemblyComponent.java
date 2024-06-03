@@ -1,14 +1,15 @@
-package teapot.rocket.components.assembly;
+package teapot.models.rocket.components.assembly;
 
-import teapot.rocket.components.Component;
-import teapot.rocket.utils.ComponentBase;
+import teapot.models.rocket.Rocket;
+import teapot.models.rocket.components.Component;
+import teapot.models.rocket.utils.ComponentBase;
 
 /**
  * Represents an assembly component used in
- * {@link teapot.rocket.Rocket} construction.
+ * {@link Rocket} construction.
  *
  * @author Gleb Kiva
- * @see teapot.rocket.Rocket
+ * @see Rocket
  */
 public abstract class AssemblyComponent extends Component {
     /**

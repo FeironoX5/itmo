@@ -1,17 +1,17 @@
-package teapot.rocket.components.body;
+package teapot.models.rocket.components.body;
 
 import java.util.LinkedList;
 
-import teapot.rocket.components.inner.InnerComponent;
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.enums.TransitionShape;
+import teapot.models.rocket.components.inner.InnerComponent;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.enums.TransitionShape;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a transition component used in rocket body construction.
  *
  * <p>
- * This class extends {@link teapot.rocket.components.body.BodyComponent}
+ * This class extends {@link BodyComponent}
  * and represents a transition section
  * of a rocket body that connects different diameter sections or shapes.
  * </p>

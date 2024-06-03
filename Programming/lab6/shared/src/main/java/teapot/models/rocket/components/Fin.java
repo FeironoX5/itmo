@@ -1,8 +1,9 @@
-package teapot.rocket.components;
+package teapot.models.rocket.components;
 
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.enums.FinShape;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.utils.RequirementHandler;
+import teapot.models.rocket.utils.enums.FinShape;
+import teapot.models.rocket.components.inner.Trapezoidal;
 
 /**
  * Represents a stabilizing fin component attached to the tail of a rocket.
@@ -10,7 +11,7 @@ import teapot.rocket.utils.enums.FinShape;
  *
  * <p>
  * A {@code Fin} is typically attached to the empennage
- * {@link teapot.rocket.components.inner.Trapezoidal} of a rocket
+ * {@link Trapezoidal} of a rocket
  * to stabilize its trajectory.
  * </p>
  *
@@ -20,7 +21,7 @@ import teapot.rocket.utils.enums.FinShape;
  * </p>
  *
  * @author Gleb Kiva
- * @see teapot.rocket.components.inner.Trapezoidal
+ * @see Trapezoidal
  */
 public final class Fin extends Component {
 

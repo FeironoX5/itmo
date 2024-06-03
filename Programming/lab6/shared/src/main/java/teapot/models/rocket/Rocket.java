@@ -1,26 +1,30 @@
-package teapot.rocket;
+package teapot.models.rocket;
 
-import static java.lang.Double.max;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.Vector;
+import teapot.models.rocket.utils.implementations.Event;
+import teapot.models.rocket.utils.implementations.EventBus;
+import teapot.models.rocket.utils.interfaces.EventListener;
+import teapot.models.rocket.utils.interfaces.Physical;
+import teapot.utils.RequirementHandler;
+import teapot.models.rocket.components.assembly.NoseCone;
+import teapot.models.rocket.components.assembly.Stage;
+import teapot.models.rocket.components.body.BodyComponent;
+import teapot.models.rocket.utils.enums.EventType;
+import teapot.models.rocket.utils.enums.Material;
+import teapot.models.rocket.utils.enums.NoseConeShape;
+import teapot.models.rocket.utils.exceptions.StageNotExistsException;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Objects;
 
-import teapot.rocket.components.assembly.NoseCone;
-import teapot.rocket.components.assembly.Stage;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.Vector;
-import teapot.rocket.utils.enums.EventType;
-import teapot.rocket.utils.exceptions.StageNotExistsException;
-import teapot.rocket.utils.implementations.Event;
-import teapot.rocket.utils.implementations.EventBus;
-import teapot.rocket.utils.interfaces.EventListener;
-import teapot.rocket.utils.interfaces.Physical;
+import static java.lang.Double.max;
 
 /**
  * {@code Rocket} represents a rocket intended for a long journey.
- *
+ * <p>
  * This class defines a rocket with its stages, nose cone, and provides methods
  * for calculating movement vector, separating stages,
  * and retrieving rocket properties.
@@ -28,7 +32,7 @@ import teapot.rocket.utils.interfaces.Physical;
  *
  * @author Gleb Kiva
  */
-public final class Rocket implements Physical {
+public final class Rocket implements Physical, Comparable<Rocket> {
     /**
      * The name of the rocket.
      */
@@ -42,7 +46,7 @@ public final class Rocket implements Physical {
      */
     public final String originCountry;
     /**
-     * Stages, containing {@link org.teapot_rocket.components.body.BodyComponents}.
+     * Stages, containing {@link BodyComponent}.
      */
     private final LinkedList<Stage> stages;
     /**
@@ -67,8 +71,8 @@ public final class Rocket implements Physical {
      *                                  are empty or null
      */
     public Rocket(final String name,
-            final String manufacturer, final String originCountry,
-            final LinkedList<Stage> stages, final NoseCone cone)
+                  final String manufacturer, final String originCountry,
+                  final LinkedList<Stage> stages, final NoseCone cone)
             throws IllegalArgumentException {
         this.name = RequirementHandler
                 .requireNonEmptyString(name);
@@ -79,6 +83,49 @@ public final class Rocket implements Physical {
         this.stages = RequirementHandler
                 .requireNonEmptyArray(stages);
         this.cone = Objects.requireNonNull(cone);
+    }
+
+    /**
+     * Constructs a Rocket object with the specified name, manufacturer,
+     * origin country.
+     *
+     * @param name          the name of the rocket
+     * @param manufacturer  the manufacturer of the rocket
+     * @param originCountry the country of origin of the rocket
+     * @throws IllegalArgumentException if any of the parameters
+     *                                  are empty or null
+     */
+    public Rocket(final String name,
+                  final String manufacturer, final String originCountry)
+            throws IllegalArgumentException {
+        this.name = RequirementHandler
+                .requireNonEmptyString(name);
+        this.manufacturer = RequirementHandler
+                .requireNonEmptyString(manufacturer);
+        this.originCountry = RequirementHandler
+                .requireNonEmptyString(originCountry);
+        this.stages = new LinkedList<>();
+        this.cone = new NoseCone(
+                new ComponentBase(
+                        "Example Nose Cone",
+                        80, 150, 200,
+                        Material.ALUMINIUM),
+                30,
+                NoseConeShape.CONICAL);
+    }
+
+    /**
+     * Compares the two rockets by summary weights values.
+     *
+     * @param o the rocket to be compared with
+     * @return zero if summary weights are equals,
+     * negative if summary weight of this rocket is less,
+     * than the weight of specified one, otherwise, returns
+     * a positive number
+     */
+    @Override
+    public int compareTo(Rocket o) {
+        return Double.compare(this.getWeight(), o.getWeight());
     }
 
     /**
@@ -143,6 +190,15 @@ public final class Rocket implements Physical {
      *
      * @return the stages of the rocket
      */
+    public void addStage(Stage stage) {
+        this.stages.add(stage);
+    }
+
+    /**
+     * Retrieves the stages of the rocket.
+     *
+     * @return the stages of the rocket
+     */
     public LinkedList<Stage> getStages() {
         return stages;
     }
@@ -151,9 +207,9 @@ public final class Rocket implements Physical {
     public double getWidth() {
         return max(cone.width,
                 Collections.max(
-                        stages,
-                        Comparator.comparing(
-                                stage -> stage.getWidth()))
+                                stages,
+                                Comparator.comparing(
+                                        stage -> stage.getWidth()))
                         .getWidth());
     }
 

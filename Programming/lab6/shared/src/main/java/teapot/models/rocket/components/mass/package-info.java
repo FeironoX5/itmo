@@ -4,4 +4,4 @@
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.components.mass;
+package teapot.models.rocket.components.mass;

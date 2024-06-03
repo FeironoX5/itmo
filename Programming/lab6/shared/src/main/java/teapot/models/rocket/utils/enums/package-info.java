@@ -3,4 +3,4 @@
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.utils.enums;
+package teapot.models.rocket.utils.enums;

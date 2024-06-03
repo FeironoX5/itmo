@@ -1,10 +1,10 @@
-package teapot.rocket.components.inner;
+package teapot.models.rocket.components.inner;
 
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.Vector;
-import teapot.rocket.utils.exceptions.NonPositiveNumberException;
-import teapot.rocket.utils.interfaces.MotorMount;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.Vector;
+import teapot.models.rocket.utils.interfaces.MotorMount;
+import teapot.utils.exceptions.NonPositiveNumberException;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents an inner engine component used in rocket construction.

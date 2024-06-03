@@ -1,17 +1,17 @@
-package teapot.rocket.components.inner;
+package teapot.models.rocket.components.inner;
 
 import java.util.LinkedList;
 
-import teapot.rocket.components.Fin;
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.exceptions.NumberException;
+import teapot.models.rocket.components.Fin;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.utils.RequirementHandler;
+import teapot.utils.exceptions.NumberException;
 
 /**
  * Represents a trapezoidal inner component used in rocket construction.
  *
  * <p>
- * This class extends {@link teapot.rocket.components.inner.InnerComponent}
+ * This class extends {@link InnerComponent}
  * and represents a trapezoidal-shaped component placed in rocket's tail,
  * typically used for aerodynamic purposes.
  * </p>

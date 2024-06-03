@@ -1,4 +1,4 @@
-package teapot.rocket.utils.exceptions;
+package teapot.utils.exceptions;
 
 /**
  * Signals that a numeric argument has an invalid value.

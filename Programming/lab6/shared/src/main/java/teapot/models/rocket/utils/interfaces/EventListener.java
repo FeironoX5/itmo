@@ -1,6 +1,6 @@
-package teapot.rocket.utils.interfaces;
+package teapot.models.rocket.utils.interfaces;
 
-import teapot.rocket.utils.implementations.Event;
+import teapot.models.rocket.utils.implementations.Event;
 
 /**
  * The {@code EventListener} interface represents an object

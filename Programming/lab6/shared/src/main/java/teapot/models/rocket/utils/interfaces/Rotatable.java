@@ -1,4 +1,6 @@
-package teapot.rocket.utils.interfaces;
+package teapot.models.rocket.utils.interfaces;
+
+import teapot.models.rocket.components.body.BodyTube;
 
 /**
  * The {@code Rotatable} interface is designed for components that can be
@@ -10,7 +12,7 @@ package teapot.rocket.utils.interfaces;
  * allowing them to be rotated by a specified angle.
  * 
  * @author Gleb Kiva
- * @see teapot.rocket.components.body.BodyTube
+ * @see BodyTube
  */
 public interface Rotatable {
     /**

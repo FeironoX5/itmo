@@ -1,10 +1,10 @@
-package teapot.rocket.utils.implementations;
+package teapot.models.rocket.utils.implementations;
 
 import java.util.HashMap;
 import java.util.HashSet;
 
-import teapot.rocket.utils.enums.EventType;
-import teapot.rocket.utils.interfaces.EventListener;
+import teapot.models.rocket.utils.enums.EventType;
+import teapot.models.rocket.utils.interfaces.EventListener;
 
 /**
  * The {@code EventBus} class implements the EventBus pattern, which

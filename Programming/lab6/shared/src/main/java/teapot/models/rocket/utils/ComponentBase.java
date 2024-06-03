@@ -1,8 +1,10 @@
-package teapot.rocket.utils;
+package teapot.models.rocket.utils;
 
 import java.util.Objects;
 
-import teapot.rocket.utils.enums.Material;
+import teapot.models.rocket.components.Component;
+import teapot.models.rocket.utils.enums.Material;
+import teapot.utils.RequirementHandler;
 
 /**
  * The {@code ComponentBase} class represents the basic attributes of a
@@ -13,7 +15,7 @@ import teapot.rocket.utils.enums.Material;
  * and cannot be changed afterwards.
  * 
  * @author Gleb Kiva
- * @see teapot.rocket.components.Component
+ * @see Component
  */
 public final class ComponentBase {
     /**

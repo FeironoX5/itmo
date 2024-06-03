@@ -1,6 +1,4 @@
-package teapot.rocket.utils.exceptions;
-
-import teapot.rocket.utils.RequirementHandler;
+package teapot.models.rocket.utils.exceptions;
 
 /**
  * Signals that an attempt was made to access a non-existent rocket stage.
@@ -17,7 +15,7 @@ import teapot.rocket.utils.RequirementHandler;
  * attempt to detach a non-existent stage.
  * </p>
  *
- * @see RequirementHandler
+ * @see teapot.models.rocket.utils.RequirementHandler
  */
 public class StageNotExistsException extends RuntimeException {
 

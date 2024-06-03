@@ -9,4 +9,4 @@
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.components.inner;
+package teapot.models.rocket.components.inner;

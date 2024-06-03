@@ -3,4 +3,4 @@
  *
  * @author Gleb Kiva
  */
-package teapot.rocket.utils.implementations;
+package teapot.models.rocket.utils.implementations;

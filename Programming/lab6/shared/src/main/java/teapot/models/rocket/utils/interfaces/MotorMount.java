@@ -1,7 +1,7 @@
-package teapot.rocket.utils.interfaces;
+package teapot.models.rocket.utils.interfaces;
 
-import teapot.rocket.utils.Vector;
-import teapot.rocket.utils.exceptions.NonPositiveNumberException;
+import teapot.models.rocket.utils.Vector;
+import teapot.utils.exceptions.NonPositiveNumberException;
 
 /**
  * The {@code MotorMount} interface represents a rocket engine mount.

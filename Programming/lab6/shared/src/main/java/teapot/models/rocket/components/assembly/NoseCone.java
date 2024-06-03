@@ -1,8 +1,8 @@
-package teapot.rocket.components.assembly;
+package teapot.models.rocket.components.assembly;
 
-import teapot.rocket.utils.ComponentBase;
-import teapot.rocket.utils.RequirementHandler;
-import teapot.rocket.utils.enums.NoseConeShape;
+import teapot.models.rocket.utils.ComponentBase;
+import teapot.models.rocket.utils.enums.NoseConeShape;
+import teapot.utils.RequirementHandler;
 
 /**
  * Represents a nose cone assembly component used in rocket construction.

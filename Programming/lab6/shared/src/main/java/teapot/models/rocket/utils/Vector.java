@@ -1,4 +1,4 @@
-package teapot.rocket.utils;
+package teapot.models.rocket.utils;
 
 import java.util.Objects;
 

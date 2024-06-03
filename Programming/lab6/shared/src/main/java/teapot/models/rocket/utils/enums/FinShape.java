@@ -1,6 +1,6 @@
-package teapot.rocket.utils.enums;
+package teapot.models.rocket.utils.enums;
 
-import teapot.rocket.components.Fin;
+import teapot.models.rocket.components.Fin;
 
 /**
  * Represents the shape of a {@link Fin}.

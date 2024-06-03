@@ -1,4 +1,4 @@
-package teapot.rocket.utils.interfaces;
+package teapot.models.rocket.utils.interfaces;
 
 /**
  * The {@code Physical} interface represents physical dimensions and weight of
