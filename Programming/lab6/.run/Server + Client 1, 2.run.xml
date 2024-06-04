@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Server + Client 1, 2" type="CompoundRunConfigurationType">
+    <toRun name="lab6:client [run]" type="GradleRunConfiguration" />
+    <toRun name="lab6:client [run] (2)" type="GradleRunConfiguration" />
+    <toRun name="lab6:server [run]" type="GradleRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>

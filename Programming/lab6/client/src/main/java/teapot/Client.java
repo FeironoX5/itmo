@@ -5,6 +5,7 @@ import teapot.utils.Console;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
+import java.net.UnknownHostException;
 import java.nio.channels.SocketChannel;
 
 public class Client {
@@ -17,12 +18,15 @@ public class Client {
     public void run(int port) {
         try {
             InetSocketAddress hostAddress = new InetSocketAddress(InetAddress.getLocalHost(), port);
-            SocketChannel client = SocketChannel.open(hostAddress);
             Console.instance.sayHello();
-            Console.instance.run(client);
-            client.close();
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            Console.instance.run(hostAddress);
+        } catch (InterruptedException e) {
+            System.out.println("Client interrupted");
+        } catch (UnknownHostException e) {
+            System.out.println("Cannot use localhost as a host");
+        } catch (IOException e) {
+            System.out.println("Channel operations unavailable for now.\nCheck server status.");
+            Console.instance.close();
         }
 
     }

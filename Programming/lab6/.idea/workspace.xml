@@ -10,88 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19d60735-78c5-4e94-8fd2-c4e1ef4e8c5b" name="Changes" comment="🎶 haha it works">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/teapot/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/teapot/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/teapot/ServerRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/teapot/utils/CommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/teapot/utils/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/CommandRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/RequirementHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/Serializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/enums/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/exceptions/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/interfaces/Executable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/Server + Client 1, 2.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/teapot/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/RocketBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/teapot/utils/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/interfaces/Executable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/providers/CommandProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/providers/ConsoleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/builder/utils/providers/RequestProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/teapot/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/teapot/utils/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/teapot/utils/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/ServerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/teapot/ServerRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/utils/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/teapot/utils/CollectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/utils/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/teapot/utils/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/utils/FileProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/teapot/utils/FileProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/utils/RequestProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/teapot/utils/RequirementHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/exceptions/EmptyArrayException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/exceptions/EmptyArrayException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/exceptions/EmptyStringException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/exceptions/NonPositiveNumberException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/exceptions/NumberException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/exceptions/StageNotExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/exceptions/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/Rocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/Rocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/Fin.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/Fin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/AssemblyComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/AssemblyComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/NoseCone.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/NoseCone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/Stage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/assembly/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/BodyComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/BodyComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/BodyTube.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/BodyTube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/Transition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/body/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/CenteringRing.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/CenteringRing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/InnerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/InnerComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/InnerEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/InnerEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/ManoeuveringEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/ManoeuveringEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/Trapezoidal.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/Trapezoidal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/inner/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/mass/MassComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/mass/MassComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/mass/Parachute.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/mass/Parachute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/mass/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/mass/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/components/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/ComponentBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/ComponentBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/RequirementHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/EventType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/FinShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/FinShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/FlightPhases.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/FlightPhases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/NoseConeShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/NoseConeShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/TransitionShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/TransitionShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/enums/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/EmptyArrayException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/EmptyStringException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/exceptions/EmptyStringException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/NonPositiveNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/exceptions/NonPositiveNumberException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/NumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/exceptions/NumberException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/StageNotExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/StageNotExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/exceptions/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/implementations/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/implementations/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/implementations/EventBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/implementations/EventBus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/implementations/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/implementations/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/EventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/MotorMount.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/MotorMount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/Physical.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/Physical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/Rotatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/Rotatable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/interfaces/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/models/rocket/utils/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/teapot/utils/Serializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +119,7 @@
     "Gradle.lab6 [build].executor": "Run",
     "Gradle.lab6:client [:client:App.main()].executor": "Debug",
     "Gradle.lab6:client [run] (1).executor": "Run",
+    "Gradle.lab6:client [run] (2).executor": "Run",
     "Gradle.lab6:client [run].executor": "Run",
     "Gradle.lab6:server [:server:Server.main()].executor": "Run",
     "Gradle.lab6:server [run].executor": "Run",
@@ -223,10 +154,28 @@
       <recent name="teapot.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.lab6:client [run]">
-    <configuration name="Unnamed" type="CompoundRunConfigurationType">
-      <toRun name="lab6 [build]" type="GradleRunConfiguration" />
-      <toRun name="lab6:client [run]" type="GradleRunConfiguration" />
+  <component name="RunManager" selected="Compound.Server + Client 1, 2">
+    <configuration name="lab6:client [run] (2)" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--console=plain" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+            <option value="--args='4200'" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="lab6:client [run]" type="GradleRunConfiguration" factoryName="Gradle">
@@ -257,7 +206,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -276,9 +225,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="Gradle.lab6:client [run]" />
+      <item itemvalue="Compound.Server + Client 1, 2" />
       <item itemvalue="Gradle.lab6:server [run]" />
+      <item itemvalue="Gradle.lab6:client [run]" />
+      <item itemvalue="Gradle.lab6:client [run] (2)" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -317,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717344350790</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="🎶 haha it works">
+      <option name="closed" value="true" />
+      <created>1717448112899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717448112899</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

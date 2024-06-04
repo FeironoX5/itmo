@@ -31,25 +31,24 @@ public final class Command implements Executable {
     public Response execute(String... args) throws IllegalArgumentException {
         // validating argument types
         int i = 0;
-        for (var requiredArg : requiredArgs.values()) {
-            var requiredTypeName = requiredArg.getSimpleName();
+        for (var requiredArg : requiredArgs.entrySet()) {
+            var requiredTypeName = requiredArg.getValue().getSimpleName();
             try {
                 var arg = args[i++];
                 RequirementHandler.requireParsable(arg, requiredTypeName);
             } catch (IndexOutOfBoundsException e) {
                 throw new IllegalArgumentException(
-                        String.format("Argument typed %s with index %s not provided. Caused by %s",
-                                requiredTypeName, i + 1, e),
+                        String.format("Field %s with index %s typed %s is not provided.",
+                                requiredArg.getKey(), i, requiredTypeName),
                         e); // TODO replace with custom exception
             } catch (IllegalArgumentException e) {
                 throw new IllegalArgumentException(
-                        String.format("Argument with index %s of type %s expected. Caused by %s",
-                                i + 1, requiredTypeName, e),
+                        String.format("Cannot parse argument %s with index %s typed %s.",
+                                requiredArg.getKey(), i, requiredTypeName),
                         e);
             } catch (DateTimeException e) {
                 throw new IllegalArgumentException(
-                        String.format("Invalid datetime format with index %s. Caused by %s",
-                                i + 1, e),
+                        String.format("Invalid datetime format with index %s. Caused by %s", i, e),
                         e);
             }
         }

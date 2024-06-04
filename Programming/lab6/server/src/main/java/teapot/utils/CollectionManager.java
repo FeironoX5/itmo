@@ -41,7 +41,7 @@ public final class CollectionManager<T extends Comparable<T>> {
      *
      * @param l The list of objects to add.
      */
-    public void addAll(ArrayList<T> l) {
+    public void addAll(List<T> l) {
         collection.addAll(l);
     }
 

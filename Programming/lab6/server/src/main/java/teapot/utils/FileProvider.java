@@ -43,6 +43,10 @@ public final class FileProvider {
         }
     }
 
+    public static String loadAsSingleLine(String absolutePath) {
+        return String.join("", load(absolutePath));
+    }
+
     private static ArrayList<String> readLines(final InputStreamReader inputReader)
             throws IOException {
         ArrayList<String> lines = new ArrayList<>();

@@ -4,13 +4,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.ZonedDateTime;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class Serializer {
@@ -32,27 +33,35 @@ public class Serializer {
             .create();
 
     public static byte[] toBytes(Object object) {
-        System.err.println("!!!!! ENCODED:");
-        System.err.println(gson.toJson(Objects.requireNonNull(object)));
-        byte[] jsonEncodedBytes = gson.toJson(Objects.requireNonNull(object)).getBytes(StandardCharsets.UTF_8);
-        System.err.println(Arrays.toString(jsonEncodedBytes));
-        String jsonDecodedString = new String(jsonEncodedBytes, StandardCharsets.UTF_8);
-        System.err.println(jsonDecodedString);
-        Object decodedObject = gson.fromJson(jsonDecodedString, Object.class);
-        System.err.println(decodedObject);
+//        System.err.println("!!!!! ENCODED:");
+//        System.err.println(gson.toJson(Objects.requireNonNull(object)));
+//        byte[] jsonEncodedBytes = gson.toJson(Objects.requireNonNull(object)).getBytes(StandardCharsets.UTF_8);
+//        System.err.println(Arrays.toString(jsonEncodedBytes));
+//        String jsonDecodedString = new String(jsonEncodedBytes, StandardCharsets.UTF_8);
+//        System.err.println(jsonDecodedString);
+//        Object decodedObject = gson.fromJson(jsonDecodedString, Object.class);
+//        System.err.println(decodedObject);
         return gson.toJson(Objects.requireNonNull(object)).getBytes(StandardCharsets.UTF_8);
     }
 
-    public static <T> T fromBytes(byte[] bytes, Class<T> tClass) {
+    public static <T> T fromBytes(byte[] bytes, Class<T> tClass) throws IllegalArgumentException {
+        return fromString(new String(bytes, StandardCharsets.UTF_8), tClass);
+    }
+
+    public static <T> T fromString(String s, Class<T> tClass) throws IllegalArgumentException {
         try {
-            System.err.println("!!!!! DECODED:");
-            System.err.println(Arrays.toString(bytes));
-            System.err.println(new String(bytes, StandardCharsets.UTF_8));
-            return gson.fromJson(new String(bytes, StandardCharsets.UTF_8), tClass);
+            return gson.fromJson(s, tClass);
         } catch (IllegalStateException | JsonSyntaxException e) {
-            System.err.println("Unexpected JSON format");
-            e.printStackTrace();
+            throw new IllegalArgumentException("Unexpected JSON format");
         }
-        return null;
+    }
+
+    public static <T> List<T> fromStringAsCollection(String s, Class<T> tClass) throws IllegalArgumentException {
+        try {
+            TypeToken<?> type = TypeToken.getParameterized(List.class, tClass);
+            return (List<T>) gson.fromJson(s, type);
+        } catch (IllegalStateException | JsonSyntaxException e) {
+            throw new IllegalArgumentException("Unexpected JSON format");
+        }
     }
 }

@@ -21,11 +21,17 @@ public class ServerRunner {
     private final Server server;
 
     public ServerRunner(String collectionResourceName) {
-        var resourceURL = App.class.getResource(String.format("/%s", collectionResourceName));
+        var resourceURL = Server.class.getResource(String.format("/%s", collectionResourceName));
         this.FILE_PATH = Objects.requireNonNull(resourceURL).getPath();
         // создать менеджер ракет и загрузить данные из файла
         rocketsManager = new CollectionManager<>();
-        // TODO rocketsManager.addAll(CSVProvider.load(FILE_PATH, rocketConverter.instance));
+        try {
+            String jsonCollection = FileProvider.loadAsSingleLine(FILE_PATH);
+            List<Rocket> rocketsLoaded = Serializer.fromStringAsCollection(jsonCollection, Rocket.class);
+            rocketsManager.addAll(rocketsLoaded);
+        } catch (IllegalArgumentException e) {
+            System.err.printf("Unable to parse collection from file: %s%n", e.getMessage());
+        }
         // создать менеджер команд и добавить нужные
         commandManager = new CommandManager();
         commandManager.addCommands(createCommandsMap());
@@ -39,7 +45,8 @@ public class ServerRunner {
 
     private HashMap<String, Command> createCommandsMap() {
         HashMap<String, Command> commandsMap = new HashMap<>();
-        commandsMap.put("info", createInfoCommand());
+        commandsMap.put("info", createCollectionInfoCommand());
+        commandsMap.put("com", createCommandInfoCommand());
         commandsMap.put("help", createHelpCommand());
         commandsMap.put("show", createShowCommand());
         commandsMap.put("showd", createShowDescCommand());
@@ -57,15 +64,47 @@ public class ServerRunner {
      * Creates a Command for the 'info' command.
      * Prints information about the collection to the standard output stream.
      */
-    private Command createInfoCommand() {
+    private Command createCollectionInfoCommand() {
         return new Command(
-                "Print information about the collection (type, initialization date, number of elements, etc.) to the standard output stream.",
+                """
+                        Print information about the collec-
+                        tion (type, initialization date,
+                        number of elements, etc.) to the
+                        standard output stream.""",
                 (String... args) -> {
                     Response response = new Response();
                     var rockets = rocketsManager.get();
-                    response.print(String.format("Collection class: %s%n", rockets.getClass()));
-                    response.print(String.format("Collection created at %s%n", rocketsManager.getCreationDate()));
-                    response.print(String.format("Collection contains %s elements%n", rockets.size()));
+                    response.print(String.format("Collection class: %s", rockets.getClass()));
+                    response.print(String.format("Collection created at %s", rocketsManager.getCreationDate()));
+                    response.print(String.format("Collection contains %s elements", rockets.size()));
+                    return response;
+                });
+    }
+
+    /**
+     * Creates a Command for the 'com' command.
+     * Prints information about the specific command to the standard output stream.
+     */
+    private Command createCommandInfoCommand() {
+        return new Command(
+                """
+                        Print information about the speci-
+                        fic command to the standard output
+                        stream.""",
+                new TreeMap<>() {{
+                    put("command abbreviation", String.class);
+                }},
+                (String... args) -> {
+                    Response response = new Response();
+                    Command command = commandManager.getCommands().get(args[0]);
+                    if (command != null) {
+                        response.print(command.description);
+                        for (var arg : command.requiredArgs.entrySet()) {
+                            response.print(String.format("> (%s) %s", arg.getValue().getSimpleName(), arg.getKey()));
+                        }
+                    } else {
+                        response.err("No such command");
+                    }
                     return response;
                 });
     }
@@ -95,7 +134,7 @@ public class ServerRunner {
                                 div));
                         response.print(entry.getValue().description);
                         for (var arg : entry.getValue().requiredArgs.entrySet()) {
-                            response.print(String.format("> (%s) %s%n", arg.getValue().getSimpleName(), arg.getKey()));
+                            response.print(String.format("> (%s) %s", arg.getValue().getSimpleName(), arg.getKey()));
                         }
                     }
                     return response;
@@ -109,7 +148,10 @@ public class ServerRunner {
      */
     private Command createShowCommand() {
         return new Command(
-                "Output all elements of the collection in string representation to the standard output stream.",
+                """
+                        Output all elements of the collec-
+                        tion in string representation to
+                        the standard output stream.""",
                 (String... args) -> {
                     Response response = new Response();
                     var rockets = rocketsManager.get();
@@ -124,7 +166,9 @@ public class ServerRunner {
      */
     private Command createShowDescCommand() {
         return new Command(
-                "Print the distance field values of all items in descending order.",
+                """
+                        Print the distance field values
+                        of all items in descending order.""",
                 (String... args) -> {
                     Response response = new Response();
                     var rockets = rocketsManager.getSorted();
@@ -139,7 +183,9 @@ public class ServerRunner {
      */
     private Command createSearchCommand() {
         return new Command(
-                "Print the elements whose name field value starts with the given substring.",
+                """
+                        Print the elements whose name field
+                        value starts with the given substring.""",
                 new TreeMap<>() {{
                     put("searched value", String.class);
                 }},
@@ -185,7 +231,9 @@ public class ServerRunner {
      */
     private Command createHistoryCommand() {
         return new Command(
-                "Print the last 15 commands (without their arguments).",
+                """
+                        Print the last 15 commands (without
+                        their arguments).""",
                 (String... args) -> {
                     Response response = new Response();
                     commandManager.getHistory().forEach(response::print);
@@ -218,7 +266,9 @@ public class ServerRunner {
      */
     private Command createRemoveCommand() {
         return new Command(
-                "Remove an item from the collection by its name.",
+                """
+                        Remove an item from the collection
+                        by its name.""",
                 new TreeMap<>() {{
                     put("rocket's name", String.class);
                 }},
