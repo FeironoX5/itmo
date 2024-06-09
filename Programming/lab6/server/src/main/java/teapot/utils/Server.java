@@ -15,10 +15,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /*
  * осуществляет выполнение команд по управлению коллекцией
@@ -27,24 +24,26 @@ import java.util.Set;
 public class Server {
     public static final Server instance = new Server();
     private final HashMap<Integer, Thread> portListeners;
+    public final Logger logger;
     /*
      * Осуществляет логирование различных этапов работы
      * сервера (начало работы, получение нового подключения,
      * получение нового запроса, отправка ответа и т.п.)
      */
-    public final Logger logger;
+    final Scanner in = new Scanner(System.in);
 
     private Server() {
         portListeners = new HashMap<>();
         logger = LoggerFactory.getLogger("server");
     }
 
-    public void listen(int port, CommandManager commandManager) {
-        portListeners.put(port, new Thread(createPortListener(port, commandManager)));
+    public void listenPort(int port, CommandManager commandsManager) {
+        portListeners.put(port, new Thread(createPortListener(port, commandsManager)));
         portListeners.get(port).start();
     }
 
-    private Runnable createPortListener(int port, CommandManager commandManager) {
+
+    private Runnable createPortListener(int port, CommandManager commandsManager) {
         return new Runnable() {
             @Override
             public void run() {
@@ -57,31 +56,34 @@ public class Server {
                     serverChannel.bind(hostAddress);
 
                     serverChannel.register(selector, SelectionKey.OP_ACCEPT);
-
                     while (true) {
-                        int readyCount = selector.select();
-                        if (readyCount == 0) {
-                            continue;
-                        }
-                        Set<SelectionKey> readyKeys = selector.selectedKeys();
-                        Iterator<SelectionKey> iterator = readyKeys.iterator();
-                        while (iterator.hasNext()) {
-                            SelectionKey key = iterator.next();
-                            iterator.remove();
-                            if (!key.isValid()) {
-                                continue;
-                            }
-                            if (key.isAcceptable()) {
-                                // клиент хочет подключится
-                                this.accept(key, selector);
-                            } else if (key.isReadable()) {
-                                // готово соединение сервер < клиент
-                                this.read(key, selector);
-                            }
-                        }
+                        handleRequest(selector);
                     }
                 } catch (IOException e) {
                     System.err.printf("Error while initializing the listener on port %d", port);
+                }
+            }
+
+            private void handleRequest(Selector selector) throws IOException {
+                int readyCount = selector.select();
+                if (readyCount == 0) {
+                    return;
+                }
+                Set<SelectionKey> readyKeys = selector.selectedKeys();
+                Iterator<SelectionKey> iterator = readyKeys.iterator();
+                while (iterator.hasNext()) {
+                    SelectionKey key = iterator.next();
+                    iterator.remove();
+                    if (!key.isValid()) {
+                        continue;
+                    }
+                    if (key.isAcceptable()) {
+                        // клиент хочет подключится
+                        this.accept(key, selector);
+                    } else if (key.isReadable()) {
+                        // готово соединение сервер < клиент
+                        this.read(key);
+                    }
                 }
             }
 
@@ -95,7 +97,7 @@ public class Server {
                 channel.register(selector, SelectionKey.OP_READ);
             }
 
-            private void read(SelectionKey key, Selector selector) throws IOException {
+            private void read(SelectionKey key) throws IOException {
                 SocketChannel channel = (SocketChannel) key.channel();
                 ByteBuffer buffer = ByteBuffer.allocate(10000);
                 int r = channel.read(buffer);
@@ -111,7 +113,7 @@ public class Server {
                 byte[] data = new byte[r];
                 System.arraycopy(buffer.array(), 0, data, 0, r);
                 CommandRequest commandRequest = Objects.requireNonNull(Serializer.fromBytes(data, CommandRequest.class));
-                Response response = commandManager.runCommand(
+                Response response = commandsManager.runCommand(
                         commandRequest.abbreviation(),
                         commandRequest.args());
                 buffer.clear();

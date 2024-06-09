@@ -1,39 +1,44 @@
 package teapot;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import teapot.models.Command;
 import teapot.models.Response;
 import teapot.models.rocket.Rocket;
 import teapot.models.rocket.components.assembly.Stage;
 import teapot.models.rocket.utils.ComponentBase;
 import teapot.models.rocket.utils.enums.Material;
-import teapot.utils.CollectionManager;
-import teapot.utils.Command;
 import teapot.utils.CommandManager;
 import teapot.utils.Server;
+import teapot.utils.managers.CollectionManager;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Objects;
+import java.util.TreeMap;
 
 /*
  * Позволяет запустить сервер, определяя набор команд
  * для управления коллекцией ракет
  */
 public class ServerRunner {
-    private final String FILE_PATH;
-    private final CollectionManager<Rocket> rocketsManager;
+    public static final Logger logger = LogManager.getLogger(ServerRunner.class);
     private final CommandManager commandsManager;
-    private final Server server;
+    private final CollectionManager<Rocket> rocketsManager;
+    private final Server<Rocket> server;
 
     public ServerRunner(String collectionResourceName) {
         var resourceURL = Server.class.getResource(String.format("/%s", collectionResourceName));
-        this.FILE_PATH = Objects.requireNonNull(resourceURL).getPath();
+        var filePath = Objects.requireNonNull(resourceURL).getPath();
         // создать менеджер ракет и загрузить данные из файла
-        rocketsManager = new CollectionManager<>();
-        rocketsManager.load(FILE_PATH, Rocket.class);
+        rocketsManager = new CollectionManager<>(filePath);
+        rocketsManager.load(Rocket.class);
         // создать менеджер команд и добавить нужные
-        commandsManager = new CommandManager();
+        commandsManager = new CommandManager('b');
         commandsManager.addCommands(createCommandsMap());
-        // задать сервер
-        server = Server.instance;
+        // создать сервер
+        server = new Server<>(rocketsManager);
     }
 
     public void runServer(int port) {
@@ -44,7 +49,6 @@ public class ServerRunner {
         HashMap<String, Command> commandsMap = new HashMap<>();
         commandsMap.put("info", createCollectionInfoCommand());
         commandsMap.put("com", createCommandInfoCommand());
-        commandsMap.put("help", createHelpCommand());
         commandsMap.put("show", createShowCommand());
         commandsMap.put("showd", createShowDescCommand());
         commandsMap.put("search", createSearchCommand());
@@ -106,38 +110,6 @@ public class ServerRunner {
     }
 
     /**
-     * Creates a Command for the 'help' command.
-     * Prints help on available commands.
-     */
-    private Command createHelpCommand() {
-        return new Command(
-                """
-                        Print help on available commands.""",
-                (String... args) -> {
-                    Response response = new Response();
-                    var entries = new ArrayList<>(commandsManager.getCommands().entrySet());
-                    for (var entry : entries) {
-                        var title = entry.getKey().toUpperCase();
-                        var divLength = 33 - title.length();
-                        var divSymbols = new char[divLength / 2];
-                        Arrays.fill(divSymbols, '=');
-                        var div = new String(divSymbols);
-                        response.print(String.join("",
-                                div,
-                                divLength % 2 == 0 ? " " : "= ",
-                                title,
-                                " ",
-                                div));
-                        response.print(entry.getValue().description);
-                        for (var arg : entry.getValue().requiredArgs.entrySet()) {
-                            response.print(String.format("> (%s) %s", arg.getValue().getSimpleName(), arg.getKey()));
-                        }
-                    }
-                    return response;
-                });
-    }
-
-    /**
      * Creates a Command for the 'show' command.
      * Outputs all elements of the collection in string representation to the
      * standard output stream.
@@ -190,37 +162,6 @@ public class ServerRunner {
                     var query = args[0];
                     var rockets = rocketsManager.search(rocket -> rocket.name.startsWith(query));
                     rockets.forEach(response::print);
-                    return response;
-                });
-    }
-
-    /**
-     * Saves the collection to a file.
-     */
-    private Command createSaveCommand() {
-        return new Command(
-                "Save the collection to a file.",
-                (String... args) -> {
-                    Response response = new Response();
-                    rocketsManager.save(FILE_PATH);
-                    response.print("Changes saved");
-                    return response;
-                });
-    }
-
-    /**
-     * Closes server port listening.
-     */
-    private Command createCloseCommand() {
-        return new Command(
-                "Closes connection.",
-                new TreeMap<>() {{
-                    put("port", Integer.class);
-                }},
-                (String... args) -> {
-                    Response response = new Response();
-                    server.closePortListener(Integer.parseInt(args[0]));
-                    response.print("Connection closed");
                     return response;
                 });
     }

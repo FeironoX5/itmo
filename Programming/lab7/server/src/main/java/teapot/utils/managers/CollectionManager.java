@@ -1,4 +1,9 @@
-package teapot.utils;
+package teapot.utils.managers;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import teapot.utils.FileProvider;
+import teapot.utils.Serializer;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -10,14 +15,17 @@ import java.util.function.Predicate;
  * @author Gleb Kiva
  */
 public final class CollectionManager<T extends Comparable<T>> {
+    private final String FILE_PATH;
     private final HashSet<T> collection;
     private final Date creationDate;
+    private final Logger logger = LogManager.getLogger(CollectionManager.class);
 
     /**
      * Constructs a CollectionManager with an empty collection initialized and the
      * creation date set to the current date.
      */
-    public CollectionManager() {
+    public CollectionManager(String filePath) {
+        this.FILE_PATH = filePath;
         collection = new HashSet<>();
         creationDate = new Date();
     }
@@ -28,6 +36,7 @@ public final class CollectionManager<T extends Comparable<T>> {
      * @param o The object to add.
      */
     public void add(T o) {
+        logger.info(String.format("Item added to collection (%s)", getCreationDate()));
         collection.add(o);
     }
 
@@ -37,6 +46,7 @@ public final class CollectionManager<T extends Comparable<T>> {
      * @param l The list of objects to add.
      */
     public void addAll(List<T> l) {
+        logger.info(String.format("%s items added to collection (%s)", l.size(), getCreationDate()));
         collection.addAll(l);
     }
 
@@ -62,20 +72,25 @@ public final class CollectionManager<T extends Comparable<T>> {
     /**
      * Saves the entire collection to the file.
      */
-    public void save(String path) {
-        FileProvider.save(path, Serializer.toBytes(collection));
+    public void save() {
+        logger.info(String.format("Saving collection (%s) to file %s", getCreationDate(), FILE_PATH));
+        FileProvider.save(FILE_PATH, Serializer.toBytes(collection));
     }
 
     /**
      * Loads the entire collection from file.
      */
-    public void load(String path, Class<T> tClass) {
+    public void load(Class<T> tClass) {
+//        logger.info(String.format("Loading collection (%s) from file %s", getCreationDate(), path));
         try {
-            String jsonCollection = FileProvider.loadAsSingleLine(path);
+            String jsonCollection = FileProvider.loadAsSingleLine(FILE_PATH);
+//            logger.info(String.format("Loaded %s symbols as single line", jsonCollection.length()));
             List<T> objectsLoaded = Serializer.fromStringAsCollection(jsonCollection, tClass);
+//            logger.info(String.format("Loaded %s objects of type %s", objectsLoaded.size(), tClass.getSimpleName()));
             addAll(objectsLoaded);
         } catch (IllegalArgumentException e) {
-            System.err.printf("Unable to parse collection from file: %s%n", e.getMessage());
+            String message = String.format("Unable to parse collection (%s) from file: %s%n", getCreationDate(), e.getMessage());
+            logger.error(message);
         }
     }
 
@@ -83,6 +98,7 @@ public final class CollectionManager<T extends Comparable<T>> {
      * Clears the entire collection.
      */
     public void clear() {
+        logger.info(String.format("Clearing collection (%s)", getCreationDate()));
         collection.clear();
     }
 

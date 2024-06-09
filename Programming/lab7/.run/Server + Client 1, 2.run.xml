@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Server + Client 1, 2" type="CompoundRunConfigurationType">
+    <toRun name="teapot:client [run]" type="GradleRunConfiguration" />
+    <toRun name="teapot:client2 [run]" type="GradleRunConfiguration" />
+    <toRun name="teapot:server [run]" type="GradleRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>

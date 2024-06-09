@@ -50,9 +50,13 @@ public final class Console {
         while (running) {
             System.out.print("\nType any command: ");
             String[] userCommand = in.nextLine().toLowerCase().split("\\s+");
-            CommandRequest request = getCommandRequest(
+            CommandRequest request = new CommandRequest(
                     userCommand[0],
                     Arrays.copyOfRange(userCommand, 1, userCommand.length));
+            if (Objects.equals(request.abbreviation(), "exit")) {
+                close();
+                continue;
+            }
             try {
                 printResponse(request);
             } catch (IOException e) {
@@ -71,15 +75,6 @@ public final class Console {
         } catch (IOException e) {
             connect(hostAddress, ++tryNumber);
         }
-    }
-
-    public CommandRequest getCommandRequest(String abbreviation, String... args) {
-        CommandRequest c = new CommandRequest(abbreviation, args);
-        if (Objects.equals(c.abbreviation(), "exit")) {
-            close();
-            return null;
-        }
-        return c;
     }
 
     public Response sendRequest(CommandRequest request) throws IOException {
